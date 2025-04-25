@@ -7,12 +7,12 @@ import EventSlider from "@/components/event-slider";
 // // import { CalendarDays, Heart, Users, Landmark, ArrowRight } from "lucide-react";
 // // import Newsletter from "@/components/newsletter";
 // // import CardSlider from "@/components/CardSlider";
-import HeroHome from "@/components/HeroHome";
-import Quicklinks from "@/components/Quicklinks";
-import HomeAbout from "@/components/HomeAbout";
-import HomeEvents from "@/components/HomeEvents";
-import Testimonials from "@/components/Testimonials";
-import NewsHome from "@/components/NewsHome";
+import HeroHome from "@/components/home/HeroHome";
+import Quicklinks from "@/components/home/Quicklinks";
+import HomeAbout from "@/components/home/HomeAbout";
+import HomeEvents from "@/components/home/HomeEvents";
+import Testimonials from "@/components/home/Testimonials";
+import NewsHome from "@/components/home/NewsHome";
 
 export default function Home() {
   return (
