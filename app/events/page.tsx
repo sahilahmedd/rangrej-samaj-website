@@ -1,9 +1,17 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { CalendarDays, MapPin, Clock, Users, Heart, Music, Landmark } from "lucide-react"
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  CalendarDays,
+  MapPin,
+  Clock,
+  Users,
+  Heart,
+  Music,
+  Landmark,
+} from "lucide-react";
 
 export default function EventsPage() {
   // Sample event data
@@ -15,7 +23,8 @@ export default function EventsPage() {
       time: "10:00 AM - 6:00 PM",
       location: "Rangraj Community Hall, Mumbai",
       image: "/placeholder.svg?height=400&width=600",
-      description: "Our annual marriage meet bringing together eligible candidates from the Rangraj community.",
+      description:
+        "Our annual marriage meet bringing together eligible candidates from the Rangraj community.",
       category: "vivah",
       attendees: 200,
     },
@@ -26,7 +35,8 @@ export default function EventsPage() {
       time: "9:00 AM - 4:00 PM",
       location: "Rangraj Bhavan, Delhi",
       image: "/placeholder.svg?height=400&width=600",
-      description: "Free health check-ups including general health, eye, and dental examinations.",
+      description:
+        "Free health check-ups including general health, eye, and dental examinations.",
       category: "health",
       attendees: 150,
     },
@@ -37,7 +47,8 @@ export default function EventsPage() {
       time: "5:00 PM - 10:00 PM",
       location: "Central Park, Jaipur",
       image: "/placeholder.svg?height=400&width=600",
-      description: "Celebrating our rich cultural heritage with music, dance, and traditional crafts.",
+      description:
+        "Celebrating our rich cultural heritage with music, dance, and traditional crafts.",
       category: "cultural",
       attendees: 300,
     },
@@ -48,11 +59,12 @@ export default function EventsPage() {
       time: "11:00 AM - 2:00 PM",
       location: "Rangraj Education Center, Ahmedabad",
       image: "/placeholder.svg?height=400&width=600",
-      description: "Distribution of scholarships to deserving students from our community.",
+      description:
+        "Distribution of scholarships to deserving students from our community.",
       category: "education",
       attendees: 100,
     },
-  ]
+  ];
 
   const pastEvents = [
     {
@@ -62,7 +74,8 @@ export default function EventsPage() {
       time: "10:00 AM - 4:00 PM",
       location: "Multiple Locations",
       image: "/placeholder.svg?height=400&width=600",
-      description: "Successfully distributed zakat to over 200 families in need across 5 cities.",
+      description:
+        "Successfully distributed zakat to over 200 families in need across 5 cities.",
       category: "charity",
       attendees: 50,
     },
@@ -73,7 +86,8 @@ export default function EventsPage() {
       time: "9:00 AM - 5:00 PM",
       location: "Rangraj Community Center, Ahmedabad",
       image: "/placeholder.svg?height=400&width=600",
-      description: "Empowering the next generation with leadership skills and community values.",
+      description:
+        "Empowering the next generation with leadership skills and community values.",
       category: "education",
       attendees: 75,
     },
@@ -84,7 +98,8 @@ export default function EventsPage() {
       time: "10:00 AM - 3:00 PM",
       location: "Various Locations",
       image: "/placeholder.svg?height=400&width=600",
-      description: "Provided warm clothing to underprivileged children and elderly community members.",
+      description:
+        "Provided warm clothing to underprivileged children and elderly community members.",
       category: "charity",
       attendees: 120,
     },
@@ -95,11 +110,12 @@ export default function EventsPage() {
       time: "6:00 PM - 10:00 PM",
       location: "Rangraj Community Hall, Mumbai",
       image: "/placeholder.svg?height=400&width=600",
-      description: "A festive gathering to celebrate the new year with cultural performances and dinner.",
+      description:
+        "A festive gathering to celebrate the new year with cultural performances and dinner.",
       category: "cultural",
       attendees: 250,
     },
-  ]
+  ];
 
   return (
     <main className="flex min-h-screen flex-col">
@@ -115,7 +131,9 @@ export default function EventsPage() {
           />
         </div>
         <div className="container relative z-10 px-4 md:px-6 flex flex-col items-center text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tighter mb-4">Events</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tighter mb-4">
+            Events
+          </h1>
           <p className="text-xl text-white/90 max-w-[800px]">
             Join us for our upcoming events or explore our past gatherings.
           </p>
@@ -134,9 +152,18 @@ export default function EventsPage() {
             <TabsContent value="upcoming" className="space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {upcomingEvents.map((event) => (
-                  <Card key={event.id} id={event.category} className="overflow-hidden">
+                  <Card
+                    key={event.id}
+                    id={event.category}
+                    className="overflow-hidden"
+                  >
                     <div className="relative h-48">
-                      <Image src={event.image || "/placeholder.svg"} alt={event.title} fill className="object-cover" />
+                      <Image
+                        src={event.image || "/placeholder.svg"}
+                        alt={event.title}
+                        fill
+                        className="object-cover"
+                      />
                     </div>
                     <CardContent className="p-6">
                       <h3 className="text-xl font-bold mb-2">{event.title}</h3>
@@ -158,10 +185,14 @@ export default function EventsPage() {
                           <span>Expected Attendees: {event.attendees}</span>
                         </div>
                       </div>
-                      <p className="text-muted-foreground">{event.description}</p>
+                      <p className="text-muted-foreground">
+                        {event.description}
+                      </p>
                     </CardContent>
                     <CardFooter className="px-6 pb-6 pt-0">
-                      <Button className="w-full bg-[#B7410E] hover:bg-[#8B3103] text-white">Register Now</Button>
+                      <Button className="w-full bg-[#B7410E] hover:bg-[#8B3103] text-white">
+                        Register Now
+                      </Button>
                     </CardFooter>
                   </Card>
                 ))}
@@ -171,9 +202,18 @@ export default function EventsPage() {
             <TabsContent value="past" className="space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {pastEvents.map((event) => (
-                  <Card key={event.id} id={event.category} className="overflow-hidden">
+                  <Card
+                    key={event.id}
+                    id={event.category}
+                    className="overflow-hidden"
+                  >
                     <div className="relative h-48">
-                      <Image src={event.image || "/placeholder.svg"} alt={event.title} fill className="object-cover" />
+                      <Image
+                        src={event.image || "/placeholder.svg"}
+                        alt={event.title}
+                        fill
+                        className="object-cover"
+                      />
                     </div>
                     <CardContent className="p-6">
                       <h3 className="text-xl font-bold mb-2">{event.title}</h3>
@@ -195,7 +235,9 @@ export default function EventsPage() {
                           <span>Attendees: {event.attendees}</span>
                         </div>
                       </div>
-                      <p className="text-muted-foreground">{event.description}</p>
+                      <p className="text-muted-foreground">
+                        {event.description}
+                      </p>
                     </CardContent>
                     <CardFooter className="px-6 pb-6 pt-0">
                       <Button variant="outline" className="w-full">
@@ -213,7 +255,9 @@ export default function EventsPage() {
       {/* Event Categories */}
       <section className="py-16 bg-[#F9F5E7]">
         <div className="container px-4 md:px-6">
-          <h2 className="text-3xl font-bold text-center mb-12 text-[#8B3103]">Event Categories</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-[#8B3103]">
+            Event Categories
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Link href="#vivah">
               <Card className="h-full hover:border-[#B7410E] transition-colors cursor-pointer">
@@ -223,7 +267,8 @@ export default function EventsPage() {
                   </div>
                   <h3 className="text-xl font-bold">Vivah Sammelan</h3>
                   <p className="text-muted-foreground">
-                    Marriage meets to help community members find suitable life partners.
+                    Marriage meets to help community members find suitable life
+                    partners.
                   </p>
                 </CardContent>
               </Card>
@@ -237,7 +282,8 @@ export default function EventsPage() {
                   </div>
                   <h3 className="text-xl font-bold">Health Camps</h3>
                   <p className="text-muted-foreground">
-                    Free medical check-ups and health awareness programs for the community.
+                    Free medical check-ups and health awareness programs for the
+                    community.
                   </p>
                 </CardContent>
               </Card>
@@ -251,7 +297,8 @@ export default function EventsPage() {
                   </div>
                   <h3 className="text-xl font-bold">Cultural Events</h3>
                   <p className="text-muted-foreground">
-                    Celebrating our rich cultural heritage through music, dance, and art.
+                    Celebrating our rich cultural heritage through music, dance,
+                    and art.
                   </p>
                 </CardContent>
               </Card>
@@ -265,7 +312,8 @@ export default function EventsPage() {
                   </div>
                   <h3 className="text-xl font-bold">Charity Drives</h3>
                   <p className="text-muted-foreground">
-                    Zakat distribution and other charitable activities to help those in need.
+                    Zakat distribution and other charitable activities to help
+                    those in need.
                   </p>
                 </CardContent>
               </Card>
@@ -278,15 +326,20 @@ export default function EventsPage() {
       <section className="py-16 bg-white">
         <div className="container px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6 text-[#8B3103]">Host an Event</h2>
+            <h2 className="text-3xl font-bold mb-6 text-[#8B3103]">
+              Host an Event
+            </h2>
             <p className="text-lg mb-8">
-              Are you interested in hosting a community event? We welcome initiatives from community members and can
-              provide support in organizing and promoting your event.
+              Are you interested in hosting a community event? We welcome
+              initiatives from community members and can provide support in
+              organizing and promoting your event.
             </p>
-            <Button className="bg-[#B7410E] hover:bg-[#8B3103] text-white">Contact Us to Host an Event</Button>
+            <Button className="bg-[#B7410E] hover:bg-[#8B3103] text-white">
+              Contact Us to Host an Event
+            </Button>
           </div>
         </div>
       </section>
     </main>
-  )
+  );
 }

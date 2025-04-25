@@ -1,11 +1,12 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { CalendarDays, Heart, Users, Landmark, ArrowRight } from "lucide-react"
-import EventSlider from "@/components/event-slider"
-import Newsletter from "@/components/newsletter"
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { CalendarDays, Heart, Users, Landmark, ArrowRight } from "lucide-react";
+import EventSlider from "@/components/event-slider";
+import Newsletter from "@/components/newsletter";
+import CardSlider from "@/components/CardSlider";
 
 export default function Home() {
   return (
@@ -26,11 +27,14 @@ export default function Home() {
             Serving Humanity, Preserving Culture
           </h1>
           <p className="text-xl text-white/90 max-w-[800px]">
-            Empowering and uniting the Rangraj (Rangrez) Samaj through health initiatives, charity, marriage meets, and
-            cultural awareness.
+            Empowering and uniting the Rangraj (Rangrez) Samaj through health
+            initiatives, charity, marriage meets, and cultural awareness.
           </p>
           <div className="flex flex-wrap gap-4 justify-center mt-8">
-            <Button size="lg" className="bg-[#B7410E] hover:bg-[#8B3103] text-white">
+            <Button
+              size="lg"
+              className="bg-[#B7410E] hover:bg-[#8B3103] text-white"
+            >
               Join Us
             </Button>
             <Button
@@ -54,8 +58,10 @@ export default function Home() {
       {/* Quick Links Section */}
       <section className="py-16 bg-white">
         <div className="container px-4 md:px-6">
-          <h2 className="text-3xl font-bold text-center mb-12 text-[#8B3103]">Our Initiatives</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h2 className="text-3xl font-bold text-center mb-12 text-[#8B3103]">
+            Our Initiatives
+          </h2>
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Card className="border-2 border-[#F2C94C]/20 hover:border-[#F2C94C] transition-all">
               <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
                 <div className="w-16 h-16 rounded-full bg-[#F2C94C]/10 flex items-center justify-center">
@@ -63,9 +69,13 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold">Health Support</h3>
                 <p className="text-muted-foreground">
-                  Free medical camps, treatments, and health awareness programs for our community.
+                  Free medical camps, treatments, and health awareness programs
+                  for our community.
                 </p>
-                <Link href="/initiatives#health" className="text-[#B7410E] flex items-center gap-1 hover:underline">
+                <Link
+                  href="/initiatives#health"
+                  className="text-[#B7410E] flex items-center gap-1 hover:underline"
+                >
                   Learn more <ArrowRight className="w-4 h-4" />
                 </Link>
               </CardContent>
@@ -78,9 +88,13 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold">Zakat & Donations</h3>
                 <p className="text-muted-foreground">
-                  Supporting the needy through charitable donations and zakat distribution.
+                  Supporting the needy through charitable donations and zakat
+                  distribution.
                 </p>
-                <Link href="/donation" className="text-[#B7410E] flex items-center gap-1 hover:underline">
+                <Link
+                  href="/donation"
+                  className="text-[#B7410E] flex items-center gap-1 hover:underline"
+                >
                   Learn more <ArrowRight className="w-4 h-4" />
                 </Link>
               </CardContent>
@@ -93,9 +107,13 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold">Vivah Sammelan</h3>
                 <p className="text-muted-foreground">
-                  Marriage meets to help community members find suitable life partners.
+                  Marriage meets to help community members find suitable life
+                  partners.
                 </p>
-                <Link href="/events#vivah" className="text-[#B7410E] flex items-center gap-1 hover:underline">
+                <Link
+                  href="/events#vivah"
+                  className="text-[#B7410E] flex items-center gap-1 hover:underline"
+                >
                   Learn more <ArrowRight className="w-4 h-4" />
                 </Link>
               </CardContent>
@@ -108,14 +126,39 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold">Upcoming Events</h3>
                 <p className="text-muted-foreground">
-                  Stay updated with our community gatherings, cultural programs, and more.
+                  Stay updated with our community gatherings, cultural programs,
+                  and more.
                 </p>
-                <Link href="/events" className="text-[#B7410E] flex items-center gap-1 hover:underline">
+                <Link
+                  href="/events"
+                  className="text-[#B7410E] flex items-center gap-1 hover:underline"
+                >
                   Learn more <ArrowRight className="w-4 h-4" />
                 </Link>
               </CardContent>
             </Card>
-          </div>
+
+            <Card className="border-2 border-[#F2C94C]/20 hover:border-[#F2C94C] transition-all">
+              <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
+                <div className="w-16 h-16 rounded-full bg-[#F2C94C]/10 flex items-center justify-center">
+                  <CalendarDays className="w-8 h-8 text-[#B7410E]" />
+                </div>
+                <h3 className="text-xl font-bold">Upcoming Events</h3>
+                <p className="text-muted-foreground">
+                  Stay updated with our community gatherings, cultural programs,
+                  and more.
+                </p>
+                <Link
+                  href="/events"
+                  className="text-[#B7410E] flex items-center gap-1 hover:underline"
+                >
+                  Learn more <ArrowRight className="w-4 h-4" />
+                </Link>
+              </CardContent>
+            </Card>
+          </div> */}
+
+          <CardSlider />
         </div>
       </section>
 
@@ -124,17 +167,24 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-6 text-[#8B3103]">About Rangraj Samaj</h2>
+              <h2 className="text-3xl font-bold mb-6 text-[#8B3103]">
+                About Rangraj Samaj
+              </h2>
               <p className="text-lg mb-4">
-                The Rangraj (Rangrez) Samaj is a vibrant community with a rich cultural heritage in textile dyeing and
-                craftsmanship. Our community has been preserving traditional art forms while adapting to modern
-                challenges.
+                The Rangraj (Rangrez) Samaj is a vibrant community with a rich
+                cultural heritage in textile dyeing and craftsmanship. Our
+                community has been preserving traditional art forms while
+                adapting to modern challenges.
               </p>
               <p className="text-lg mb-6">
-                Today, we focus on empowering our community through education, healthcare, cultural preservation, and
-                social welfare initiatives.
+                Today, we focus on empowering our community through education,
+                healthcare, cultural preservation, and social welfare
+                initiatives.
               </p>
-              <Button asChild className="bg-[#B7410E] hover:bg-[#8B3103] text-white">
+              <Button
+                asChild
+                className="bg-[#B7410E] hover:bg-[#8B3103] text-white"
+              >
                 <Link href="/about">Learn More About Us</Link>
               </Button>
             </div>
@@ -153,7 +203,9 @@ export default function Home() {
       {/* Events Section */}
       <section className="py-16 bg-white">
         <div className="container px-4 md:px-6">
-          <h2 className="text-3xl font-bold text-center mb-12 text-[#8B3103]">Our Events</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-[#8B3103]">
+            Our Events
+          </h2>
           <Tabs defaultValue="upcoming" className="w-full">
             <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8">
               <TabsTrigger value="upcoming">Upcoming Events</TabsTrigger>
@@ -177,7 +229,8 @@ export default function Home() {
                     date: "June 10, 2025",
                     location: "Rangraj Bhavan, Delhi",
                     image: "/placeholder.svg?height=400&width=600",
-                    description: "Free health check-ups including general health, eye, and dental examinations.",
+                    description:
+                      "Free health check-ups including general health, eye, and dental examinations.",
                   },
                   {
                     id: 3,
@@ -185,7 +238,8 @@ export default function Home() {
                     date: "July 22, 2025",
                     location: "Central Park, Jaipur",
                     image: "/placeholder.svg?height=400&width=600",
-                    description: "Celebrating our rich cultural heritage with music, dance, and traditional crafts.",
+                    description:
+                      "Celebrating our rich cultural heritage with music, dance, and traditional crafts.",
                   },
                 ]}
               />
@@ -199,7 +253,8 @@ export default function Home() {
                     date: "March 5, 2025",
                     location: "Multiple Locations",
                     image: "/placeholder.svg?height=400&width=600",
-                    description: "Successfully distributed zakat to over 200 families in need across 5 cities.",
+                    description:
+                      "Successfully distributed zakat to over 200 families in need across 5 cities.",
                   },
                   {
                     id: 5,
@@ -207,7 +262,8 @@ export default function Home() {
                     date: "February 18, 2025",
                     location: "Rangraj Community Center, Ahmedabad",
                     image: "/placeholder.svg?height=400&width=600",
-                    description: "Empowering the next generation with leadership skills and community values.",
+                    description:
+                      "Empowering the next generation with leadership skills and community values.",
                   },
                   {
                     id: 6,
@@ -215,14 +271,18 @@ export default function Home() {
                     date: "January 10, 2025",
                     location: "Various Locations",
                     image: "/placeholder.svg?height=400&width=600",
-                    description: "Provided warm clothing to underprivileged children and elderly community members.",
+                    description:
+                      "Provided warm clothing to underprivileged children and elderly community members.",
                   },
                 ]}
               />
             </TabsContent>
           </Tabs>
           <div className="text-center mt-8">
-            <Button asChild className="bg-[#B7410E] hover:bg-[#8B3103] text-white">
+            <Button
+              asChild
+              className="bg-[#B7410E] hover:bg-[#8B3103] text-white"
+            >
               <Link href="/events">View All Events</Link>
             </Button>
           </div>
@@ -232,7 +292,9 @@ export default function Home() {
       {/* Testimonials */}
       <section className="py-16 bg-[#F9F5E7]">
         <div className="container px-4 md:px-6">
-          <h2 className="text-3xl font-bold text-center mb-12 text-[#8B3103]">Community Voices</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-[#8B3103]">
+            Community Voices
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[1, 2, 3].map((i) => (
               <Card key={i} className="border-2 border-[#F2C94C]/20">
@@ -248,12 +310,15 @@ export default function Home() {
                     </div>
                     <div>
                       <h4 className="font-bold">Community Member {i}</h4>
-                      <p className="text-sm text-muted-foreground">Beneficiary</p>
+                      <p className="text-sm text-muted-foreground">
+                        Beneficiary
+                      </p>
                     </div>
                   </div>
                   <p className="italic">
-                    "The support from Rangraj Samaj has been life-changing for my family. The medical assistance helped
-                    us during a difficult time, and we are forever grateful."
+                    "The support from Rangraj Samaj has been life-changing for
+                    my family. The medical assistance helped us during a
+                    difficult time, and we are forever grateful."
                   </p>
                 </CardContent>
               </Card>
@@ -269,5 +334,5 @@ export default function Home() {
         </div>
       </section>
     </main>
-  )
+  );
 }
