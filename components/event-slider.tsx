@@ -1,34 +1,36 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight, CalendarDays, MapPin } from "lucide-react"
+import { useState } from "react";
+import Image from "next/image";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ChevronLeft, ChevronRight, CalendarDays, MapPin } from "lucide-react";
 
 interface Event {
-  id: number
-  title: string
-  date: string
-  location: string
-  image: string
-  description: string
+  id: number;
+  title: string;
+  date: string;
+  location: string;
+  image: string;
+  description: string;
 }
 
 interface EventSliderProps {
-  events: Event[]
+  events: Event[];
 }
 
 export default function EventSlider({ events }: EventSliderProps) {
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % events.length)
-  }
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % events.length);
+  };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + events.length) % events.length)
-  }
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + events.length) % events.length
+    );
+  };
 
   return (
     <div className="relative">
@@ -42,7 +44,12 @@ export default function EventSlider({ events }: EventSliderProps) {
               <Card className="border-0 shadow-none">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                    <Image src={event.image || "/placeholder.svg"} alt={event.title} fill className="object-cover" />
+                    <Image
+                      src={event.image || "/placeholder.svg"}
+                      alt={event.title}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                   <CardContent className="p-0 flex flex-col justify-center">
                     <h3 className="text-2xl font-bold mb-4">{event.title}</h3>
@@ -56,8 +63,12 @@ export default function EventSlider({ events }: EventSliderProps) {
                         <span>{event.location}</span>
                       </div>
                     </div>
-                    <p className="text-muted-foreground mb-6">{event.description}</p>
-                    <Button className="w-full md:w-auto bg-[#B7410E] hover:bg-[#8B3103] text-white">Learn More</Button>
+                    <p className="text-muted-foreground mb-6">
+                      {event.description}
+                    </p>
+                    <Button className="w-full md:w-auto bg-[#B7410E] hover:bg-[#8B3103] text-white">
+                      Learn More
+                    </Button>
                   </CardContent>
                 </div>
               </Card>
@@ -91,7 +102,9 @@ export default function EventSlider({ events }: EventSliderProps) {
             {events.map((_, index) => (
               <button
                 key={index}
-                className={`w-2 h-2 rounded-full ${index === currentIndex ? "bg-[#B7410E]" : "bg-gray-300"}`}
+                className={`w-2 h-2 rounded-full ${
+                  index === currentIndex ? "bg-[#B7410E]" : "bg-gray-300"
+                }`}
                 onClick={() => setCurrentIndex(index)}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -100,5 +113,5 @@ export default function EventSlider({ events }: EventSliderProps) {
         </>
       )}
     </div>
-  )
+  );
 }

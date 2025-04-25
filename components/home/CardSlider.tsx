@@ -10,6 +10,8 @@ import {
   Users,
   CalendarDays,
   ArrowRight,
+  GraduationCap,
+  Star,
   ChevronLeft,
   ChevronRight,
 } from "lucide-react"
@@ -75,11 +77,18 @@ export default function CardSlider() {
       href: "/events",
     },
     {
-      icon: <CalendarDays className="w-8 h-8 text-[#B7410E]" />,
+      icon: <Star className="w-8 h-8 text-[#B7410E]" />,
       title: "More Events",
       description:
         "Never miss out on what’s happening around you in the community.",
       href: "/events",
+    },
+    {
+      icon: <GraduationCap className="w-8 h-8 text-[#B7410E]" />,
+      title: "Rangrej Academy",
+      description:
+        "Empowering education in the community.",
+      href: "/academy",
     },
   ]
 
@@ -108,24 +117,6 @@ export default function CardSlider() {
         ))}
       </div>
 
-
-      {/* Navigation Buttons */}
-      {/* {loaded && instanceRef.current && (
-        <div className="relative border-2 border-red-500">
-          <button
-            onClick={() => instanceRef.current?.prev()}
-            className="absolute left-0 md:-left-12 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full shadow-md p-2 hover:bg-gray-100"
-          >
-            <ChevronLeft className="w-5 h-5 text-[#B7410E]" />
-          </button>
-          <button
-            onClick={() => instanceRef.current?.next()}
-            className="absolute right-0 md:-right-12 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full shadow-md p-2 hover:bg-gray-100"
-          >
-            <ChevronRight className="w-5 h-5 text-[#B7410E]" />
-          </button>
-        </div>
-      )} */}
       {loaded && instanceRef.current && (
         <>
           {/* Prev Button */}

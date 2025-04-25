@@ -1,37 +1,22 @@
-import Image from "next/image";
-import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import AboutHero from "@/components/about/AboutHero";
+import AboutEvents from "@/components/about/AboutEvents";
 
 export default function AboutPage() {
   return (
     <main className="flex min-h-screen flex-col">
       {/* Hero Section */}
-      <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/placeholder.svg?height=800&width=1920"
-            alt="About Rangraj Samaj"
-            fill
-            className="object-cover brightness-50"
-            priority
-          />
-        </div>
-        <div className="container relative z-10 px-4 md:px-6 flex flex-col items-center text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tighter">
-            About Rangraj Samaj
-          </h1>
-        </div>
-      </section>
+      <AboutHero />
 
       {/* About Content */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="container px-4 md:px-6">
           <Tabs defaultValue="introduction" className="w-full">
-            <TabsList className="grid w-full max-w-3xl mx-auto grid-cols-4 mb-8">
+            <TabsList className="grid w-full max-w-3xl mx-auto grid-cols-5 mb-8">
               <TabsTrigger value="introduction">Introduction</TabsTrigger>
               <TabsTrigger value="history">History</TabsTrigger>
               <TabsTrigger value="mission">Mission & Vision</TabsTrigger>
               <TabsTrigger value="members">Key Members</TabsTrigger>
+              <TabsTrigger value="academy">Academy</TabsTrigger>
             </TabsList>
 
             <TabsContent value="introduction" className="space-y-8">
@@ -226,9 +211,48 @@ export default function AboutPage() {
                 ))}
               </div>
             </TabsContent>
+
+            <TabsContent value="academy" className="space-y-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="relative h-[400px] rounded-lg overflow-hidden order-2 lg:order-1">
+                  <Image
+                    src="/placeholder.svg?height=800&width=600"
+                    alt="Rangraj Samaj History"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="order-1 lg:order-2">
+                  <h2 className="text-3xl font-bold mb-6 text-[#8B3103]">
+                    Rangrej Academy
+                  </h2>
+                  <p className="text-lg mb-4">
+                    Rangrej Academy School is a modern, values-driven
+                    educational institution dedicated to nurturing young minds
+                    with knowledge, creativity, and confidence. Located in a
+                    peaceful and accessible area, Rangrej Academy combines
+                    traditional values with modern teaching techniques to create
+                    a balanced and enriching learning environment.
+                  </p>
+                  <p className="text-lg mb-4">
+                    From foundational academics to co-curricular activities, the
+                    school focuses on the all-round development of students.
+                    With a team of qualified teachers, a student-first approach,
+                    and a commitment to academic excellence, Rangrej Academy
+                    prepares children not just for exams, but for life.
+                  </p>
+                  <p className="text-lg">
+                    The school fosters curiosity, discipline, cultural respect,
+                    and leadership, making it an ideal place for students to
+                    grow into responsible, thoughtful, and capable individuals.
+                  </p>
+                </div>
+              </div>
+            </TabsContent>
           </Tabs>
         </div>
-      </section>
+      </section> */}
+      <AboutEvents />
 
       {/* Impact Section */}
       <section className="py-16 bg-[#F9F5E7]">
