@@ -133,7 +133,7 @@ export default function CardSlider() {
             onClick={() => instanceRef.current?.prev()}
             className="absolute left-2 md:-left-6 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full shadow-md p-2 md:p-3 hover:bg-gray-100 transition"
           >
-            <ChevronLeft className=" md:w-5 md:h-5 lg:w-6 lg:h-6 text-[#B7410E]" />
+            <ChevronLeft className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-[#B7410E]" />
           </button>
 
           {/* Next Button */}
