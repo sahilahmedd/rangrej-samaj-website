@@ -7,6 +7,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
+import Logo from "./Logo"
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -27,7 +28,8 @@ export default function Header() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold text-[#B7410E]">Rangraj Samaj</span>
+            {/* <span className="text-2xl font-bold text-[#B7410E]">Rangraj Samaj</span> */}
+            <Logo width={50} height={50} style="rounded-lg border-1 shadow-md " alt="Logo" />
           </Link>
         </div>
 
@@ -61,7 +63,8 @@ export default function Header() {
             <SheetContent side="right" className="pr-0">
               <div className="px-7">
                 <Link href="/" className="flex items-center" onClick={() => setIsOpen(false)}>
-                  <span className="text-lg font-bold">Rangraj Samaj</span>
+                  {/* <span className="text-lg font-bold">Rangraj Samaj</span> */}
+                  <Logo width={50} height={50} style="rounded-lg mb-5 border-2 shadow-md" alt="Logo" />
                 </Link>
               </div>
               <nav className="flex flex-col gap-4 px-7 mt-8">

@@ -50,7 +50,7 @@ export default function CardSlider() {
   const cardData = [
     {
       icon: <Heart className="w-8 h-8 text-[#B7410E]" />,
-      title: "Health Support",
+      title: "Hospital",
       description:
         "Free medical camps, treatments, and health awareness programs for our community.",
       href: "/initiatives#health",

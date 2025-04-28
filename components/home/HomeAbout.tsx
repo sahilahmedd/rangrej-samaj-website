@@ -32,7 +32,8 @@ const HomeAbout = () => {
         </div>
         <div className="relative h-[400px] rounded-lg overflow-hidden">
           <Image
-            src="/placeholder.svg?height=800&width=600"
+            // src="/placeholder.svg?height=800&width=600"
+            src="/images/2.png"
             alt="Rangraj Samaj Community"
             fill
             className="object-cover"

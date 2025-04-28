@@ -6,7 +6,8 @@ const AboutHero = () => {
     <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
     <div className="absolute inset-0 z-0">
       <Image
-        src="/placeholder.svg?height=800&width=1920"
+        // src="/placeholder.svg?height=800&width=1920"
+        src="/images/aboutus.png"
         alt="About Rangraj Samaj"
         fill
         className="object-cover brightness-50"

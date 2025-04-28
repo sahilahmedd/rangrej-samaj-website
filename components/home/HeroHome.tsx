@@ -7,7 +7,7 @@ const HeroHome = () => {
     <section className="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
     <div className="absolute inset-0 z-0">
       <Image
-        src="/placeholder.svg?height=1080&width=1920"
+        src="/images/5.png"
         alt="Rangraj Samaj Cultural Image"
         fill
         className="object-cover brightness-50"

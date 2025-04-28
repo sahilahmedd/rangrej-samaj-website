@@ -1,0 +1,70 @@
+import React from "react";
+import { Card, CardContent } from "../ui/card";
+import { Heart, BookOpen, GraduationCap, Home } from "lucide-react";
+
+const DonationInfo = () => {
+  return (
+    <section className="py-16 bg-[#F9F5E7]">
+      <div className="container px-4 md:px-6">
+        <h2 className="text-3xl font-bold text-center mb-12 text-[#8B3103]">
+          Where Your Donations Go
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <Card className="border-2 border-[#F2C94C]/20">
+            <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
+              <div className="w-16 h-16 rounded-full bg-[#F2C94C]/10 flex items-center justify-center">
+                <Heart className="w-8 h-8 text-[#B7410E]" />
+              </div>
+              <h3 className="text-xl font-bold">Healthcare</h3>
+              <p className="text-muted-foreground">
+                Providing medical assistance, organizing health camps, and
+                supporting those with chronic illnesses.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="border-2 border-[#F2C94C]/20">
+            <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
+              <div className="w-16 h-16 rounded-full bg-[#F2C94C]/10 flex items-center justify-center">
+                <BookOpen className="w-8 h-8 text-[#B7410E]" />
+              </div>
+              <h3 className="text-xl font-bold">Education</h3>
+              <p className="text-muted-foreground">
+                Scholarships for deserving students, educational materials, and
+                skill development programs.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="border-2 border-[#F2C94C]/20">
+            <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
+              <div className="w-16 h-16 rounded-full bg-[#F2C94C]/10 flex items-center justify-center">
+                <GraduationCap className="w-8 h-8 text-[#B7410E]" />
+              </div>
+              <h3 className="text-xl font-bold">Marriage Aid</h3>
+              <p className="text-muted-foreground">
+                Financial assistance for marriages of underprivileged community
+                members.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="border-2 border-[#F2C94C]/20">
+            <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
+              <div className="w-16 h-16 rounded-full bg-[#F2C94C]/10 flex items-center justify-center">
+                <Home className="w-8 h-8 text-[#B7410E]" />
+              </div>
+              <h3 className="text-xl font-bold">Family Support</h3>
+              <p className="text-muted-foreground">
+                Helping families in financial distress with basic necessities
+                and emergency assistance.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default DonationInfo;

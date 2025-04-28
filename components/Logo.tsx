@@ -1,0 +1,25 @@
+import Image from 'next/image'
+import React from 'react'
+
+interface types {
+    width: number;
+    height: number;
+    style: string;
+    alt: string;
+}
+
+const Logo = ({ width, height, style, alt }: types) => {
+  return (
+    <div>
+      <Image 
+        width={width}
+        height={height}
+        className={style}
+        src="./images/logo.png"
+        alt={alt}
+      />
+    </div>
+  )
+}
+
+export default Logo
