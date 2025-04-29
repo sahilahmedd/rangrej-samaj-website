@@ -5,7 +5,7 @@ import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 import { Card, CardContent } from "@/components/ui/card"
 import {
-  Heart,
+  Hospital,
   Landmark,
   Users,
   CalendarDays,
@@ -49,7 +49,7 @@ export default function CardSlider() {
 
   const cardData = [
     {
-      icon: <Heart className="w-8 h-8 text-[#B7410E]" />,
+      icon: <Hospital className="w-8 h-8 text-[#B7410E]" />,
       title: "Hospital",
       description:
         "Free medical camps, treatments, and health awareness programs for our community.",
