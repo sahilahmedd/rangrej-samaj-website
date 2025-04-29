@@ -270,7 +270,7 @@ export default function RangrajSection() {
         <Tabs value={activeTab} onValueChange={setActiveTab}>
           {/* Desktop Header */}
           <div className="hidden sm:block mt-4">
-            <TabsList className="grid w-full grid-cols-5">
+            <TabsList className="grid w-full grid-cols-5 mb-8">
               {tabItems.map((tab) => (
                 <TabsTrigger key={tab.value} value={tab.value}>
                   {tab.label}

@@ -15,13 +15,13 @@ const EventsCategories = () => {
         Event Categories
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <Link href="#vivah">
+        <Link href="#nikah">
           <Card className="h-full hover:border-[#B7410E] transition-colors cursor-pointer">
             <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
               <div className="w-16 h-16 rounded-full bg-[#F2C94C]/10 flex items-center justify-center">
                 <Users className="w-8 h-8 text-[#B7410E]" />
               </div>
-              <h3 className="text-xl font-bold">Vivah Sammelan</h3>
+              <h3 className="text-xl font-bold">Nikah Sammelan</h3>
               <p className="text-muted-foreground">
                 Marriage meets to help community members find suitable life
                 partners.

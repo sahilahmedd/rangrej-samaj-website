@@ -5,7 +5,8 @@ import Image from "next/image";
 const GallerySection = () => {
   const culturalImages = Array.from({ length: 9 }, (_, i) => ({
     id: `cultural-${i + 1}`,
-    src: `/placeholder.svg?height=600&width=800&text=Cultural${i + 1}`,
+    // src: `/placeholder.svg?height=600&width=800&text=Cultural${i + 1}`,
+    src: `/images/logo.png`,
     alt: `Cultural Event ${i + 1}`,
     caption: `Traditional cultural celebration from our community gathering ${
       i + 1
@@ -14,7 +15,8 @@ const GallerySection = () => {
 
   const medicalImages = Array.from({ length: 6 }, (_, i) => ({
     id: `medical-${i + 1}`,
-    src: `/placeholder.svg?height=600&width=800&text=Medical${i + 1}`,
+    // src: `/placeholder.svg?height=600&width=800&text=Medical${i + 1}`,
+    src: `/images/logo.png`,
     alt: `Medical Camp ${i + 1}`,
     caption: `Health check-up camp providing free medical services to the community ${
       i + 1
@@ -22,9 +24,10 @@ const GallerySection = () => {
   }));
 
   const vivahImages = Array.from({ length: 6 }, (_, i) => ({
-    id: `vivah-${i + 1}`,
-    src: `/placeholder.svg?height=600&width=800&text=Vivah${i + 1}`,
-    alt: `Vivah Sammelan ${i + 1}`,
+    id: `Nikah-${i + 1}`,
+    // src: `/placeholder.svg?height=600&width=800&text=Vivah${i + 1}`,
+    src: `/images/logo.png`,
+    alt: `Nikah Sammelan ${i + 1}`,
     caption: `Successful marriage meet bringing together eligible candidates from our community ${
       i + 1
     }`,
@@ -32,7 +35,8 @@ const GallerySection = () => {
 
   const communityImages = Array.from({ length: 6 }, (_, i) => ({
     id: `community-${i + 1}`,
-    src: `/placeholder.svg?height=600&width=800&text=Community${i + 1}`,
+    // src: `/placeholder.svg?height=600&width=800&text=Community${i + 1}`,
+    src: `/images/logo.png`,
     alt: `Community Gathering ${i + 1}`,
     caption: `Community members coming together for various social activities and celebrations ${
       i + 1
@@ -46,7 +50,7 @@ const GallerySection = () => {
           <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-4 mb-8">
             <TabsTrigger value="cultural">Cultural Events</TabsTrigger>
             <TabsTrigger value="medical">Medical Camps</TabsTrigger>
-            <TabsTrigger value="vivah">Vivah Sammelans</TabsTrigger>
+            <TabsTrigger value="vivah">Nikah Sammelans</TabsTrigger>
             <TabsTrigger value="community">Community</TabsTrigger>
           </TabsList>
 
