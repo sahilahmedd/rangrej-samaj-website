@@ -138,7 +138,7 @@ export default function Footer() {
       <div className="text-left text-sm sm:text-lg">
         {/* <h3 className="text-lg font-bold mb-4">Rangraj Samaj</h3> */}
         <Logo width={50} height={50} style="rounded-lg mb-5" alt="Logo" />
-        <p className="text-white/80 mb-4">
+        <p className="text-white/80 mb-4 text-sm">
           Empowering and uniting the Rangraj (Rangrez) Samaj through health, charity, marriage meets, and cultural awareness.
         </p>
         <div className="flex justify-start gap-4">
@@ -157,7 +157,7 @@ export default function Footer() {
       {/* Quick Links */}
       <div className="text-left">
         <h3 className="text-lg font-bold mb-4">Quick Links</h3>
-        <ul className="space-y-2 text-sm sm:text-lg">
+        <ul className="space-y-2 text-sm">
           {[
             { href: "/", label: "Home" },
             { href: "/about", label: "About Us" },
@@ -179,7 +179,7 @@ export default function Footer() {
       {/* Initiatives */}
       <div className="text-left">
         <h3 className="text-lg font-bold mb-4">Initiatives</h3>
-        <ul className="space-y-2 text-sm sm:text-lg">
+        <ul className="space-y-2 text-sm">
           {[
             { href: "/initiatives#health", label: "Medical Aid" },
             { href: "/initiatives#zakat", label: "Zakat Distribution" },
@@ -199,7 +199,7 @@ export default function Footer() {
       {/* Contact */}
       <div className="text-left">
         <h3 className="text-lg font-bold mb-4">Contact Us</h3>
-        <ul className="space-y-3 text-sm sm:text-lg">
+        <ul className="space-y-3 text-sm">
           <li className="flex flex-col sm:flex-row sm:items-start gap-3">
             <MapPin className="w-5 h-5 flex-shrink-0" />
             <span className="text-white/80 leading-snug">
