@@ -1,9 +1,13 @@
 import React from 'react'
 import { Button } from '../ui/button'
 import Image from 'next/image'
+import {useTranslations} from 'next-intl';
 
 const HeroHome = () => {
-  return (
+
+  const t = useTranslations("Homepage")
+
+    return (
     <section className="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
     <div className="absolute inset-0 z-0">
       <Image
@@ -16,11 +20,13 @@ const HeroHome = () => {
     </div>
     <div className="container relative z-10 px-4 md:px-6 flex flex-col items-center text-center space-y-4">
       <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tighter">
-        Serving Humanity, Preserving Culture
+        {/* Serving Humanity, Preserving Culture */}
+        {t('title')}
       </h1>
       <p className="text-xl text-white/90 max-w-[800px]">
-        Empowering and uniting the Rangraj (Rangrez) Samaj through health
-        initiatives, charity, marriage meets, and cultural awareness.
+        {/* Empowering and uniting the Rangraj (Rangrez) Samaj through health
+        initiatives, charity, marriage meets, and cultural awareness. */}
+        {t('title-h1')}
       </p>
       <div className="flex flex-wrap gap-4 justify-center mt-8">
         <Button
