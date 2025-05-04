@@ -8,6 +8,7 @@ import { Menu } from "lucide-react"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import Logo from "./Logo"
+import LanguageSwitcher from "./LanguageSwitcher"
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -52,6 +53,7 @@ export default function Header() {
           <Button asChild className="hidden md:flex bg-[#B7410E] hover:bg-[#8B3103] text-white">
             <Link href="/donation">Donate Now</Link>
           </Button>
+          <LanguageSwitcher />
 
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="md:hidden">
