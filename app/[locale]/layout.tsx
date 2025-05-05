@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { NextIntlClientProvider } from "next-intl"
 import { routing } from "@/i18n/routing"
 import { notFound } from "next/navigation"
+import Script from "next/script"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -39,6 +40,7 @@ export default async function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <div className="flex min-h-screen flex-col">
             <Header />
+            <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="beforeInteractive" />
             {children}
             <Footer />
           </div>

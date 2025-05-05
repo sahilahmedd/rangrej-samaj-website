@@ -15,7 +15,7 @@ const Logo = ({ width, height, style, alt }: types) => {
         width={width}
         height={height}
         className={style}
-        src="./images/logo1.png"
+        src="/images/logo1.png"
         alt={alt}
       />
     </div>

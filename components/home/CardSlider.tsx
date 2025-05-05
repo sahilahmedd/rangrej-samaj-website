@@ -20,11 +20,13 @@ import {
   Star,
 } from "lucide-react";
 import Link from "next/link";
+import Autoplay from "embla-carousel-autoplay";
 
 export default function CardSlider() {
   const [api, setApi] = useState<CarouselApi | null>(null);
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
+  const [currentAd, setCurrentAd] = useState(0);
 
   useEffect(() => {
     if (!api) return;
@@ -81,57 +83,190 @@ export default function CardSlider() {
     },
   ];
 
-  return (
-    <div className="relative">
-      <Carousel
-        setApi={setApi}
-        opts={{
-          align: "start",
-          loop: true,
-        }}
-      >
-        <CarouselContent className="-ml-4 md:-ml-6 lg:-ml-8">
-          {cardData.map((card, index) => (
-            <CarouselItem
-              key={index}
-              className="pl-4 md:pl-6 lg:pl-8 basis-11/12 sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
-            >
-              <Card className="border-2 border-[#F2C94C]/20 hover:border-[#F2C94C] transition-all h-full">
-                <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
-                  <div className="w-16 h-16 rounded-full bg-[#F2C94C]/10 flex items-center justify-center">
-                    {card.icon}
-                  </div>
-                  <h3 className="text-xl font-bold">{card.title}</h3>
-                  <p className="text-muted-foreground">{card.description}</p>
-                  <Link
-                    href={card.href}
-                    className="text-[#B7410E] flex items-center gap-1 hover:underline"
-                  >
-                    Learn more <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </CardContent>
-              </Card>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious className="absolute left-2 md:-left-6 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full shadow-md p-2 md:p-3 hover:bg-gray-100 transition" />
-        <CarouselNext className="absolute right-2 md:-right-6 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full shadow-md p-2 md:p-3 hover:bg-gray-100 transition" />
-      </Carousel>
+  const adData = [
+    {
+      title: "Sponsor Us",
+      description: "Get your brand in front of thousands!",
+    },
+    {
+      title: "Advertise Events",
+      description: "Share your event with the community.",
+    },
+    {
+      title: "Showcase Products",
+      description: "Promote your products or services here.",
+    },
+  ];
 
-      {/* Dots */}
-      {count > 0 && (
-        <div className="flex justify-center mt-4 gap-2">
-          {Array.from({ length: count }).map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => api?.scrollTo(idx)}
-              className={`w-3 h-3 rounded-full ${
-                current === idx ? "bg-[#B7410E]" : "bg-gray-300"
-              } transition-all`}
-            />
-          ))}
-        </div>
-      )}
+  // Auto-scroll ads every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentAd((prev) => (prev + 1) % adData.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    // <div className="relative">
+    //   <Carousel
+    //     setApi={setApi}
+    //     opts={{
+    //       align: "start",
+    //       loop: true,
+    //     }}
+    //   >
+    //     <CarouselContent className="-ml-4 md:-ml-6 lg:-ml-8">
+    //       {cardData.map((card, index) => (
+    //         <CarouselItem
+    //           key={index}
+    //           className="pl-4 md:pl-6 lg:pl-8 basis-11/12 sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
+    //         >
+    //           <Card className="border-2 border-[#F2C94C]/20 hover:border-[#F2C94C] transition-all h-full">
+    //             <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
+    //               <div className="w-16 h-16 rounded-full bg-[#F2C94C]/10 flex items-center justify-center">
+    //                 {card.icon}
+    //               </div>
+    //               <h3 className="text-xl font-bold">{card.title}</h3>
+    //               <p className="text-muted-foreground">{card.description}</p>
+    //               <Link
+    //                 href={card.href}
+    //                 className="text-[#B7410E] flex items-center gap-1 hover:underline"
+    //               >
+    //                 Learn more <ArrowRight className="w-4 h-4" />
+    //               </Link>
+    //             </CardContent>
+    //           </Card>
+    //         </CarouselItem>
+    //       ))}
+    //     </CarouselContent>
+    //     <CarouselPrevious className="absolute left-2 md:-left-6 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full shadow-md p-2 md:p-3 hover:bg-gray-100 transition" />
+    //     <CarouselNext className="absolute right-2 md:-right-6 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full shadow-md p-2 md:p-3 hover:bg-gray-100 transition" />
+    //   </Carousel>
+
+    //   {/* Dots */}
+    //   {count > 0 && (
+    //     <div className="flex justify-center mt-4 gap-2">
+    //       {Array.from({ length: count }).map((_, idx) => (
+    //         <button
+    //           key={idx}
+    //           onClick={() => api?.scrollTo(idx)}
+    //           className={`w-3 h-3 rounded-full ${
+    //             current === idx ? "bg-[#B7410E]" : "bg-gray-300"
+    //           } transition-all`}
+    //         />
+    //       ))}
+    //     </div>
+    //   )}
+    // </div>
+    <div className="relative flex flex-col lg:flex-row gap-6">
+      {/* Main Carousel */}
+      <div className="w-full lg:w-4/5">
+        <Carousel
+          setApi={setApi}
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+        >
+          <CarouselContent className="-ml-4 md:-ml-6 lg:-ml-8">
+            {cardData.map((card, index) => (
+              <CarouselItem
+                key={index}
+                className="pl-4 md:pl-6 lg:pl-8 basis-11/12 sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
+              >
+                <Card className="border-2 border-[#F2C94C]/20 hover:border-[#F2C94C] transition-all h-full">
+                  <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
+                    <div className="w-16 h-16 rounded-full bg-[#F2C94C]/10 flex items-center justify-center">
+                      {card.icon}
+                    </div>
+                    <h3 className="text-xl font-bold">{card.title}</h3>
+                    <p className="text-muted-foreground">{card.description}</p>
+                    <Link
+                      href={card.href}
+                      className="text-[#B7410E] flex items-center gap-1 hover:underline"
+                    >
+                      Learn more <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="absolute left-2 md:-left-6 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full shadow-md p-2 md:p-3 hover:bg-gray-100 transition" />
+          <CarouselNext className="absolute right-2 md:-right-6 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full shadow-md p-2 md:p-3 hover:bg-gray-100 transition" />
+        </Carousel>
+
+        {/* Dots */}
+        {count > 0 && (
+          <div className="flex justify-center mt-4 gap-2">
+            {Array.from({ length: count }).map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => api?.scrollTo(idx)}
+                className={`w-3 h-3 rounded-full ${
+                  current === idx ? "bg-[#B7410E]" : "bg-gray-300"
+                } transition-all`}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Advertisement Card */}
+      <div className="w-full lg:w-1/5">
+        <Card className="border-2 border-blue-300 hover:border-blue-500 transition-all h-full overflow-hidden">
+          <CardContent className="p-6 text-center h-64 relative">
+            <Carousel
+              orientation="horizontal"
+              opts={{
+                align: "center",
+                loop: true,
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 3000,
+                  stopOnInteraction: false,
+                }),
+              ]}
+              className="h-full"
+            >
+              <CarouselContent className="h-full">
+                {adData.map((ad, index) => (
+                  // <CarouselItem key={index} className="h-full">
+                  //   <div className="flex flex-col justify-end items-center h-full space-y-2">
+                  //     <h3 className="text-lg font-semibold text-blue-700">
+                  //       {ad.title}
+                  //     </h3>
+                  //     <p className="text-sm text-muted-foreground">
+                  //       {ad.description}
+                  //     </p>
+                  //     <button className="mt-2 px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded">
+                  //       Learn More
+                  //     </button>
+                  //   </div>
+                  // </CarouselItem>
+                  <CarouselItem
+                    key={index}
+                    className="h-full flex items-center justify-center"
+                  >
+                    <div className="text-center space-y-2">
+                      <h3 className="text-lg font-semibold text-blue-700">
+                        {ad.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {ad.description}
+                      </p>
+                      <button className="mt-2 px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded">
+                        Learn More
+                      </button>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 }

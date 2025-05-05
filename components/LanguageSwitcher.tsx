@@ -33,10 +33,10 @@ const LanguageSwitcher = () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => changeLanguage("en")}>
-          🇬🇧 en
+          🇬🇧 ENGLISH
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => changeLanguage("hi")}>
-          🇮🇳 hi
+          🇮🇳 हिन्दी
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

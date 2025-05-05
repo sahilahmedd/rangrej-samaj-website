@@ -31,33 +31,60 @@
 // }
 
 
-import Razorpay from 'razorpay'
-import { NextRequest, NextResponse } from 'next/server'
+// import Razorpay from 'razorpay'
+// import { NextRequest, NextResponse } from 'next/server'
+
+// const razorpay = new Razorpay({
+//   key_id: process.env.RAZORPAY_KEY_ID!,
+//   key_secret: process.env.RAZORPAY_KEY_SECRET!,
+// })
+
+// export async function POST(req: NextRequest) {
+//   const body = await req.json()
+//   const { amount } = body
+
+//   const payment_capture = 1
+//   const currency = 'INR'
+
+//   const options = {
+//     amount: amount * 100, // amount in paisa
+//     currency,
+//     receipt: `receipt_order_${Date.now()}`,
+//     payment_capture,
+//   }
+
+//   try {
+//     const order = await razorpay.orders.create(options)
+//     return NextResponse.json({ orderId: order.id, amount: order.amount, currency: order.currency })
+//   } catch (err) {
+//     console.error('Razorpay Error:', err)
+//     return new NextResponse('Razorpay order creation failed', { status: 500 })
+//   }
+// }
+
+// app/api/payment/order/route.ts
+import Razorpay from "razorpay"
+import { NextResponse } from "next/server"
 
 const razorpay = new Razorpay({
   key_id: process.env.RAZORPAY_KEY_ID!,
   key_secret: process.env.RAZORPAY_KEY_SECRET!,
 })
 
-export async function POST(req: NextRequest) {
-  const body = await req.json()
-  const { amount } = body
-
-  const payment_capture = 1
-  const currency = 'INR'
-
-  const options = {
-    amount: amount * 100, // amount in paisa
-    currency,
-    receipt: `receipt_order_${Date.now()}`,
-    payment_capture,
-  }
+export async function POST(req: Request) {
+  const { amount } = await req.json()
 
   try {
+    const options = {
+      amount: Number(amount) * 100, // in paise
+      currency: "INR",
+      receipt: "receipt#1",
+    }
+
     const order = await razorpay.orders.create(options)
-    return NextResponse.json({ orderId: order.id, amount: order.amount, currency: order.currency })
-  } catch (err) {
-    console.error('Razorpay Error:', err)
-    return new NextResponse('Razorpay order creation failed', { status: 500 })
+    return NextResponse.json(order)
+  } catch (error) {
+    console.error("Razorpay Error:", error)
+    return NextResponse.json({ error: "Failed to create Razorpay order" }, { status: 500 })
   }
 }
