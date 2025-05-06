@@ -5,11 +5,7 @@
 
 # next.js
 /.next/
-<<<<<<< HEAD
-/out/     
-=======
 /out/
->>>>>>> lang
 
 # production
 /build
@@ -21,7 +17,7 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files
-.env*
+#.env*
 
 # vercel
 .vercel
