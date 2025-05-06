@@ -1,14 +1,12 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Phone, Mail, MapPin, Facebook, Instagram, Youtube } from "lucide-react"
 import ContactForm from "@/components/contact-form"
-<<<<<<< HEAD
+import { useTranslations } from "next-intl";
+
+
 
 export default function ContactPage() {
-=======
-import { useTranslations } from "next-intl";
-export default function ContactPage() {
   const t = useTranslations("Contact");
->>>>>>> lang
   return (
     <main className="flex min-h-screen flex-col">
       {/* Hero Section */}
@@ -134,13 +132,13 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div>
+            {/* <div>
               <h2 className="text-3xl font-bold mb-8 text-[#8B3103]">
                 Send Us a Message
-                {/* {t("contact-us-send-us-a-message")} */}
+                {t("contact-us-send-us-a-message")}
               </h2>
               <ContactForm />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

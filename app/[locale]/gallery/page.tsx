@@ -13,7 +13,7 @@ export default function GalleryPage() {
       <GallerySection />
 
       {/* Video Gallery */}
-      <GalleryVideo />
+      {/* <GalleryVideo /> */}
     </main>
   )
 }

@@ -20,19 +20,16 @@ import {
   Star,
 } from "lucide-react";
 import Link from "next/link";
-import { useTranslations } from 'next-intl'
-import Autoplay from 'embla-carousel-autoplay'
-
-
-
+import { useTranslations } from "next-intl";
+import Autoplay from "embla-carousel-autoplay";
 
 export default function CardSlider() {
   const [api, setApi] = useState<CarouselApi | null>(null);
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
-  const [currentAd, setCurrentAd] = useState(0)
+  const [currentAd, setCurrentAd] = useState(0);
 
-  const t = useTranslations('Homepage')
+  const t = useTranslations("Homepage");
 
   useEffect(() => {
     if (!api) return;
@@ -49,43 +46,37 @@ export default function CardSlider() {
     {
       icon: <Hospital className="w-8 h-8 text-[#B7410E]" />,
       title: t("hospital-title"),
-      description:
-        t("hospital-description"),
+      description: t("hospital-description"),
       href: "/initiatives#health",
     },
     {
       icon: <Landmark className="w-8 h-8 text-[#B7410E]" />,
       title: t("zakat-title"),
-      description:
-        t("zakat-description"),
+      description: t("zakat-description"),
       href: "/donation",
     },
     {
       icon: <Users className="w-8 h-8 text-[#B7410E]" />,
       title: t("nikah-title"),
-      description:
-        t("nikah-description"),
+      description: t("nikah-description"),
       href: "/events#nikah",
     },
     {
       icon: <CalendarDays className="w-8 h-8 text-[#B7410E]" />,
       title: t("education-title"),
-      description:
-        t("education-description"),
+      description: t("education-description"),
       href: "/events",
     },
     {
       icon: <Star className="w-8 h-8 text-[#B7410E]" />,
       title: t("culture-title"),
-      description:
-        t("culture-description"),
+      description: t("culture-description"),
       href: "/events",
     },
     {
       icon: <GraduationCap className="w-8 h-8 text-[#B7410E]" />,
       title: t("academy-title"),
-      description:
-        t("academy-description"),
+      description: t("academy-description"),
       href: "/academy",
     },
   ];
@@ -114,59 +105,60 @@ export default function CardSlider() {
   }, []);
 
   return (
-    <div className="relative">
-      <Carousel
-        setApi={setApi}
-        opts={{
-          align: "start",
-          loop: true,
-        }}
-      >
-        <CarouselContent className="-ml-4 md:-ml-6 lg:-ml-8">
-          {cardData.map((card, index) => (
-            <CarouselItem
-              key={index}
-              className="pl-4 md:pl-6 lg:pl-8 basis-11/12 sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
-            >
-              <Card className="border-2 border-[#F2C94C]/20 hover:border-[#F2C94C] transition-all h-full">
-                <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
-                  <div className="w-16 h-16 rounded-full bg-[#F2C94C]/10 flex items-center justify-center">
-                    {card.icon}
-                  </div>
-                  <h3 className="text-xl font-bold">{card.title}</h3>
-                  <p className="text-muted-foreground">{card.description}</p>
-                  <Link
-                    href={card.href}
-                    className="text-[#B7410E] flex items-center gap-1 hover:underline"
-                  >
-                    {/* Learn more */}
-                    {t("button-LearnMore")}
-                     <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </CardContent>
-              </Card>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious className="absolute left-2 md:-left-6 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full shadow-md p-2 md:p-3 hover:bg-gray-100 transition" />
-        <CarouselNext className="absolute right-2 md:-right-6 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full shadow-md p-2 md:p-3 hover:bg-gray-100 transition" />
-      </Carousel>
+    <div className="flex gap-4">
+      <div className="relative">
+        <Carousel
+          setApi={setApi}
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+        >
+          <CarouselContent className="-ml-4 md:-ml-6 lg:-ml-8">
+            {cardData.map((card, index) => (
+              <CarouselItem
+                key={index}
+                className="pl-4 md:pl-6 lg:pl-8 basis-11/12 sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
+              >
+                <Card className="border-2 border-[#F2C94C]/20 hover:border-[#F2C94C] transition-all h-full">
+                  <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
+                    <div className="w-16 h-16 rounded-full bg-[#F2C94C]/10 flex items-center justify-center">
+                      {card.icon}
+                    </div>
+                    <h3 className="text-xl font-bold">{card.title}</h3>
+                    <p className="text-muted-foreground">{card.description}</p>
+                    <Link
+                      href={card.href}
+                      className="text-[#B7410E] flex items-center gap-1 hover:underline"
+                    >
+                      {/* Learn more */}
+                      {t("button-LearnMore")}
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="absolute left-2 md:-left-6 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full shadow-md p-2 md:p-3 hover:bg-gray-100 transition" />
+          <CarouselNext className="absolute right-2 md:-right-6 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full shadow-md p-2 md:p-3 hover:bg-gray-100 transition" />
+        </Carousel>
 
-      {/* Dots */}
-      {count > 0 && (
-        <div className="flex justify-center mt-4 gap-2">
-          {Array.from({ length: count }).map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => api?.scrollTo(idx)}
-              className={`w-3 h-3 rounded-full ${
-                current === idx ? "bg-[#B7410E]" : "bg-gray-300"
-              } transition-all`}
-            />
-          ))}
-        </div>
-      )}
-
+        {/* Dots */}
+        {count > 0 && (
+          <div className="flex justify-center mt-4 gap-2">
+            {Array.from({ length: count }).map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => api?.scrollTo(idx)}
+                className={`w-3 h-3 rounded-full ${
+                  current === idx ? "bg-[#B7410E]" : "bg-gray-300"
+                } transition-all`}
+              />
+            ))}
+          </div>
+        )}
+      </div>
 
       {/* Ads slider */}
       <div className="w-full lg:w-1/5">
