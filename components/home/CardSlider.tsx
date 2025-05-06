@@ -20,22 +20,13 @@ import {
   Star,
 } from "lucide-react";
 import Link from "next/link";
-<<<<<<< HEAD
-import Autoplay from "embla-carousel-autoplay";
-
-=======
 import { useTranslations } from 'next-intl'
->>>>>>> lang
 export default function CardSlider() {
   const [api, setApi] = useState<CarouselApi | null>(null);
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
-<<<<<<< HEAD
-  const [currentAd, setCurrentAd] = useState(0);
-=======
 
   const t = useTranslations('Homepage')
->>>>>>> lang
 
   useEffect(() => {
     if (!api) return;
@@ -51,79 +42,44 @@ export default function CardSlider() {
   const cardData = [
     {
       icon: <Hospital className="w-8 h-8 text-[#B7410E]" />,
-<<<<<<< HEAD
-      title: "Hospital",
-      description:
-        "Free medical camps, treatments, and health awareness programs for our community.",
-=======
       title: t("hospital-title"),
       description:
         t("hospital-description"),
->>>>>>> lang
       href: "/initiatives#health",
     },
     {
       icon: <Landmark className="w-8 h-8 text-[#B7410E]" />,
-<<<<<<< HEAD
-      title: "Zakat & Donations",
-      description:
-        "Supporting the needy through charitable donations and zakat distribution.",
-=======
       title: t("zakat-title"),
       description:
         t("zakat-description"),
->>>>>>> lang
       href: "/donation",
     },
     {
       icon: <Users className="w-8 h-8 text-[#B7410E]" />,
-<<<<<<< HEAD
-      title: "Nikah Sammelan",
-      description:
-        "Marriage meets to help community members find suitable life partners.",
-=======
       title: t("nikah-title"),
       description:
         t("nikah-description"),
->>>>>>> lang
       href: "/events#nikah",
     },
     {
       icon: <CalendarDays className="w-8 h-8 text-[#B7410E]" />,
-<<<<<<< HEAD
-      title: "Upcoming Events",
-      description:
-        "Stay updated with our community gatherings, cultural programs, and more.",
-=======
       title: t("education-title"),
       description:
         t("education-description"),
->>>>>>> lang
       href: "/events",
     },
     {
       icon: <Star className="w-8 h-8 text-[#B7410E]" />,
-<<<<<<< HEAD
-      title: "More Events",
-      description:
-        "Never miss out on what’s happening around you in the community.",
-=======
       title: t("culture-title"),
       description:
         t("culture-description"),
->>>>>>> lang
       href: "/events",
     },
     {
       icon: <GraduationCap className="w-8 h-8 text-[#B7410E]" />,
-<<<<<<< HEAD
-      title: "Rangrej Academy",
-      description: "Empowering education in the community.",
-=======
       title: t("academy-title"),
       description:
         t("academy-description"),
->>>>>>> lang
       href: "/academy",
     },
   ];

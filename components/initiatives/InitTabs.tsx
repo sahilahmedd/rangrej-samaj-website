@@ -475,17 +475,6 @@ import ResponsiveTabHeader from "../ResponsiveTabHeader";
 import { Card, CardContent } from "../ui/card";
 import { Button } from "../ui/button";
 import Image from "next/image";
-<<<<<<< HEAD
-
-const tabItems = [
-  { label: "Medical Aid", value: "health" },
-  { label: "Zakat distribution", value: "zakat" },
-  { label: "Nikah Sammelan", value: "nikah" },
-  { label: "Education", value: "education" },
-];
-
-export default function InitTabs() {
-=======
 import { useTranslations } from "next-intl";
 
 export default function InitTabs() {
@@ -497,7 +486,6 @@ const tabItems = [
   { label: t("initiatives-tabitems-educational-support"), value: "education" },
 ];
 
->>>>>>> lang
   const [activeTab, setActiveTab] = useState("health");
 
   return (
@@ -535,33 +523,6 @@ const tabItems = [
               </div>
               <div>
                 <div className="inline-block rounded-lg bg-[#F2C94C]/10 px-3 py-1 text-sm text-[#B7410E] mb-4">
-<<<<<<< HEAD
-                  Health Initiative
-                </div>
-                <h2 className="text-3xl font-bold mb-6 text-[#8B3103]">
-                  Medical Aid Program
-                </h2>
-                <p className="text-lg mb-4">
-                  Our Medical Aid Program aims to provide accessible healthcare
-                  services to all members of our community, especially those who
-                  cannot afford quality medical care.
-                </p>
-                <p className="text-lg mb-4">
-                  Through this initiative, we offer:
-                </p>
-                <ul className="list-disc pl-6 mb-6 space-y-2">
-                  <li>Free medical check-up camps in various locations</li>
-                  <li>Financial assistance for critical medical treatments</li>
-                  <li>Subsidized medicines for chronic conditions</li>
-                  <li>Health awareness programs and workshops</li>
-                  <li>Tie-ups with hospitals for discounted treatments</li>
-                </ul>
-                <div className="flex flex-wrap gap-4">
-                  <Button className="bg-[#B7410E] hover:bg-[#8B3103] text-white">
-                    Apply for Medical Aid
-                  </Button>
-                  <Button variant="outline">Volunteer for Health Camps</Button>
-=======
                   {/* Health Initiative */}
                   {t("initiatives-Health-Initiative")}
                 </div>
@@ -610,19 +571,14 @@ const tabItems = [
                     {/* Volunteer for Health Camps */}
                     {t("initiatives-Medical-button2")}
                   </Button>
->>>>>>> lang
                 </div>
               </div>
             </div>
 
             <div className="mt-12">
               <h3 className="text-2xl font-bold mb-6 text-[#8B3103]">
-<<<<<<< HEAD
-                Recent Health Camps
-=======
                 {/* Recent Health Camps */}
                 {t("initiatives-Medical-camps")}
->>>>>>> lang
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {[1, 2, 3].map((i) => (
@@ -637,17 +593,6 @@ const tabItems = [
                     </div>
                     <CardContent className="p-6">
                       <h4 className="font-bold text-lg mb-2">
-<<<<<<< HEAD
-                        Health Check-up Camp {i}
-                      </h4>
-                      <p className="text-sm text-muted-foreground mb-2">
-                        March {i * 5}, 2025 | Mumbai
-                      </p>
-                      <p className="text-muted-foreground">
-                        Provided free health check-ups to over 200 community
-                        members, including general health, eye, and dental
-                        examinations.
-=======
                         {/* Health Check-up Camp {i} */}
                         {t("initiatives-Medical-camps1-title")} {i}
                       </h4>
@@ -660,7 +605,6 @@ const tabItems = [
                         members, including general health, eye, and dental
                         examinations. */}
                         {t("initiatives-Medical-camps1-description")}
->>>>>>> lang
                       </p>
                     </CardContent>
                   </Card>
@@ -669,13 +613,6 @@ const tabItems = [
             </div>
 
             <div className="bg-[#F9F5E7] p-6 rounded-lg">
-<<<<<<< HEAD
-              <h3 className="text-xl font-bold mb-4">Impact Statistics</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                <div className="p-4 bg-white rounded-lg">
-                  <div className="text-3xl font-bold text-[#B7410E]">50+</div>
-                  <p>Health Camps Conducted</p>
-=======
               <h3 className="text-xl font-bold mb-4">
                 {/* Impact Statistics */}
                 {t("initiatives-medical-Impact-title")}
@@ -687,23 +624,11 @@ const tabItems = [
                     {/* Health Camps Conducted */}
                     {t("initiatives-medical-Impact-Camps")}
                     </p>
->>>>>>> lang
                 </div>
                 <div className="p-4 bg-white rounded-lg">
                   <div className="text-3xl font-bold text-[#B7410E]">
                     5,000+
                   </div>
-<<<<<<< HEAD
-                  <p>People Benefited</p>
-                </div>
-                <div className="p-4 bg-white rounded-lg">
-                  <div className="text-3xl font-bold text-[#B7410E]">₹50L+</div>
-                  <p>Medical Aid Distributed</p>
-                </div>
-                <div className="p-4 bg-white rounded-lg">
-                  <div className="text-3xl font-bold text-[#B7410E]">20+</div>
-                  <p>Hospital Partnerships</p>
-=======
                   <p>
                     {/* People Benefited */}
                     {t("initiatives-medical-Impact-Benefited")}
@@ -722,7 +647,6 @@ const tabItems = [
                     {/* Hospital Partnerships */}
                     {t("initiatives-medical-Impact-Partnerships")}
                     </p>
->>>>>>> lang
                 </div>
               </div>
             </div>
@@ -732,32 +656,6 @@ const tabItems = [
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="inline-block rounded-lg bg-[#F2C94C]/10 px-3 py-1 text-sm text-[#B7410E] mb-4">
-<<<<<<< HEAD
-                  Charity Initiative
-                </div>
-                <h2 className="text-3xl font-bold mb-6 text-[#8B3103]">
-                  Zakat Distribution
-                </h2>
-                <p className="text-lg mb-4">
-                  Zakat is one of the five pillars of Islam, requiring Muslims
-                  to give 2.5% of their qualifying wealth to those in need. Our
-                  Zakat Distribution program ensures that these funds reach the
-                  most deserving members of our community.
-                </p>
-                <p className="text-lg mb-4">Our Zakat Distribution covers:</p>
-                <ul className="list-disc pl-6 mb-6 space-y-2">
-                  <li>Financial assistance to poor families</li>
-                  <li>Educational scholarships for deserving students</li>
-                  <li>Medical treatment for those who cannot afford it</li>
-                  <li>Support for widows and orphans</li>
-                  <li>Aid for those in debt due to genuine needs</li>
-                </ul>
-                <div className="flex flex-wrap gap-4">
-                  <Button className="bg-[#B7410E] hover:bg-[#8B3103] text-white">
-                    Contribute Zakat
-                  </Button>
-                  <Button variant="outline">Apply for Zakat Assistance</Button>
-=======
                   {/* Charity Initiative */}  
                   {t("initiatives-Zakat-Initiative")}
                 </div>
@@ -807,7 +705,6 @@ const tabItems = [
                     {/* Apply for Zakat Assistance */}
                     {t("initiatives-Zakat-button2")}
                   </Button>
->>>>>>> lang
                 </div>
               </div>
               <div className="relative h-[400px] rounded-lg overflow-hidden order-first lg:order-last">
@@ -822,12 +719,8 @@ const tabItems = [
 
             <div className="mt-12">
               <h3 className="text-2xl font-bold mb-6 text-[#8B3103]">
-<<<<<<< HEAD
-                Recent Zakat Distributions
-=======
                 {/* Recent Zakat Distributions */}
                 {t("initiatives-Zakat-Recent-Distributions")}
->>>>>>> lang
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {[1, 2, 3].map((i) => (
@@ -842,17 +735,6 @@ const tabItems = [
                     </div>
                     <CardContent className="p-6">
                       <h4 className="font-bold text-lg mb-2">
-<<<<<<< HEAD
-                        Zakat Distribution Drive {i}
-                      </h4>
-                      <p className="text-sm text-muted-foreground mb-2">
-                        February {i * 5}, 2025 | Multiple Locations
-                      </p>
-                      <p className="text-muted-foreground">
-                        Distributed Zakat funds to 100+ families, providing
-                        financial assistance for basic needs, education, and
-                        medical treatments.
-=======
                         {/* Zakat Distribution Drive {i} */}
                         {t("initiatives-Zakat-Distributions")} {i}
                       </h4>
@@ -865,7 +747,6 @@ const tabItems = [
                         financial assistance for basic needs, education, and
                         medical treatments. */}
                         {t("initiatives-Zakat-Distributions-description")}
->>>>>>> lang
                       </p>
                     </CardContent>
                   </Card>
@@ -874,13 +755,6 @@ const tabItems = [
             </div>
 
             <div className="bg-[#F9F5E7] p-6 rounded-lg">
-<<<<<<< HEAD
-              <h3 className="text-xl font-bold mb-4">Impact Statistics</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                <div className="p-4 bg-white rounded-lg">
-                  <div className="text-3xl font-bold text-[#B7410E]">₹1Cr+</div>
-                  <p>Zakat Collected</p>
-=======
               <h3 className="text-xl font-bold mb-4">
                 {/* Impact Statistics */}
                 {t("initiatives-Zakat-Distributions-Impact-title")}
@@ -892,23 +766,11 @@ const tabItems = [
                     {/* Zakat Collected */}
                     {t("initiatives-Zakat-Distributions-Impact-Amount")}
                   </p>
->>>>>>> lang
                 </div>
                 <div className="p-4 bg-white rounded-lg">
                   <div className="text-3xl font-bold text-[#B7410E]">
                     1,000+
                   </div>
-<<<<<<< HEAD
-                  <p>Families Supported</p>
-                </div>
-                <div className="p-4 bg-white rounded-lg">
-                  <div className="text-3xl font-bold text-[#B7410E]">200+</div>
-                  <p>Students Sponsored</p>
-                </div>
-                <div className="p-4 bg-white rounded-lg">
-                  <div className="text-3xl font-bold text-[#B7410E]">50+</div>
-                  <p>Medical Treatments Funded</p>
-=======
                   <p>
                     {/* Families Supported */}
                     {t("initiatives-Zakat-Distributions-Impact-Families")}
@@ -928,7 +790,6 @@ const tabItems = [
                     {/* Medical Treatments Funded */}
                     {t("initiatives-Zakat-Distributions-Impact-Medical")}
                     </p>
->>>>>>> lang
                 </div>
               </div>
             </div>
@@ -946,27 +807,6 @@ const tabItems = [
               </div>
               <div>
                 <div className="inline-block rounded-lg bg-[#F2C94C]/10 px-3 py-1 text-sm text-[#B7410E] mb-4">
-<<<<<<< HEAD
-                  Community Initiative
-                </div>
-                <h2 className="text-3xl font-bold mb-6 text-[#8B3103]">
-                  Nikah Sammelan
-                </h2>
-                <p className="text-lg mb-4">
-                  Our Nikah Sammelan (Marriage Meet) initiative aims to help
-                  eligible candidates from the Rangraj community find suitable
-                  life partners in a respectful and organized environment.
-                </p>
-                <p className="text-lg mb-4">Features of our Nikah Sammelan:</p>
-                <ul className="list-disc pl-6 mb-6 space-y-2">
-                  <li>Carefully screened and verified profiles</li>
-                  <li>Organized meetings in a dignified setting</li>
-                  <li>Biodata sharing and introduction facilitation</li>
-                  <li>Privacy and respect for all participants</li>
-                  <li>
-                    Financial assistance for marriages of underprivileged
-                    families
-=======
                   {/* Community Initiative */}
                   {t("initiatives-nikah-Initiative")}
                 </div>
@@ -1008,16 +848,10 @@ const tabItems = [
                     {/* Financial assistance for marriages of underprivileged
                     families */}
                     {t("initiatives-nikah-Features5")}
->>>>>>> lang
                   </li>
                 </ul>
                 <div className="flex flex-wrap gap-4">
                   <Button className="bg-[#B7410E] hover:bg-[#8B3103] text-white">
-<<<<<<< HEAD
-                    Register for Next Sammelan
-                  </Button>
-                  <Button variant="outline">Submit Your Profile</Button>
-=======
                     {/* Register for Next Sammelan */}
                     {t("initiatives-nikah-button1")}
                   </Button>
@@ -1025,19 +859,14 @@ const tabItems = [
                     {/* Submit Your Profile */}
                     {t("initiatives-nikah-button2")}
                     </Button>
->>>>>>> lang
                 </div>
               </div>
             </div>
 
             <div className="mt-12">
               <h3 className="text-2xl font-bold mb-6 text-[#8B3103]">
-<<<<<<< HEAD
-                Upcoming Nikah Sammelan
-=======
                 {/* Upcoming Nikah Sammelan */}
                 {t("initiatives-nikah-upcoming")}
->>>>>>> lang
               </h3>
               <Card className="overflow-hidden">
                 <div className="grid grid-cols-1 md:grid-cols-2">
@@ -1051,24 +880,6 @@ const tabItems = [
                   </div>
                   <CardContent className="p-6 flex flex-col justify-center">
                     <h4 className="font-bold text-xl mb-2">
-<<<<<<< HEAD
-                      Annual Nikah Sammelan 2025
-                    </h4>
-                    <p className="text-muted-foreground mb-4">
-                      Date: May 15, 2025
-                      <br />
-                      Time: 10:00 AM - 6:00 PM
-                      <br />
-                      Venue: Rangraj Community Hall, Mumbai
-                    </p>
-                    <p className="text-muted-foreground mb-4">
-                      Our annual marriage meet bringing together eligible
-                      candidates from the Rangraj community. Registration is now
-                      open for candidates and families.
-                    </p>
-                    <Button className="w-full md:w-auto bg-[#B7410E] hover:bg-[#8B3103] text-white">
-                      Register Now
-=======
                       {/* Annual Nikah Sammelan 2025 */}
                 {t("initiatives-nikah-upcoming-title")}
                     </h4>
@@ -1092,7 +903,6 @@ const tabItems = [
                     <Button className="w-full md:w-auto bg-[#B7410E] hover:bg-[#8B3103] text-white">
                       {/* Register Now */}
                 {t("initiatives-nikah-upcoming-button")}
->>>>>>> lang
                     </Button>
                   </CardContent>
                 </div>
@@ -1100,14 +910,10 @@ const tabItems = [
             </div>
 
             <div className="bg-[#F9F5E7] p-6 rounded-lg">
-<<<<<<< HEAD
-              <h3 className="text-xl font-bold mb-4">Success Stories</h3>
-=======
               <h3 className="text-xl font-bold mb-4">
                 {/* Success Stories */}
                 {t("initiatives-nikah-Success-title")}
                 </h3>
->>>>>>> lang
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {[1, 2, 3].map((i) => (
                   <Card key={i} className="border-2 border-[#F2C94C]/20">
@@ -1122,11 +928,6 @@ const tabItems = [
                           />
                         </div>
                         <div>
-<<<<<<< HEAD
-                          <h4 className="font-bold">Couple {i}</h4>
-                          <p className="text-sm text-muted-foreground">
-                            Married: 202{i}
-=======
                           <h4 className="font-bold">
                             {/* Couple {i} */}
                             {t("initiatives-nikah-Success")} {i}
@@ -1134,25 +935,16 @@ const tabItems = [
                           <p className="text-sm text-muted-foreground">
                             {/* Married: 202{i} */}
                             {t("initiatives-nikah-Success-Date")} 202{i}
->>>>>>> lang
                           </p>
                         </div>
                       </div>
                       <p className="italic">
-<<<<<<< HEAD
-                        "We met at the Rangraj Samaj Nikah Sammelan and
-                        instantly connected. The organized environment helped us
-                        get to know each other's families properly. We're
-                        grateful to the Samaj for this beautiful beginning to
-                        our life together."
-=======
                         {/* "We met at the Rangraj Samaj Nikah Sammelan and
                         instantly connected. The organized environment helped us
                         get to know each other's families properly. We're
                         grateful to the Samaj for this beautiful beginning to
                         our life together." */}
                         {t("initiatives-nikah-Success-description")}
->>>>>>> lang
                       </p>
                     </CardContent>
                   </Card>
@@ -1165,34 +957,6 @@ const tabItems = [
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="inline-block rounded-lg bg-[#F2C94C]/10 px-3 py-1 text-sm text-[#B7410E] mb-4">
-<<<<<<< HEAD
-                  Education Initiative
-                </div>
-                <h2 className="text-3xl font-bold mb-6 text-[#8B3103]">
-                  Educational Support
-                </h2>
-                <p className="text-lg mb-4">
-                  Education is the foundation for a better future. Our
-                  Educational Support initiative aims to ensure that every child
-                  in our community has access to quality education, regardless
-                  of their financial background.
-                </p>
-                <p className="text-lg mb-4">
-                  Our educational programs include:
-                </p>
-                <ul className="list-disc pl-6 mb-6 space-y-2">
-                  <li>Scholarships for deserving students</li>
-                  <li>Financial assistance for higher education</li>
-                  <li>Career guidance and counseling</li>
-                  <li>Skill development workshops</li>
-                  <li>Educational materials and resources</li>
-                </ul>
-                <div className="flex flex-wrap gap-4">
-                  <Button className="bg-[#B7410E] hover:bg-[#8B3103] text-white">
-                    Apply for Scholarship
-                  </Button>
-                  <Button variant="outline">Donate for Education</Button>
-=======
                   {/* Education Initiative */}
                   {t("education-initiative")}
                 </div>
@@ -1242,7 +1006,6 @@ const tabItems = [
                     {/* Donate for Education */}
                     {t("donate-education-button")}
                   </Button>
->>>>>>> lang
                 </div>
               </div>
               <div className="relative h-[400px] rounded-lg overflow-hidden order-first lg:order-last">
@@ -1257,12 +1020,8 @@ const tabItems = [
 
             <div className="mt-12">
               <h3 className="text-2xl font-bold mb-6 text-[#8B3103]">
-<<<<<<< HEAD
-                Scholarship Recipients
-=======
                 {/* Scholarship Recipients */}
                 {t("scholarship-recipients-title")}
->>>>>>> lang
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {[1, 2, 3].map((i) => (
@@ -1276,18 +1035,6 @@ const tabItems = [
                       />
                     </div>
                     <CardContent className="p-6">
-<<<<<<< HEAD
-                      <h4 className="font-bold text-lg mb-2">Student {i}</h4>
-                      <p className="text-sm text-muted-foreground mb-2">
-                        Pursuing:{" "}
-                        {["Engineering", "Medicine", "Computer Science"][i - 1]}
-                      </p>
-                      <p className="text-muted-foreground">
-                        "The scholarship from Rangraj Samaj has been
-                        instrumental in helping me pursue my dream of becoming a{" "}
-                        {["engineer", "doctor", "software developer"][i - 1]}.
-                        I'm grateful for this support."
-=======
                       <h4 className="font-bold text-lg mb-2">
                         {/* Student {i} */}
                         {t("student-name")} {i}
@@ -1303,7 +1050,6 @@ const tabItems = [
                         {["engineer", "doctor", "software developer"][i - 1]}.
                         I'm grateful for this support." */}
                         {t("student-quote")}
->>>>>>> lang
                       </p>
                     </CardContent>
                   </Card>
@@ -1312,25 +1058,6 @@ const tabItems = [
             </div>
 
             <div className="bg-[#F9F5E7] p-6 rounded-lg">
-<<<<<<< HEAD
-              <h3 className="text-xl font-bold mb-4">Impact Statistics</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                <div className="p-4 bg-white rounded-lg">
-                  <div className="text-3xl font-bold text-[#B7410E]">500+</div>
-                  <p>Scholarships Awarded</p>
-                </div>
-                <div className="p-4 bg-white rounded-lg">
-                  <div className="text-3xl font-bold text-[#B7410E]">₹50L+</div>
-                  <p>Educational Aid Distributed</p>
-                </div>
-                <div className="p-4 bg-white rounded-lg">
-                  <div className="text-3xl font-bold text-[#B7410E]">100+</div>
-                  <p>Professional Graduates</p>
-                </div>
-                <div className="p-4 bg-white rounded-lg">
-                  <div className="text-3xl font-bold text-[#B7410E]">20+</div>
-                  <p>Career Workshops</p>
-=======
               <h3 className="text-xl font-bold mb-4">
                 {/* Impact Statistics */}
                 {t("impact-statistics-title")}
@@ -1363,7 +1090,6 @@ const tabItems = [
                     {/* Career Workshops */}
                     {t("impact-statistics4")}
                   </p>
->>>>>>> lang
                 </div>
               </div>
             </div>

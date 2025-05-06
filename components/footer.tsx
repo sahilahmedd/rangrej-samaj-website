@@ -1,15 +1,10 @@
 import Link from "next/link"
 import { Facebook, Instagram, Youtube, Mail, Phone, MapPin } from "lucide-react"
 import Logo from "./Logo"
-<<<<<<< HEAD
-
-export default function Footer() {
-=======
 import { useTranslations } from "next-intl"
 
 export default function Footer() {
   const t = useTranslations("Footer")
->>>>>>> lang
   return (
     // <footer className="bg-[#8B3103] text-white mx-4 my-10 rounded-2xl">
     //   <div className="container px-4 md:px-6 py-12">

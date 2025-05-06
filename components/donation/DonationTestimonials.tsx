@@ -1,14 +1,6 @@
 import React from 'react'
 import { Card, CardContent } from '../ui/card'
 import Image from 'next/image'
-<<<<<<< HEAD
-
-const DonationTestimonials = () => {
-  return (
-    <section className="py-16 bg-[#F9F5E7]">
-    <div className="container px-4 md:px-6">
-      <h2 className="text-3xl font-bold text-center mb-12 text-[#8B3103]">Impact Stories</h2>
-=======
 import { useTranslations } from 'next-intl';
 
 const DonationTestimonials = () => {
@@ -20,7 +12,6 @@ const DonationTestimonials = () => {
         {/* Impact Stories */}
         {t("donation-testimonials-title")}
       </h2>
->>>>>>> lang
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {[1, 2, 3].map((i) => (
           <Card key={i} className="border-2 border-[#F2C94C]/20">
@@ -35,16 +26,6 @@ const DonationTestimonials = () => {
                   />
                 </div>
                 <div>
-<<<<<<< HEAD
-                  <h4 className="font-bold">Beneficiary {i}</h4>
-                  <p className="text-sm text-muted-foreground">Healthcare Recipient</p>
-                </div>
-              </div>
-              <p className="italic">
-                "The medical assistance provided by Rangraj Samaj was life-saving for my family. My child needed
-                urgent surgery, and we couldn't afford it. Thanks to the generous donors, my child received the
-                treatment and is now healthy and thriving."
-=======
                   <h4 className="font-bold">
                     {/* Beneficiary */}
                     {t("donation-testimonials-beneficiary")} {i}
@@ -60,7 +41,6 @@ const DonationTestimonials = () => {
                 urgent surgery, and we couldn't afford it. Thanks to the generous donors, my child received the
                 treatment and is now healthy and thriving. */}
                 {t("donation-testimonials-testimonial")}
->>>>>>> lang
               </p>
             </CardContent>
           </Card>

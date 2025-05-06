@@ -29,12 +29,8 @@ const AboutHero = () => {
     </div>
     <div className="container relative z-10 px-4 md:px-6 flex flex-col items-center text-center">
       <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tighter">
-<<<<<<< HEAD
-        About Rangraj Samaj
-=======
         {/* About Rangraj Samaj */}
         {t('title')}
->>>>>>> lang
       </h1>
     </div>
   </section>

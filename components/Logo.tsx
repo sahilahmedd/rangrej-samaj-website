@@ -15,11 +15,7 @@ const Logo = ({ width, height, style, alt }: types) => {
         width={width}
         height={height}
         className={style}
-<<<<<<< HEAD
         src="/images/logo1.png"
-=======
-        src="./images/logo.png"
->>>>>>> lang
         alt={alt}
       />
     </div>

@@ -43,10 +43,7 @@ export default async function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <div className="flex min-h-screen flex-col">
             <Header />
-<<<<<<< HEAD
             <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="beforeInteractive" />
-=======
->>>>>>> lang
             {children}
             <Footer />
           </div>
