@@ -141,12 +141,8 @@ export default function Footer() {
         {/* <h3 className="text-lg font-bold mb-4">Rangraj Samaj</h3> */}
         <Logo width={50} height={50} style="rounded-lg mb-5" alt="Logo" />
         <p className="text-white/80 mb-4 text-sm">
-<<<<<<< HEAD
-          Empowering and uniting the Rangraj (Rangrez) Samaj through health, charity, marriage meets, and cultural awareness.
-=======
           {/* Empowering and uniting the Rangraj (Rangrez) Samaj through health, charity, marriage meets, and cultural awareness. */}
           {t("footer-title-p")}
->>>>>>> lang
         </p>
         <div className="flex justify-start gap-4">
           <a href="#" className="text-white/80 hover:text-white">
@@ -163,18 +159,6 @@ export default function Footer() {
 
       {/* Quick Links */}
       <div className="text-left">
-<<<<<<< HEAD
-        <h3 className="text-lg font-bold mb-4">Quick Links</h3>
-        <ul className="space-y-2 text-sm">
-          {[
-            { href: "/", label: "Home" },
-            { href: "/about", label: "About Us" },
-            { href: "/initiatives", label: "Our Initiatives" },
-            { href: "/events", label: "Events" },
-            { href: "/gallery", label: "Gallery" },
-            { href: "/donation", label: "Donation" },
-            { href: "/contact", label: "Contact Us" },
-=======
         <h3 className="text-lg font-bold mb-4">
           {/* Quick Links */}
           {t("footer-quick-links")}
@@ -188,7 +172,6 @@ export default function Footer() {
             { href: "/gallery", label: t("gallery") },
             { href: "/donation", label: t("donation") },
             { href: "/contact", label: t("contact") },
->>>>>>> lang
           ].map((link) => (
             <li key={link.href}>
               <Link href={link.href} className="text-white/80 hover:text-white">
@@ -201,16 +184,6 @@ export default function Footer() {
 
       {/* Initiatives */}
       <div className="text-left">
-<<<<<<< HEAD
-        <h3 className="text-lg font-bold mb-4">Initiatives</h3>
-        <ul className="space-y-2 text-sm">
-          {[
-            { href: "/initiatives#health", label: "Medical Aid" },
-            { href: "/initiatives#zakat", label: "Zakat Distribution" },
-            { href: "/initiatives#vivah", label: "Vivah Sammelan" },
-            { href: "/initiatives#education", label: "Educational Support" },
-            { href: "/events", label: "Community Events" },
-=======
         <h3 className="text-lg font-bold mb-4">
           {/* Initiatives */}
           {t("footer-initiatives")}
@@ -222,7 +195,6 @@ export default function Footer() {
             { href: "/initiatives#vivah", label: t("footer-vivah-sammelan") },
             { href: "/initiatives#education", label: t("footer-educational-support") },
             { href: "/events", label: t("footer-community-events") },
->>>>>>> lang
           ].map((link) => (
             <li key={link.href}>
               <Link href={link.href} className="text-white/80 hover:text-white">
@@ -235,35 +207,19 @@ export default function Footer() {
 
       {/* Contact */}
       <div className="text-left">
-<<<<<<< HEAD
-        <h3 className="text-lg font-bold mb-4">Contact Us</h3>
-=======
         <h3 className="text-lg font-bold mb-4">
           {/* Contact Us */}
           {t("footer-contact")}
           </h3>
->>>>>>> lang
         <ul className="space-y-3 text-sm">
           <li className="flex flex-col sm:flex-row sm:items-start gap-3">
             <MapPin className="w-5 h-5 flex-shrink-0" />
             <span className="text-white/80 leading-snug">
-<<<<<<< HEAD
-              Rangraj Bhavan, 123 Community Street
-              Mumbai, Maharashtra 400001
-=======
               {t("footer-address")}
->>>>>>> lang
             </span>
           </li>
           <li className="flex items-center justify-start sm:justify-start gap-3">
             <Phone className="w-5 h-5 flex-shrink-0" />
-<<<<<<< HEAD
-            <span className="text-white/80">+91 98765 43210</span>
-          </li>
-          <li className="flex items-center justify-start sm:justify-start gap-3">
-            <Mail className="w-5 h-5 flex-shrink-0" />
-            <span className="text-white/80">info@rangrajsamaj.org</span>
-=======
             <span className="text-white/80">
               {t("footer-phone")}
             </span>
@@ -273,7 +229,6 @@ export default function Footer() {
             <span className="text-white/80">
               {t("footer-email")}
             </span>
->>>>>>> lang
           </li>
         </ul>
       </div>
@@ -281,14 +236,10 @@ export default function Footer() {
 
     {/* Footer Bottom */}
     <div className="border-t border-white/20 mt-8 pt-6 text-center text-white/60 text-sm">
-<<<<<<< HEAD
-      <p>&copy; {new Date().getFullYear()} Rangraj Samaj. All rights reserved.</p>
-=======
       <p>
         {/* &copy; {new Date().getFullYear()} Rangraj Samaj. All rights reserved. */}
         {t("footer-copyright")}
       </p>
->>>>>>> lang
     </div>
   </div>
 </footer>

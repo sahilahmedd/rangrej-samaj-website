@@ -21,6 +21,11 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from 'next-intl'
+import Autoplay from 'embla-carousel-autoplay'
+
+
+
+
 export default function CardSlider() {
   const [api, setApi] = useState<CarouselApi | null>(null);
   const [current, setCurrent] = useState(0);
