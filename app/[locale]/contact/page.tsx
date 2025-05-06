@@ -101,7 +101,7 @@ export default function ContactPage() {
                 </Card>
               </div>
 
-              <div className="mt-8">
+              <div className="mt-8">            
                 <h3 className="font-bold text-lg mb-4">
                   {/* Connect With Us */}
                   {t("contact-us-connect-with-us")}
