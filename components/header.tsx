@@ -8,6 +8,7 @@ import { Menu } from "lucide-react"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import Logo from "./Logo"
+<<<<<<< HEAD
 import LanguageSwitcher from "./LanguageSwitcher"
 
 export default function Header() {
@@ -22,6 +23,22 @@ export default function Header() {
     { name: "Gallery", href: "/gallery" },
     { name: "Donation", href: "/donation" },
     { name: "Contact", href: "/contact" },
+=======
+import { useTranslations } from "next-intl"
+export default function Header() {
+  const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
+  const t = useTranslations("Header")
+
+  const navigation = [
+    { name: t("home"), href: "/" },
+    { name: t("about"), href: "/about" },
+    { name: t("initiatives"), href: "/initiatives" },
+    { name: t("events"), href: "/events" },
+    { name: t("gallery"), href: "/gallery" },
+    { name: t("donation"), href: "/donation" },
+    { name: t("contact"), href: "/contact" },
+>>>>>>> lang
   ]
 
   return (
@@ -51,9 +68,17 @@ export default function Header() {
 
         <div className="flex items-center gap-4">
           <Button asChild className="hidden md:flex bg-[#B7410E] hover:bg-[#8B3103] text-white">
+<<<<<<< HEAD
             <Link href="/donation">Donate Now</Link>
           </Button>
           <LanguageSwitcher />
+=======
+            <Link href="/donation">
+            {/* Donate Now */}
+            {t("button-Donate")}
+            </Link>
+          </Button>
+>>>>>>> lang
 
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="md:hidden">

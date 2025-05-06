@@ -1,13 +1,25 @@
 import React from 'react'
 import { Card, CardContent } from '../ui/card'
 import Image from 'next/image'
+<<<<<<< HEAD
 
 const Testimonials = () => {
+=======
+import { useTranslations } from 'next-intl'
+
+const Testimonials = () => {
+  const t = useTranslations("Homepage");
+>>>>>>> lang
   return (
     <section className="py-16 bg-[#F9F5E7]">
     <div className="container px-4 md:px-6">
       <h2 className="text-3xl font-bold text-center mb-12 text-[#8B3103]">
+<<<<<<< HEAD
         Community Voices
+=======
+        {/* Community Voices */}
+        {t("home-testimonials-title")}
+>>>>>>> lang
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {[1, 2, 3].map((i) => (
@@ -23,16 +35,34 @@ const Testimonials = () => {
                   />
                 </div>
                 <div>
+<<<<<<< HEAD
                   <h4 className="font-bold">Community Member {i}</h4>
                   <p className="text-sm text-muted-foreground">
                     Beneficiary
+=======
+                  <h4 className="font-bold">
+                    {/* Community Member */}
+                    {t("home-testimonials-title-h4")}
+                    {i}
+                    </h4>
+                  <p className="text-sm text-muted-foreground">
+                    {/* Beneficiary */}
+                    {t("home-testimonials-title-beneficiary")}
+>>>>>>> lang
                   </p>
                 </div>
               </div>
               <p className="italic">
+<<<<<<< HEAD
                 "The support from Rangraj Samaj has been life-changing for
                 my family. The medical assistance helped us during a
                 difficult time, and we are forever grateful."
+=======
+                {/* "The support from Rangraj Samaj has been life-changing for
+                my family. The medical assistance helped us during a
+                difficult time, and we are forever grateful." */}
+                {t("home-testimonials-description")}
+>>>>>>> lang
               </p>
             </CardContent>
           </Card>

@@ -5,7 +5,11 @@
 
 # next.js
 /.next/
+<<<<<<< HEAD
 /out/     
+=======
+/out/
+>>>>>>> lang
 
 # production
 /build
@@ -24,4 +28,8 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+<<<<<<< HEAD
 next-env.d.ts
+=======
+next-env.d.ts
+>>>>>>> lang

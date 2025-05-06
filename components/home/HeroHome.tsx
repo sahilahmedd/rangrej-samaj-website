@@ -11,7 +11,11 @@ const HeroHome = () => {
     <section className="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
     <div className="absolute inset-0 z-0">
       <Image
+<<<<<<< HEAD
         src="/images/image-2.jpg"
+=======
+        src="/images/5.png"
+>>>>>>> lang
         alt="Rangraj Samaj Cultural Image"
         fill
         className="object-cover brightness-50"
@@ -33,21 +37,35 @@ const HeroHome = () => {
           size="lg"
           className="bg-[#B7410E] hover:bg-[#8B3103] text-white"
         >
+<<<<<<< HEAD
           Join Us
+=======
+          {t('button-Join')}
+>>>>>>> lang
         </Button>
         <Button
           size="lg"
           variant="outline"
           className="bg-white/10 backdrop-blur-sm text-white border-white hover:bg-white/20"
         >
+<<<<<<< HEAD
           Donate Now
+=======
+          {/* Donate Now */}
+          {t('button-Donate')}
+>>>>>>> lang
         </Button>
         <Button
           size="lg"
           variant="outline"
           className="bg-white/10 backdrop-blur-sm text-white border-white hover:bg-white/20"
         >
+<<<<<<< HEAD
           Attend Next Event
+=======
+          {/* Attend Next Event */}
+          {t('button-Volunteer')}
+>>>>>>> lang
         </Button>
       </div>
     </div>

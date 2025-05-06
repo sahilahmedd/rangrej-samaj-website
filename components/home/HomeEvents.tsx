@@ -12,7 +12,11 @@ import {
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { splitEventsByDate } from "@/utils/eventHelpers";
+<<<<<<< HEAD
 
+=======
+import { useTranslations } from "next-intl";
+>>>>>>> lang
 // const events = [
 //   {
 //     id: 1,
@@ -81,6 +85,10 @@ import { splitEventsByDate } from "@/utils/eventHelpers";
 
 
 const HomeEvents = () => {
+<<<<<<< HEAD
+=======
+  const t = useTranslations("Homepage");
+>>>>>>> lang
 
   const [ event, setEvents ] = useState<any[]>([])
   const [pastEvents, setPastEvents] = useState<any[]>([]);
@@ -110,12 +118,28 @@ const HomeEvents = () => {
     <section className="py-16 bg-white">
       <div className="container px-4 md:px-6">
         <h2 className="text-3xl font-bold text-center mb-12 text-[#8B3103]">
+<<<<<<< HEAD
           Our Events
         </h2>
         <Tabs defaultValue="upcoming" className="w-full">
           <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-10 ">
             <TabsTrigger value="upcoming">Upcoming Events</TabsTrigger>
             <TabsTrigger value="past">Past Events</TabsTrigger>
+=======
+          {/* Our Events */}
+          {t("home-events-title-h2")}
+        </h2>
+        <Tabs defaultValue="upcoming" className="w-full">
+          <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-10 ">
+            <TabsTrigger value="upcoming">
+              {/* Upcoming Events */}
+              {t("home-events-title-upcoming")}
+              </TabsTrigger>
+            <TabsTrigger value="past">
+              {/* Past Events */}
+              {t("home-events-title-past")}
+              </TabsTrigger>
+>>>>>>> lang
           </TabsList>
           <TabsContent value="upcoming">
             <div className="relative">
@@ -203,7 +227,14 @@ const HomeEvents = () => {
             asChild
             className="bg-[#B7410E] hover:bg-[#8B3103] text-white"
           >
+<<<<<<< HEAD
             <Link href="/events">View All Events</Link>
+=======
+            <Link href="/events">
+            {/* View All Events */}
+            {t("home-events-button")}
+            </Link>
+>>>>>>> lang
           </Button>
         </div>
       </div>

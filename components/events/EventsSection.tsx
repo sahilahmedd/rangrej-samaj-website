@@ -8,6 +8,7 @@ import { Button } from "../ui/button";
 import Image from "next/image";
 import { CalendarDays, Clock, MapPin, Users, Phone } from "lucide-react";
 import { splitEventsByDate } from "@/utils/eventHelpers";
+<<<<<<< HEAD
 
 const tabItems = [
   { label: "Upcoming Events", value: "upcoming" },
@@ -19,6 +20,22 @@ export default function EventsSection() {
   const [upcoming, setUpcoming] = useState<any[]>([]);
   const [pastEvents, setPastEvents] = useState<any[]>([]);
   
+=======
+import { useTranslations } from "next-intl";
+
+export default function EventsSection() {
+  const t = useTranslations("Events");
+
+  const tabItems = [
+    { label: t("events-tabitems-upcoming"), value: "upcoming" },
+    { label: t("events-tabitems-past"), value: "past" },
+  ];
+
+  const [activeTab, setActiveTab] = useState("upcoming");
+  const [upcoming, setUpcoming] = useState<any[]>([]);
+  const [pastEvents, setPastEvents] = useState<any[]>([]);
+
+>>>>>>> lang
   useEffect(() => {
     const fetchEvents = async () => {
       const res = await fetch("https://node2-plum.vercel.app/api/user/events");
@@ -27,7 +44,10 @@ export default function EventsSection() {
       console.log("Data: ", data.events);
       // setUpcoming(data.events)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> lang
       const { pastEvents, upcomingEvents } = splitEventsByDate(data.events);
 
       setPastEvents(pastEvents);
@@ -37,9 +57,13 @@ export default function EventsSection() {
     fetchEvents();
   }, []);
 
+<<<<<<< HEAD
 
   console.log("Upcoming: ", upcoming  );
   
+=======
+  console.log("Upcoming: ", upcoming);
+>>>>>>> lang
 
   // const upcomingEvents = [
   //   {
@@ -183,7 +207,13 @@ export default function EventsSection() {
                     />
                   </div>
                   <CardContent className="p-6">
+<<<<<<< HEAD
                     <h3 className="text-xl font-bold mb-2">{event.ENVT_DESC}</h3>
+=======
+                    <h3 className="text-xl font-bold mb-2">
+                      {event.ENVT_DESC}
+                    </h3>
+>>>>>>> lang
                     <div className="space-y-2 mb-4">
                       <div className="flex items-center gap-2 text-sm text-muted-foreground">
                         <CalendarDays className="w-4 h-4" />
@@ -193,20 +223,34 @@ export default function EventsSection() {
                         <Phone className="w-4 h-4" />
                         <span>{event.ENVT_CONTACT_NO}</span>
                       </div>
+<<<<<<< HEAD
                         {/* <div className="flex items-center gap-2 text-sm text-muted-foreground">
+=======
+                      {/* <div className="flex items-center gap-2 text-sm text-muted-foreground">
+>>>>>>> lang
                           <Clock className="w-4 h-4" />
                           <span>{event.time}</span>
                         </div> */}
                       <div className="flex items-center gap-2 text-sm text-muted-foreground">
                         <MapPin className="w-4 h-4" />
+<<<<<<< HEAD
                         <span>{`${event.ENVT_ADDRESS}, ${event.ENVT_CITY}`}</span> 
+=======
+                        <span>{`${event.ENVT_ADDRESS}, ${event.ENVT_CITY}`}</span>
+>>>>>>> lang
                       </div>
                       {/* <div className="flex items-center gap-2 text-sm text-muted-foreground">
                         <Users className="w-4 h-4" />
                         <span>Expected Attendees: {event.attendees}</span>
                       </div> */}
                     </div>
+<<<<<<< HEAD
                     <p className="text-muted-foreground">{event.ENVT_EXCERPT}</p>
+=======
+                    <p className="text-muted-foreground">
+                      {event.ENVT_EXCERPT}
+                    </p>
+>>>>>>> lang
                   </CardContent>
                   <CardFooter className="px-6 pb-6 pt-0">
                     <Button className="w-full bg-[#B7410E] hover:bg-[#8B3103] text-white">
@@ -235,7 +279,13 @@ export default function EventsSection() {
                     />
                   </div>
                   <CardContent className="p-6">
+<<<<<<< HEAD
                     <h3 className="text-xl font-bold mb-2">{event.ENVT_DESC}</h3>
+=======
+                    <h3 className="text-xl font-bold mb-2">
+                      {event.ENVT_DESC}
+                    </h3>
+>>>>>>> lang
                     <div className="space-y-2 mb-4">
                       <div className="flex items-center gap-2 text-sm text-muted-foreground">
                         <CalendarDays className="w-4 h-4" />
@@ -254,7 +304,13 @@ export default function EventsSection() {
                         <span>Attendees: {event.attendees}</span>
                       </div> */}
                     </div>
+<<<<<<< HEAD
                     <p className="text-muted-foreground">{event.ENVT_EXCERPT}</p>
+=======
+                    <p className="text-muted-foreground">
+                      {event.ENVT_EXCERPT}
+                    </p>
+>>>>>>> lang
                   </CardContent>
                   <CardFooter className="px-6 pb-6 pt-0">
                     <Button variant="outline" className="w-full">
