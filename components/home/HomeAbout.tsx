@@ -31,24 +31,16 @@ const HomeAbout = () => {
             asChild
             className="bg-[#B7410E] hover:bg-[#8B3103] text-white"
           >
-<<<<<<< HEAD
-            <Link href="/about">Learn More About Us</Link>
-=======
             <Link href="/about">
             {/* Learn More About Us */}
             {t("home-about-button")}
             </Link>
->>>>>>> lang
           </Button>
         </div>
         <div className="relative h-[400px] rounded-lg overflow-hidden">
           <Image
             // src="/placeholder.svg?height=800&width=600"
-<<<<<<< HEAD
             src="/images/image-4.jpg"
-=======
-            src="/images/2.png"
->>>>>>> lang
             alt="Rangraj Samaj Community"
             fill
             className="object-cover"
