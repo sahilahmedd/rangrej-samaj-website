@@ -9,7 +9,7 @@ const GalleryHero = () => {
     <div className="absolute inset-0 z-0">
       <Image
         // src="/placeholder.svg?height=800&width=1920"
-        src="/images/gallery.png"
+        src="/images/image-1.jpg"
         alt="Gallery"
         fill
         className="object-cover brightness-50"

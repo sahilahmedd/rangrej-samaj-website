@@ -9,7 +9,7 @@ const InitHero = () => {
     <div className="absolute inset-0 z-0">
       <Image
         // src="/placeholder.svg?height=800&width=1920"
-        src="/images/initiatives.png"
+        src="/images/image-5.jpg"
         alt="Our Initiatives"
         fill
         className="object-cover brightness-50"

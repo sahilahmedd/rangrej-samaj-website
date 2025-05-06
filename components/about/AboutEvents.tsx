@@ -315,7 +315,7 @@ const tabItems = [
               <div className="relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-lg overflow-hidden">
                 <Image
                   // src="/placeholder.svg?height=800&width=600"
-                  src="/images/1.png"
+                  src="/images/image-11.jpg"
                   alt="Rangraj Samaj Community"
                   fill
                   className="object-cover"
@@ -330,7 +330,7 @@ const tabItems = [
               <div className="relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-lg overflow-hidden order-2 lg:order-1">
                 <Image
                   // src="/placeholder.svg?height=800&width=600"
-                  src="/images/history.png"
+                  src="/images/image-12.jpg"
                   alt="Rangraj Samaj History"
                   fill
                   className="object-cover"
@@ -518,8 +518,8 @@ const tabItems = [
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
               <div className="relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-lg overflow-hidden order-2 lg:order-1">
                 <Image
-                  src="/placeholder.svg?height=800&width=600"
-                  alt="Rangraj Samaj History"
+                  src="/images/academy.jpg"
+                  alt="Rangraj Samaj Academy"
                   fill
                   className="object-cover"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"

@@ -8,7 +8,7 @@ const EventsHero = () => {
     <div className="absolute inset-0 z-0">
       <Image
         // src="/placeholder.svg?height=800&width=1920"
-        src="/images/events.png"
+        src="/images/image-7.jpg"
         alt="Events"
         fill
         className="object-cover brightness-50"
