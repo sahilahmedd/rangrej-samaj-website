@@ -93,7 +93,7 @@ export default function ContactPage() {
                       </p>
                       <p className="font-medium">
                         {/* Rangraj Bhavan, 123 Community Street */}
-                        {t("contact-us-rangraj-bhavan")}
+                        {t("contact-us-Rangrej-bhavan")}
                       </p>
                       <p className="font-medium">
                         {/* Mumbai, Maharashtra 400001 */}
@@ -132,13 +132,13 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* <div>
+            <div>
               <h2 className="text-3xl font-bold mb-8 text-[#8B3103]">
-                Send Us a Message
+                {/* Send Us a Message */}
                 {t("contact-us-send-us-a-message")}
               </h2>
               <ContactForm />
-            </div> */}
+            </div>
           </div>
         </div>
       </section>

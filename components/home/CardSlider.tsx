@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
 import {
   Carousel,
@@ -27,6 +26,10 @@ export default function CardSlider() {
   const [api, setApi] = useState<CarouselApi | null>(null);
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
+
+  const [adsApi, setAdsApi] = useState<CarouselApi | null>(null);
+  const [adsCurrent, setAdsCurrent] = useState(0);
+  const [adCount, setAdCount] = useState(0);
   const [currentAd, setCurrentAd] = useState(0);
 
   const t = useTranslations("Homepage");
@@ -41,6 +44,17 @@ export default function CardSlider() {
       setCurrent(api.selectedScrollSnap());
     });
   }, [api]);
+
+  useEffect(() => {
+    if (!adsApi) return;
+
+    setAdCount(adsApi.scrollSnapList().length);
+    setAdsCurrent(adsApi.selectedScrollSnap());
+
+    adsApi.on("select", () => {
+      setAdsCurrent(adsApi.selectedScrollSnap());
+    });
+  }, [adsApi]);
 
   const cardData = [
     {
@@ -118,7 +132,7 @@ export default function CardSlider() {
             {cardData.map((card, index) => (
               <CarouselItem
                 key={index}
-                className="pl-4 md:pl-6 lg:pl-8 basis-11/12 sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
+                className="pl-4 md:pl-6 lg:pl-8 basis-full sm:basis-1/2 lg:basis-1/3"
               >
                 <Card className="border-2 border-[#F2C94C]/20 hover:border-[#F2C94C] transition-all h-full">
                   <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
@@ -161,7 +175,7 @@ export default function CardSlider() {
       </div>
 
       {/* Ads slider */}
-      <div className="w-full lg:w-1/5">
+      {/* <div className="w-full lg:w-1/5">
         <Card className="border-2 border-blue-300 hover:border-blue-500 transition-all h-full overflow-hidden">
           <CardContent className="p-6 text-center h-64 relative">
             <Carousel
@@ -180,19 +194,6 @@ export default function CardSlider() {
             >
               <CarouselContent className="h-full">
                 {adData.map((ad, index) => (
-                  // <CarouselItem key={index} className="h-full">
-                  //   <div className="flex flex-col justify-end items-center h-full space-y-2">
-                  //     <h3 className="text-lg font-semibold text-blue-700">
-                  //       {ad.title}
-                  //     </h3>
-                  //     <p className="text-sm text-muted-foreground">
-                  //       {ad.description}
-                  //     </p>
-                  //     <button className="mt-2 px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded">
-                  //       Learn More
-                  //     </button>
-                  //   </div>
-                  // </CarouselItem>
                   <CarouselItem
                     key={index}
                     className="h-full flex items-center justify-center"
@@ -214,6 +215,146 @@ export default function CardSlider() {
             </Carousel>
           </CardContent>
         </Card>
+      </div>  */}
+      {/* 
+      <div className="w-full lg:w-1/5">
+        <Card className="border-2 border-blue-300 hover:border-blue-500 transition-all h-full overflow-hidden">
+          <CardContent className="p-6 text-center h-64 relative">
+            <Carousel
+              setApi={setAdsApi}
+              orientation="horizontal"
+              opts={{
+                align: "center",
+                loop: true,
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 3000,
+                  stopOnInteraction: false,
+                }),
+              ]}
+              className="h-full"
+            >
+              <CarouselContent className="h-full">
+                {adData.map((ad, index) => (
+                  <CarouselItem
+                    key={index}
+                    className="h-full flex items-center justify-center"
+                  >
+                    <div className="text-center space-y-2">
+                      <h3 className="text-lg font-semibold text-blue-700">
+                        {ad.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {ad.description}
+                      </p>
+                      <button className="mt-2 px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded">
+                        Learn More
+                      </button>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+
+              Navigation Buttons
+              <CarouselPrevious className="absolute left-1 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full shadow p-1 hover:bg-gray-100" />
+              <CarouselNext className="absolute right-1 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full shadow p-1 hover:bg-gray-100" />
+            </Carousel>
+
+            Dots
+            {adCount > 1 && (
+              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2">
+                {Array.from({ length: adCount }).map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => api?.scrollTo(idx)}
+                    className={`w-2.5 h-2.5 rounded-full ${
+                      adsCurrent === idx ? "bg-blue-600" : "bg-gray-300"
+                    } transition-all`}
+                  />
+                ))}
+              </div>
+            )}
+          </CardContent>
+        </Card>
+      </div> */}
+
+      <div className="w-full lg:w-1/5 flex flex-col items-center">
+        <Card className="border-2 border-blue-300 hover:border-blue-500 transition-all h-full overflow-hidden w-full">
+          <CardContent className="p-6 text-center h-64 relative">
+            <Carousel
+              setApi={setAdsApi}
+              orientation="horizontal"
+              opts={{
+                align: "center",
+                loop: true,
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 3000,
+                  stopOnInteraction: false,
+                }),
+              ]}
+              className="h-full"
+            >
+              <CarouselContent className="h-full">
+                {adData.map((ad, index) => (
+                  // <CarouselItem
+                  //   key={index}
+                  //   className="h-full flex items-center justify-center"
+                  // >
+                  //   <div className="text-center space-y-2">
+                  //     <h3 className="text-lg font-semibold text-blue-700">
+                  //       {ad.title}
+                  //     </h3>
+                  //     <p className="text-sm text-muted-foreground">
+                  //       {ad.description}
+                  //     </p>
+                  //     <button className="mt-2 px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded">
+                  //       Learn More
+                  //     </button>
+                  //   </div>
+                  // </CarouselItem>
+                  <CarouselItem
+                    key={index}
+                    className="h-full pt-10 flex items-center justify-center text-center"
+                  >
+                    <div className="space-y-2 max-w-[90%] mx-auto">
+                      <h3 className="text-lg font-semibold text-blue-700">
+                        {ad.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {ad.description}
+                      </p>
+                      <button className="mt-2 px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded">
+                        Learn More
+                      </button>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+
+              {/* Navigation Buttons */}
+              <CarouselPrevious className="absolute left-1 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full shadow p-1 hover:bg-gray-100" />
+              <CarouselNext className="absolute right-1 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full shadow p-1 hover:bg-gray-100" />
+            </Carousel>
+          </CardContent>
+        </Card>
+
+        {/* Dots Outside the Card */}
+        {adCount > 1 && (
+          <div className="mt-3 flex gap-2">
+            {Array.from({ length: adCount }).map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => adsApi?.scrollTo(idx)}
+                className={`w-2.5 h-2.5 rounded-full ${
+                  adsCurrent === idx ? "bg-blue-600" : "bg-gray-300"
+                } transition-all`}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
