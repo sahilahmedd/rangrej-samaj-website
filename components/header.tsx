@@ -26,15 +26,15 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 flex justify-center items-center z-50 w-full h-28 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center space-x-2">
             {/* <span className="text-2xl font-bold text-[#B7410E]">Rangraj Samaj</span> */}
             <Logo
-              width={50}
-              height={50}
-              style="rounded-lg border-1 shadow-md "
+              width={100}
+              height={100}
+              style="rounded-lg border-1 shadow-md"
               alt="Logo"
             />
           </Link>

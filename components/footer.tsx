@@ -139,7 +139,7 @@ export default function Footer() {
       {/* Brand & Social */}
       <div className="text-left text-sm sm:text-lg">
         {/* <h3 className="text-lg font-bold mb-4">Rangraj Samaj</h3> */}
-        <Logo width={50} height={50} style="rounded-lg mb-5" alt="Logo" />
+        <Logo width={120} height={120} style="rounded-lg mb-5" alt="Logo" />
         <p className="text-white/80 mb-4 text-sm">
           {/* Empowering and uniting the Rangraj (Rangrez) Samaj through health, charity, marriage meets, and cultural awareness. */}
           {t("footer-title-p")}
