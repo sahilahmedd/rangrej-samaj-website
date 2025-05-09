@@ -51,14 +51,17 @@ export async function POST(req: Request) {
       JSON_LOG: JSON.stringify(fullPaymentData),
     };
 
-    console.log('Sending capture payload:', capturePayload);
+    console.log('Sending capture payload:', JSON.stringify(capturePayload));
 
     // 3. Send it to your actual backend for saving
-    await fetch("https://node2-plum.vercel.app/api/user/capture-payment", {
+    const db = await fetch("https://node2-plum.vercel.app/api/user/capture-payment", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(capturePayload),
     });
+
+    console.log("DB: ", db);
+    
 
     return NextResponse.json({ success: true });
   } catch (err) {

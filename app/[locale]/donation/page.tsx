@@ -28,16 +28,16 @@ export default function DonationPage() {
           <h2 className="text-3xl font-bold text-center mb-12 text-[#8B3103]">Make a Donation</h2>
           <div className="max-w-3xl mx-auto">
             <Tabs defaultValue="online" className="w-full">
-              <TabsList className="grid w-full grid-cols-2 mb-8">
+              <TabsList className="grid w-full grid-cols-1 mb-8"> {/* grid-cols-2 */}
                 <TabsTrigger value="online">Online Donation</TabsTrigger>
-                <TabsTrigger value="bank">Bank Transfer</TabsTrigger>
+                {/* <TabsTrigger value="bank">Bank Transfer</TabsTrigger> */}
               </TabsList>
 
               <TabsContent value="online">
                 <DonationForm />
               </TabsContent>
 
-              <TabsContent value="bank">
+              {/* <TabsContent value="bank">
                 <Card>
                   <CardContent className="p-6 space-y-4">
                     <h3 className="text-xl font-bold">Bank Transfer Details</h3>
@@ -81,68 +81,16 @@ export default function DonationPage() {
                     </div>
                   </CardContent>
                 </Card>
-              </TabsContent>
+              </TabsContent> */}
             </Tabs>
           </div>
         </div>
       </section>
 
       {/* Testimonials */}
-      {/* <section className="py-16 bg-[#F9F5E7]">
-        <div className="container px-4 md:px-6">
-          <h2 className="text-3xl font-bold text-center mb-12 text-[#8B3103]">Impact Stories</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((i) => (
-              <Card key={i} className="border-2 border-[#F2C94C]/20">
-                <CardContent className="p-6 space-y-4">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[#B7410E]/10 overflow-hidden relative">
-                      <Image
-                        src={`/placeholder.svg?height=100&width=100&text=P${i}`}
-                        alt="Beneficiary"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div>
-                      <h4 className="font-bold">Beneficiary {i}</h4>
-                      <p className="text-sm text-muted-foreground">Healthcare Recipient</p>
-                    </div>
-                  </div>
-                  <p className="italic">
-                    "The medical assistance provided by Rangraj Samaj was life-saving for my family. My child needed
-                    urgent surgery, and we couldn't afford it. Thanks to the generous donors, my child received the
-                    treatment and is now healthy and thriving."
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section> */}
       <DonationTestimonials />
 
       {/* Transparency */}
-      {/* <section className="py-16 bg-white">
-        <div className="container px-4 md:px-6">
-          <h2 className="text-3xl font-bold text-center mb-12 text-[#8B3103]">Transparency & Accountability</h2>
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-lg mb-6">
-              We are committed to complete transparency in how we use donations. All funds are meticulously tracked and
-              used solely for the intended purposes.
-            </p>
-            <p className="text-lg mb-6">
-              Our financial records are audited annually by independent auditors, and reports are made available to all
-              donors upon request.
-            </p>
-            <p className="text-lg mb-8">
-              We provide regular updates on our projects and initiatives through our newsletter and social media
-              channels.
-            </p>
-            <Button className="bg-[#B7410E] hover:bg-[#8B3103] text-white">Request Annual Report</Button>
-          </div>
-        </div>
-      </section> */}
       <DonationTransparency />
     </main>
   )

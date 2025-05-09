@@ -1,101 +1,112 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Label } from "@/components/ui/label"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { useToast } from "@/hooks/use-toast"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { useToast } from "@/hooks/use-toast";
 import { useTranslations } from "next-intl";
-
-
-
 
 export default function DonationForm() {
   const t = useTranslations("Donation");
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
     phone: "",
     amount: "",
     donationType: "general",
     paymentMethod: "",
     message: "",
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const { toast } = useToast()
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSelectChange = (name: string, value: string) => {
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleRadioChange = (value: string) => {
-    setFormData((prev) => ({ ...prev, donationType: value }))
-  }
+    setFormData((prev) => ({ ...prev, donationType: value }));
+  };
 
   // const handleSubmit = async (e: React.FormEvent) => {
-  //   e.preventDefault()
-  
-  //   if (!formData.name || !formData.email || !formData.amount || !formData.paymentMethod) {
+  //   e.preventDefault();
+
+  //   if (
+  //     !formData.name ||
+  //     !formData.amount ||
+  //     !formData.paymentMethod
+  //   ) {
   //     toast({
   //       title: "Error",
   //       description: "Please fill in all required fields.",
   //       variant: "destructive",
-  //     })
-  //     return
+  //     });
+  //     return;
   //   }
-  
-  //   setIsSubmitting(true)
-  
+
+  //   setIsSubmitting(true);
+
   //   try {
   //     // 1. Call backend to create Razorpay order
   //     const res = await fetch("/en/api/donate", {
   //       method: "POST",
   //       headers: { "Content-Type": "application/json" },
   //       body: JSON.stringify({ amount: formData.amount }),
-  //     })
-  
-  //     const data = await res.json()
-  //     const { order } = data
-  
+  //     });
+
+  //     const data = await res.json();
+  //     const { order } = data;
+
   //     // 2. Open Razorpay payment modal
   //     const options = {
   //       key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID as string, // must be public
-  //       amount: order.amount,
+  //       amount: Number(formData.amount) * 100,
   //       currency: "INR",
   //       name: "Rangrej Foundation",
   //       description: "Donation",
   //       image: "/images/logo1.png",
-  //       order_id: order.id,
+  //       order_id: data.orderId,
   //       handler: async function (response: any) {
-  //         console.log("✅ Razorpay Payment Response:", response)
-  
+  //         console.log("✅ Razorpay Payment Response:", response);
+
   //         // Optional: Send to backend for saving
-  //         await fetch("https://node2-plum.vercel.app/api/user/capture-payment", {
-  //           method: "POST",
-  //           headers: { "Content-Type": "application/json" },
-  //           body: JSON.stringify({
-  //             ...formData,
-  //             razorpay_payment_id: response.razorpay_payment_id,
-  //             razorpay_order_id: response.razorpay_order_id,
-  //             razorpay_signature: response.razorpay_signature,
-  //           }),
-  //         })
-  
+  //         await fetch(
+  //           "https://node2-plum.vercel.app/api/user/capture-payment",
+  //           {
+  //             method: "POST",
+  //             headers: { "Content-Type": "application/json" },
+  //             body: JSON.stringify({
+  //               ...formData,
+  //               razorpay_payment_id: response.razorpay_payment_id,
+  //               razorpay_order_id: response.razorpay_order_id,
+  //               razorpay_signature: response.razorpay_signature,
+  //             }),
+  //           }
+  //         );
+
   //         toast({
   //           title: "Thank You!",
   //           description: "Your donation has been received.",
-  //         })
-  
+  //         });
+
   //         setFormData({
   //           name: "",
   //           email: "",
@@ -104,7 +115,7 @@ export default function DonationForm() {
   //           donationType: "general",
   //           paymentMethod: "",
   //           message: "",
-  //         })
+  //         });
   //       },
   //       prefill: {
   //         name: formData.name,
@@ -114,26 +125,26 @@ export default function DonationForm() {
   //       theme: {
   //         color: "#B7410E",
   //       },
-  //     }
-  
-  //     const rzp = new (window as any).Razorpay(options)
-  //     rzp.open()
+  //     };
+
+  //     const rzp = new (window as any).Razorpay(options);
+  //     rzp.open();
   //   } catch (error) {
-  //     console.error("❌ Payment Error:", error)
+  //     console.error("❌ Payment Error:", error);
   //     toast({
   //       title: "Error",
   //       description: "Failed to process donation. Please try again later.",
   //       variant: "destructive",
-  //     })
+  //     });
   //   } finally {
-  //     setIsSubmitting(false)
+  //     setIsSubmitting(false);
   //   }
-  // }
-  
+  // };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-  
-    if (!formData.name || !formData.email || !formData.amount || !formData.paymentMethod) {
+
+    if (!formData.name || !formData.amount || !formData.paymentMethod) {
       toast({
         title: "Error",
         description: "Please fill in all required fields.",
@@ -141,9 +152,9 @@ export default function DonationForm() {
       })
       return
     }
-  
+
     setIsSubmitting(true)
-  
+
     try {
       // 1. Create Razorpay order from your backend
       const res = await fetch("/en/api/donate", {
@@ -151,12 +162,11 @@ export default function DonationForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ amount: formData.amount }),
       })
-  
+
       const data = await res.json()
       const { order } = data
       console.log("Dataaa: ", data);
-      
-  
+
       // 2. Setup Razorpay options
       const options = {
         key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID as string,
@@ -172,19 +182,19 @@ export default function DonationForm() {
             sadaqah: "2",
             general: "3",
           };
-        
+
           const ENVIT_ID = campaignMap[formData.donationType];
-        
+
           const userData = {
             PR_FULL_NAME: formData.name,
             PR_MOBILE_NO: formData.phone,
           };
-        
+
           const event = {
             id: ENVIT_ID,
             name: formData.donationType,
           };
-        
+
           await fetch("/en/api/full-payment", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -195,15 +205,14 @@ export default function DonationForm() {
               event,
             }),
           });
-        
+
           toast({
             title: "Thank You!",
             description: "Your donation has been received.",
           });
-        
+
           setFormData({
             name: "",
-            email: "",
             phone: "",
             amount: "",
             donationType: "general",
@@ -213,14 +222,13 @@ export default function DonationForm() {
         },
         prefill: {
           name: formData.name,
-          email: formData.email,
           contact: formData.phone,
         },
         theme: {
           color: "#B7410E",
         },
       }
-  
+
       const rzp = new (window as any).Razorpay(options)
       rzp.open()
     } catch (error) {
@@ -234,12 +242,11 @@ export default function DonationForm() {
       setIsSubmitting(false)
     }
   }
-  
 
   // const handleSubmit = async (e: React.FormEvent) => {
   //   e.preventDefault();
-  
-  //   if (!formData.name || !formData.email || !formData.amount || !formData.paymentMethod) {
+
+  //   if (!formData.name || !formData.amount || !formData.paymentMethod) {
   //     toast({
   //       title: "Error",
   //       description: "Please fill in all required fields.",
@@ -247,9 +254,9 @@ export default function DonationForm() {
   //     });
   //     return;
   //   }
-  
+
   //   setIsSubmitting(true);
-  
+
   //   try {
   //     // 1. Create Razorpay order from your backend
   //     const res = await fetch("/en/api/donate", {
@@ -257,16 +264,16 @@ export default function DonationForm() {
   //       headers: { "Content-Type": "application/json" },
   //       body: JSON.stringify({ amount: formData.amount }),
   //     });
-  
+
   //     const data = await res.json();
   //     const { orderId } = data;
-  
+
   //     if (!orderId) {
   //       throw new Error("Order ID not returned from backend");
   //     }
-  
+
   //     console.log("✅ Razorpay Order Created: ", orderId);
-  
+
   //     // 2. Configure Razorpay options
   //     const options = {
   //       key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID as string,
@@ -275,28 +282,28 @@ export default function DonationForm() {
   //       name: "Rangrej Foundation",
   //       description: "Donation",
   //       image: "/images/logo1.png",
-  //       order_id: orderId,
+  //       order_id: Number(orderId),
   //       handler: async function (response: any) {
   //         console.log("✅ Razorpay Payment Success Response:", response);
-  
+
   //         const campaignMap: Record<string, string> = {
-  //           zakat: "CAMPAIGN_ID_ZAKAT",
-  //           sadaqah: "CAMPAIGN_ID_SADAQAH",
-  //           general: "CAMPAIGN_ID_GENERAL",
+  //           zakat: "1",
+  //           sadaqah: "2",
+  //           general: "3",
   //         };
-  
+
   //         const ENVIT_ID = campaignMap[formData.donationType];
-  
+
   //         const userData = {
   //           PR_FULL_NAME: formData.name,
   //           PR_MOBILE_NO: formData.phone,
   //         };
-  
+
   //         const event = {
   //           id: ENVIT_ID,
   //           name: formData.donationType,
   //         };
-  
+
   //         try {
   //           const capture = await fetch("/en/api/full-payment", {
   //             method: "POST",
@@ -308,26 +315,25 @@ export default function DonationForm() {
   //               event,
   //             }),
   //           });
-  
+
   //           const result = await capture.json();
   //           console.log("📦 full-payment API response:", result);
-  
+
   //           toast({
   //             title: "Thank You!",
   //             description: "Your donation has been received.",
   //           });
-  
+
   //           // Reset form
   //           setFormData({
   //             name: "",
-  //             email: "",
   //             phone: "",
   //             amount: "",
   //             donationType: "general",
   //             paymentMethod: "",
   //             message: "",
   //           });
-  
+
   //         } catch (err) {
   //           console.error("❌ Error saving full-payment:", err);
   //           toast({
@@ -349,21 +355,20 @@ export default function DonationForm() {
   //       },
   //       prefill: {
   //         name: formData.name,
-  //         email: formData.email,
   //         contact: formData.phone,
   //       },
   //       theme: {
   //         color: "#B7410E",
   //       },
   //     };
-  
+
   //     const rzp = new (window as any).Razorpay(options);
   //     toast({
   //       title: "Redirecting to Razorpay...",
   //       description: "Please complete your payment in the popup.",
   //     });
   //     rzp.open();
-  
+
   //   } catch (error) {
   //     console.error("❌ Payment Error:", error);
   //     toast({
@@ -375,8 +380,6 @@ export default function DonationForm() {
   //     setIsSubmitting(false);
   //   }
   // };
-  
-
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
@@ -396,9 +399,9 @@ export default function DonationForm() {
             required
           />
         </div>
-        <div className="space-y-2">
+        {/* <div className="space-y-2">
           <label htmlFor="email" className="text-sm font-medium">
-            {/* Email */}
+            Email
             {t("donation-form-email")} <span className="text-red-500">*</span>
           </label>
           <Input
@@ -411,10 +414,7 @@ export default function DonationForm() {
             disabled={isSubmitting}
             required
           />
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        </div> */}
         <div className="space-y-2">
           <label htmlFor="phone" className="text-sm font-medium">
             {/* Phone Number */}
@@ -429,6 +429,9 @@ export default function DonationForm() {
             disabled={isSubmitting}
           />
         </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
           <label htmlFor="amount" className="text-sm font-medium">
             {/* Donation Amount (₹) */}
@@ -446,33 +449,40 @@ export default function DonationForm() {
             required
           />
         </div>
-      </div>
-
-      <div className="space-y-3">
-        <label className="text-sm font-medium">
-          {/* Donation Type */}
-          {t("donation-form-donation-type")} <span className="text-red-500">*</span>
-        </label>
-        <RadioGroup value={formData.donationType} onValueChange={handleRadioChange} className="flex flex-col space-y-2">
-          <div className="flex items-center space-x-2">
-            <RadioGroupItem value="zakat" id="zakat" />
-            <Label htmlFor="zakat">{t("donation-form-zakat")}</Label>
-          </div>
-          <div className="flex items-center space-x-2">
-            <RadioGroupItem value="sadaqah" id="sadaqah" />
-            <Label htmlFor="sadaqah">{t("donation-form-sadaqah")}</Label>
-          </div>
-          <div className="flex items-center space-x-2">
-            <RadioGroupItem value="general" id="general" />
-            <Label htmlFor="general">{t("donation-form-general-donation")}</Label>
-          </div>
-        </RadioGroup>
+        <div className="space-y-3">
+          <label className="text-sm font-medium">
+            {/* Donation Type */}
+            {t("donation-form-donation-type")}{" "}
+            <span className="text-red-500">*</span>
+          </label>
+          <RadioGroup
+            value={formData.donationType}
+            onValueChange={handleRadioChange}
+            className="flex justify-start"
+          >
+            <div className="flex items-center space-x-2">
+              <RadioGroupItem value="zakat" id="zakat" />
+              <Label htmlFor="zakat">{t("donation-form-zakat")}</Label>
+            </div>
+            <div className="flex items-center space-x-2">
+              <RadioGroupItem value="sadaqah" id="sadaqah" />
+              <Label htmlFor="sadaqah">{t("donation-form-sadaqah")}</Label>
+            </div>
+            <div className="flex items-center space-x-2">
+              <RadioGroupItem value="general" id="general" />
+              <Label htmlFor="general">
+                {t("donation-form-general-donation")}
+              </Label>
+            </div>
+          </RadioGroup>
+        </div>
       </div>
 
       <div className="space-y-2">
         <label className="text-sm font-medium">
           {/* Payment Method */}
-          {t("donation-form-payment-method")} <span className="text-red-500">*</span>
+          {t("donation-form-payment-method")}{" "}
+          <span className="text-red-500">*</span>
         </label>
         <Select
           value={formData.paymentMethod}
@@ -485,7 +495,9 @@ export default function DonationForm() {
           <SelectContent>
             <SelectItem value="upi">{t("donation-form-upi")}</SelectItem>
             <SelectItem value="card">{t("donation-form-card")}</SelectItem>
-            <SelectItem value="netbanking">{t("donation-form-netbanking")}</SelectItem>
+            <SelectItem value="netbanking">
+              {t("donation-form-netbanking")}
+            </SelectItem>
             <SelectItem value="wallet">{t("donation-form-wallet")}</SelectItem>
           </SelectContent>
         </Select>
@@ -507,9 +519,15 @@ export default function DonationForm() {
         />
       </div>
 
-      <Button type="submit" className="w-full bg-[#B7410E] hover:bg-[#8B3103] text-white" disabled={isSubmitting}>
-        {isSubmitting ? t("donation-form-processing") : t("donation-form-make-donation")}
+      <Button
+        type="submit"
+        className="w-full bg-[#B7410E] hover:bg-[#8B3103] text-white"
+        disabled={isSubmitting}
+      >
+        {isSubmitting
+          ? t("donation-form-processing")
+          : t("donation-form-make-donation")}
       </Button>
     </form>
-  )
+  );
 }
