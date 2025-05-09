@@ -332,7 +332,17 @@
     "donation-transparency-description": "We are committed to complete transparency in how we use donations. All funds are meticulously tracked and used solely for the intended purposes.",
     "donation-transparency-description-2": "Our financial records are audited annually by independent auditors, and reports are made available to all donors upon request.",
     "donation-transparency-description-3": "We provide regular updates on our projects and initiatives through our newsletter and social media channels.",
-    "donation-transparency-button": "Request Annual Report"
+    "donation-transparency-button": "Request Annual Report",
+    "donation-form-next": "Next",
+    "donation-form-previous": "Back",
+    "donation-form-checkout": "Checkout",
+    "donation-form-summary": "Summary",
+    "donation-form-select-category": "Select a category",
+    "donation-form-category": "Category",
+    "donation-form-thank-you": "Thank You",
+    "donation-form-donation-received": "Donation Recieved",
+    "donation-form-close": "Close",
+    "donation-form-redirect-message": "Redirecting you...."
   },
   "Contact": {
     "contact-us-title": "Contact Us",

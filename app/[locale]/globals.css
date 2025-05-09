@@ -57,3 +57,18 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+.razorpay-container iframe {
+  width: 100% !important;
+  max-width: 672px !important;
+  height: 600px !important;
+  border: none !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.razorpay-container .razorpay-checkout-frame {
+  width: 100% !important;
+  height: 100% !important;
+}

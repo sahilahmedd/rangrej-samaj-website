@@ -23,7 +23,7 @@ export async function POST(req: Request) {
     const capturePayload = {
       paymentId,
       amount: parseFloat(amount),
-      ENVIT_ID: event.id,
+      ENVIT_ID: event.eventID || "",
       PR_FULL_NAME: userData?.PR_FULL_NAME || "",
       entity: fullPaymentData.entity || "payment",
       currency: fullPaymentData.currency || "INR",
@@ -49,6 +49,7 @@ export async function POST(req: Request) {
       error_step: fullPaymentData.error_step || "",
       error_reason: fullPaymentData.error_reason || "",
       JSON_LOG: JSON.stringify(fullPaymentData),
+      cate_id: event.id,
     };
 
     console.log('Sending capture payload:', JSON.stringify(capturePayload));
