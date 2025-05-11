@@ -8,28 +8,33 @@ import { Menu } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import Logo from "./Logo";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import LanguageSwitcher from "./LanguageSwitcher";
+
+
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const t = useTranslations("Header");
 
+  const locale = useLocale();
+
   const navigation = [
-    { name: t("home"), href: "/" },
-    { name: t("about"), href: "/about" },
-    { name: t("initiatives"), href: "/initiatives" },
-    { name: t("events"), href: "/events" },
-    { name: t("gallery"), href: "/gallery" },
-    { name: t("donation"), href: "/donation" },
-    { name: t("contact"), href: "/contact" },
+    { name: t("home"), href: `/${locale}` },
+    { name: t("about"), href: `/${locale}/about` },
+    { name: t("initiatives"), href: `/${locale}/initiatives` },
+    { name: t("events"), href: `/${locale}/events` },
+    { name: t("gallery"), href: `/${locale}/gallery` },
+    { name: t("donation"), href: `/${locale}/donation` },
+    { name: t("contact"), href: `/${locale}/contact` },
   ];
 
   return (
     <header className="sticky top-0 flex justify-center items-center z-50 w-full h-28 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href={`/${locale}`} className="flex items-center space-x-2">
             {/* <span className="text-2xl font-bold text-[#B7410E]">Rangraj Samaj</span> */}
             <Logo
               width={100}
@@ -60,7 +65,7 @@ export default function Header() {
             asChild
             className="hidden md:flex bg-[#B7410E] hover:bg-[#8B3103] text-white"
           >
-            <Link href="/donation">
+            <Link href={`/${locale}/donation`}>
               {/* Donate Now */}
               {t("button-Donate")}
             </Link>
@@ -77,7 +82,7 @@ export default function Header() {
             <SheetContent side="right" className="pr-0">
               <div className="px-7">
                 <Link
-                  href="/"
+                  href={`/${locale}`}
                   className="flex items-center"
                   onClick={() => setIsOpen(false)}
                 >
@@ -107,7 +112,7 @@ export default function Header() {
                   </Link>
                 ))}
                 <Button className="mt-4 bg-[#B7410E] hover:bg-[#8B3103] text-white">
-                  <Link href="/donation" onClick={() => setIsOpen(false)}>
+                  <Link href={`/${locale}/donation`} onClick={() => setIsOpen(false)}>
                     Donate Now
                   </Link>
                 </Button>
