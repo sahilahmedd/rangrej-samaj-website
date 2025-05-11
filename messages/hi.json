@@ -338,7 +338,11 @@
     "donation-form-checkout": "इसका भुगतान करें",
     "donation-form-summary": "सारांश",
     "donation-form-select-category": "एक श्रेणी चुनें",
-    "donation-form-category": "श्रेणी"
+    "donation-form-category": "श्रेणी",
+    "donation-form-thank-you": "Thank You",
+    "donation-form-donation-received": "Donation Recieved",
+    "donation-form-close": "Close",
+    "donation-form-redirect-message": "Redirecting you...."
   },
   "Contact": {
     "contact-us-title": "संपर्क करें",
@@ -352,7 +356,7 @@
     "contact-us-email-send-us-an-email-at": "हमें इस ईमेल पर लिखें:",
     "contact-us-office-location": "कार्यालय का पता",
     "contact-us-visit-us-at": "हमसे यहाँ मिलें:",
-    "contact-us-rangraj-bhavan": "रंगराज भवन, 123 कम्युनिटी स्ट्रीट",
+    "contact-us-Rangrej-bhavan  ": "रंगराज भवन, 123 कम्युनिटी स्ट्रीट",
     "contact-us-mumbai-maharashtra": "मुंबई, महाराष्ट्र 400001",
     "contact-us-connect-with-us": "हमसे जुड़ें",
     "contact-us-find-us": "हमें खोजें"

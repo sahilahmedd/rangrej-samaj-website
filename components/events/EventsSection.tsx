@@ -18,7 +18,7 @@ export default function EventsSection() {
     { label: t("events-tabitems-past"), value: "past" },
   ];
 
-  const [activeTab, setActiveTab] = useState("upcoming");
+  const [activeTab, setActiveTab] = useState("past");
   const [upcoming, setUpcoming] = useState<any[]>([]);
   const [pastEvents, setPastEvents] = useState<any[]>([]);
 
@@ -40,108 +40,6 @@ export default function EventsSection() {
   }, []);
 
   console.log("Upcoming: ", upcoming);
-
-  // const upcomingEvents = [
-  //   {
-  //     id: 1,
-  //     title: "Annual Nikah Sammelan 2025",
-  //     date: "May 15, 2025",
-  //     time: "10:00 AM - 6:00 PM",
-  //     location: "Rangraj Community Hall, Mumbai",
-  //     image: "/placeholder.svg?height=400&width=600",
-  //     description:
-  //       "Our annual marriage meet bringing together eligible candidates from the Rangraj community.",
-  //     category: "vivah",
-  //     attendees: 200,
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "Health Check-up Camp",
-  //     date: "June 10, 2025",
-  //     time: "9:00 AM - 4:00 PM",
-  //     location: "Rangraj Bhavan, Delhi",
-  //     image: "/placeholder.svg?height=400&width=600",
-  //     description:
-  //       "Free health check-ups including general health, eye, and dental examinations.",
-  //     category: "health",
-  //     attendees: 150,
-  //   },
-  //   {
-  //     id: 3,
-  //     title: "Cultural Festival",
-  //     date: "July 22, 2025",
-  //     time: "5:00 PM - 10:00 PM",
-  //     location: "Central Park, Jaipur",
-  //     image: "/placeholder.svg?height=400&width=600",
-  //     description:
-  //       "Celebrating our rich cultural heritage with music, dance, and traditional crafts.",
-  //     category: "cultural",
-  //     attendees: 300,
-  //   },
-  //   {
-  //     id: 4,
-  //     title: "Educational Scholarship Distribution",
-  //     date: "August 5, 2025",
-  //     time: "11:00 AM - 2:00 PM",
-  //     location: "Rangraj Education Center, Ahmedabad",
-  //     image: "/placeholder.svg?height=400&width=600",
-  //     description:
-  //       "Distribution of scholarships to deserving students from our community.",
-  //     category: "education",
-  //     attendees: 100,
-  //   },
-  // ];
-
-  // const pastEvents = [
-  //   {
-  //     id: 5,
-  //     title: "Zakat Distribution Drive",
-  //     date: "March 5, 2025",
-  //     time: "10:00 AM - 4:00 PM",
-  //     location: "Multiple Locations",
-  //     image: "/placeholder.svg?height=400&width=600",
-  //     description:
-  //       "Successfully distributed zakat to over 200 families in need across 5 cities.",
-  //     category: "charity",
-  //     attendees: 50,
-  //   },
-  //   {
-  //     id: 6,
-  //     title: "Youth Leadership Workshop",
-  //     date: "February 18, 2025",
-  //     time: "9:00 AM - 5:00 PM",
-  //     location: "Rangraj Community Center, Ahmedabad",
-  //     image: "/placeholder.svg?height=400&width=600",
-  //     description:
-  //       "Empowering the next generation with leadership skills and community values.",
-  //     category: "education",
-  //     attendees: 75,
-  //   },
-  //   {
-  //     id: 7,
-  //     title: "Winter Clothing Distribution",
-  //     date: "January 10, 2025",
-  //     time: "10:00 AM - 3:00 PM",
-  //     location: "Various Locations",
-  //     image: "/placeholder.svg?height=400&width=600",
-  //     description:
-  //       "Provided warm clothing to underprivileged children and elderly community members.",
-  //     category: "charity",
-  //     attendees: 120,
-  //   },
-  //   {
-  //     id: 8,
-  //     title: "New Year Community Gathering",
-  //     date: "January 1, 2025",
-  //     time: "6:00 PM - 10:00 PM",
-  //     location: "Rangraj Community Hall, Mumbai",
-  //     image: "/placeholder.svg?height=400&width=600",
-  //     description:
-  //       "A festive gathering to celebrate the new year with cultural performances and dinner.",
-  //     category: "cultural",
-  //     attendees: 250,
-  //   },
-  // ];
 
   return (
     <section className="py-8 sm:py-12 md:py-16 bg-white">

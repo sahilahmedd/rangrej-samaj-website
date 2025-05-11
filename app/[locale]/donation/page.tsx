@@ -29,7 +29,7 @@ export default function DonationPage() {
           <div className="max-w-3xl mx-auto">
             <Tabs defaultValue="online" className="w-full">
               <TabsList className="grid w-full grid-cols-1 mb-8"> {/* grid-cols-2 */}
-                <TabsTrigger value="online">Online Donation</TabsTrigger>
+                {/* <TabsTrigger value="online">Online Donation</TabsTrigger> */}
                 {/* <TabsTrigger value="bank">Bank Transfer</TabsTrigger> */}
               </TabsList>
 

@@ -295,7 +295,7 @@ export default function CardSlider() {
   </div>
 
   {/* Ads Cards Section */}
-  <div className="w-full lg:w-1/5 flex flex-col items-center">
+  <div className="w-full lg:w-1/3 flex flex-col items-center">
     <Card className="border-2 border-blue-300 hover:border-blue-500 transition-all h-full overflow-visible w-full">
       <CardContent className="p-6 text-center h-64 relative overflow-visible">
         <Carousel

@@ -13,71 +13,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { splitEventsByDate } from "@/utils/eventHelpers";
 import { useTranslations } from "next-intl";
-// const events = [
-//   {
-//     id: 1,
-//     title: "Annual Nikah Sammelan 2025",
-//     date: "May 15, 2025",
-//     location: "Rangraj Community Hall, Mumbai",
-//     image: "/placeholder.svg?height=400&width=600",
-//     description:
-//       "Our annual marriage meet bringing together eligible candidates from the Rangraj community.",
-//   },
-//   {
-//     id: 2,
-//     title: "Health Check-up Camp",
-//     date: "June 10, 2025",
-//     location: "Rangraj Bhavan, Delhi",
-//     image: "/placeholder.svg?height=400&width=600",
-//     description:
-//       "Free health check-ups including general health, eye, and dental examinations.",
-//   },
-//   {
-//     id: 3,
-//     title: "Cultural Festival",
-//     date: "July 22, 2025",
-//     location: "Central Park, Jaipur",
-//     image: "/placeholder.svg?height=400&width=600",
-//     description:
-//       "Celebrating our rich cultural heritage with music, dance, and traditional crafts.",
-//   },
-//   {
-//     id: 4,
-//     title: "Zakat Distribution Drive",
-//     date: "March 5, 2025",
-//     location: "Multiple Locations",
-//     image: "/placeholder.svg?height=400&width=600",
-//     description:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-//   },
-//   {
-//     id: 5,
-//     title: "Lorem ipsum dolor sit amet,",
-//     date: "March 5, 2025",
-//     location: "Multiple Locations",
-//     image: "/placeholder.svg?height=400&width=600",
-//     description:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-//   },
-//   {
-//     id: 6,
-//     title: "Lorem ipsum dolor sit amet,",
-//     date: "March 5, 2025",
-//     location: "Multiple Locations",
-//     image: "/placeholder.svg?height=400&width=600",
-//     description:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-//   },
-//   {
-//     id: 7,
-//     title: "Lorem ipsum dolor sit amet",
-//     date: "March 5, 2025",
-//     location: "Multiple Locations",
-//     image: "/placeholder.svg?height=400&width=600",
-//     description:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-//   },
-// ];
+
 
 
 const HomeEvents = () => {
@@ -85,6 +21,7 @@ const HomeEvents = () => {
 
   const [ event, setEvents ] = useState<any[]>([])
   const [pastEvents, setPastEvents] = useState<any[]>([]);
+  const [activeTab, setActiveTab] = useState("upcoming");
 
   const fetchEvents = async() =>{
     const res = await fetch("https://node2-plum.vercel.app/api/user/events")
@@ -114,7 +51,7 @@ const HomeEvents = () => {
           {/* Our Events */}
           {t("home-events-title-h2")}
         </h2>
-        <Tabs defaultValue="upcoming" className="w-full">
+        <Tabs defaultValue="past" className="w-full">
           <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-10 ">
             <TabsTrigger value="upcoming">
               {/* Upcoming Events */}
