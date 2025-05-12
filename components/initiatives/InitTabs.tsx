@@ -8,6 +8,7 @@ import { Button } from "../ui/button";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
+import DonationModal from "../DonationModal";
 
 export default function InitTabs() {
   const t = useTranslations("Initiatives");
@@ -235,10 +236,11 @@ export default function InitTabs() {
                   </li>
                 </ul>
                 <div className="flex flex-wrap gap-4">
-                  <Button className="bg-[#B7410E] hover:bg-[#8B3103] text-white">
-                    {/* Contribute Zakat */}
+                  {/* <Button className="bg-[#B7410E] hover:bg-[#8B3103] text-white">
+                    Contribute Zakat
                     {t("initiatives-Zakat-button1")}
-                  </Button>
+                  </Button> */}
+                  <DonationModal lable={`${t("donation-model-lable-1")}`} />
                   {/* <Button variant="outline">
                     Apply for Zakat Assistance
                     {t("initiatives-Zakat-button2")}
@@ -534,9 +536,10 @@ export default function InitTabs() {
                   {/* <Button className="bg-[#B7410E] hover:bg-[#8B3103] text-white">
                     {t("apply-scholarship-button")}
                   </Button> */}
-                  <Button variant="outline">
+                  {/* <Button variant="outline">
                     {t("donate-education-button")}
-                  </Button>
+                  </Button> */}
+                  <DonationModal lable={`${t("donate-education-button")}`} />
                 </div>
               </div>
               <div className="relative h-[400px] rounded-lg overflow-hidden order-first lg:order-last">

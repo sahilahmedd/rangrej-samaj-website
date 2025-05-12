@@ -59,7 +59,7 @@
 }
 
 
-.razorpay-container iframe {
+/* .razorpay-container iframe {
   width: 100% !important;
   max-width: 672px !important;
   height: 600px !important;
@@ -71,4 +71,4 @@
 .razorpay-container .razorpay-checkout-frame {
   width: 100% !important;
   height: 100% !important;
-}
+} */
