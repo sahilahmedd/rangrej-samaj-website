@@ -2,10 +2,15 @@ import React from 'react'
 import { Card, CardContent } from '../ui/card'
 import { Heart, Users, GraduationCap } from 'lucide-react'
 import { Button } from '../ui/button'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
+import Link from 'next/link'
 
 const InfoCard = () => {
   const t = useTranslations("Initiatives");
+  const locale = useLocale()
+
+
+
   return (
     <section className="py-16 bg-[#B7410E]">
     <div className="container px-4 md:px-6 text-white">
@@ -41,7 +46,7 @@ const InfoCard = () => {
                 className="border-white text-white bg-transparent duration-300 ease-in hover:bg-white hover:text-[#B7410E]"
               >
                 {/* Make a Donation */}
-                {t("info-card-button1")}
+                <Link href={`/${locale}/donation`}>{t("info-card-button1")}</Link>
               </Button>
             </CardContent>
           </Card>
@@ -65,7 +70,7 @@ const InfoCard = () => {
                 className="border-white text-white bg-transparent duration-300 ease-in hover:bg-white hover:text-[#B7410E]"
               >
                 {/* Join as Volunteer */}
-                {t("info-card-button2")}
+                <Link href={`/${locale}/contact`}>{t("info-card-button2")}</Link>
               </Button>
             </CardContent>
           </Card>

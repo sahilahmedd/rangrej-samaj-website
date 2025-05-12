@@ -6,10 +6,13 @@ import ResponsiveTabHeader from "../ResponsiveTabHeader";
 import { Card, CardContent } from "../ui/card";
 import { Button } from "../ui/button";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import Link from "next/link";
 
 export default function InitTabs() {
   const t = useTranslations("Initiatives");
+  const locale = useLocale()
+
   const tabItems = [
     { label: t("initiatives-tabitems-medical-aid"), value: "health" },
     { label: t("initiatives-tabitems-zakat-distribution"), value: "zakat" },
@@ -49,7 +52,7 @@ export default function InitTabs() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="relative h-[400px] rounded-lg overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=800&width=600&text=Medical"
+                  src="/images/medical1.jpg"
                   alt="Medical Aid Initiative"
                   fill
                   className="object-cover"
@@ -96,16 +99,17 @@ export default function InitTabs() {
                     {t("initiatives-Medical-offer5")}
                   </li>
                 </ul>
-                {/* <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-4">
                   <Button className="bg-[#B7410E] hover:bg-[#8B3103] text-white">
-                    Apply for Medical Aid
-                    {t("initiatives-Medical-button1")}
+                    {/* Apply for Medical Aid */}
+                    <Link href={`/${locale}/contact`}>{t("initiatives-Medical-button1")}</Link>
                   </Button>
                   <Button variant="outline">
-                    Volunteer for Health Camps
-                    {t("initiatives-Medical-button2")}
+                    {/* Volunteer for Health Camps */}
+                    <Link href={`/${locale}/contact`}>{t("initiatives-Medical-button2")}</Link>
+                    
                   </Button>
-                </div> */}
+                </div>
               </div>
             </div>
 
@@ -119,7 +123,7 @@ export default function InitTabs() {
                   <Card key={i} className="overflow-hidden">
                     <div className="relative h-48">
                       <Image
-                        src={`/placeholder.svg?height=300&width=400&text=Camp${i}`}
+                        src={`/images/medical2.jpg`}
                         alt={`Health Camp ${i}`}
                         fill
                         className="object-cover"
@@ -243,7 +247,7 @@ export default function InitTabs() {
               </div>
               <div className="relative h-[400px] rounded-lg overflow-hidden order-first lg:order-last">
                 <Image
-                  src="/placeholder.svg?height=800&width=600&text=Zakat"
+                  src="/images/zakat1.png"
                   alt="Zakat Distribution"
                   fill
                   className="object-cover"
@@ -261,7 +265,7 @@ export default function InitTabs() {
                   <Card key={i} className="overflow-hidden">
                     <div className="relative h-48">
                       <Image
-                        src={`/placeholder.svg?height=300&width=400&text=Zakat${i}`}
+                        src={`/images/zakat1.jpg`}
                         alt={`Zakat Distribution ${i}`}
                         fill
                         className="object-cover"
@@ -332,7 +336,7 @@ export default function InitTabs() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="relative h-[400px] rounded-lg overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=800&width=600&text=Nikah"
+                  src="/images/nikkah1.png"
                   alt="Nikah Sammelan"
                   fill
                   className="object-cover"
@@ -537,7 +541,7 @@ export default function InitTabs() {
               </div>
               <div className="relative h-[400px] rounded-lg overflow-hidden order-first lg:order-last">
                 <Image
-                  src="/placeholder.svg?height=800&width=600&text=Education"
+                  src="/images/education1.png"
                   alt="Educational Support"
                   fill
                   className="object-cover"
@@ -555,7 +559,7 @@ export default function InitTabs() {
                   <Card key={i} className="overflow-hidden">
                     <div className="relative h-48">
                       <Image
-                        src={`/placeholder.svg?height=300&width=400&text=Student${i}`}
+                        src={`/images/student1.jpg`}
                         alt={`Student ${i}`}
                         fill
                         className="object-cover"
