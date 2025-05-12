@@ -28,10 +28,10 @@ export default function DonationPage() {
           <h2 className="text-3xl font-bold text-center mb-12 text-[#8B3103]">Make a Donation</h2>
           <div className="max-w-3xl mx-auto">
             <Tabs defaultValue="online" className="w-full">
-              <TabsList className="grid w-full grid-cols-1 mb-8"> {/* grid-cols-2 */}
-                {/* <TabsTrigger value="online">Online Donation</TabsTrigger> */}
-                {/* <TabsTrigger value="bank">Bank Transfer</TabsTrigger> */}
-              </TabsList>
+              {/* <TabsList className="grid w-full grid-cols-1 mb-8"> grid-cols-2
+                <TabsTrigger value="online">Online Donation</TabsTrigger>
+                <TabsTrigger value="bank">Bank Transfer</TabsTrigger>
+              </TabsList> */}
 
               <TabsContent value="online">
                 <DonationForm />

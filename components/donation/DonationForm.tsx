@@ -57,7 +57,7 @@ const DonationForm = () => {
                           {t("donation-form-bank-transfer-account-number")}
                         </p>
                         <p className="text-muted-foreground">
-                          1234567890
+                          {/* 1234567890 */}
                           {/* {t("donation-form-bank-transfer-account-number-value")} */}
                         </p>
                       </div>
@@ -77,7 +77,7 @@ const DonationForm = () => {
                           {t("donation-form-bank-transfer-ifsc-code")}
                         </p>
                         <p className="text-muted-foreground">
-                          SBIN0001234
+                          {/* SBIN0001234 */}
                           {/* {t("donation-form-bank-transfer-ifsc-code-value")} */}
                         </p>
                       </div>
