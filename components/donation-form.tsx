@@ -48,9 +48,18 @@ export default function DonationForm() {
     const getCategory = async () => {
       const res = await fetch("https://node2-plum.vercel.app/api/admin/categories");
       const data = await res.json();
-      console.log("Data: ", data);
+
+
+      console.log("This is Data: ", data);
+    
+      const apiData = {CATE_CATE_ID: 1};
+
+      const matchID = data.categories.filter((cate: { CATE_CATE_ID: number; }) => cate.CATE_CATE_ID === apiData.CATE_CATE_ID)
+
+      console.log("CATE_ID: ", matchID);
       
-      setCategory(data.categories);
+
+      setCategory(matchID);
     };
     getCategory();
   }, []);
