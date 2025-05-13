@@ -8,7 +8,8 @@ import { Button } from "../ui/button";
 import Image from "next/image";
 import { CalendarDays, Clock, MapPin, Users, Phone } from "lucide-react";
 import { splitEventsByDate } from "@/utils/eventHelpers";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import Link from "next/link";
 
 export default function EventsSection() {
   const t = useTranslations("Events");
@@ -40,6 +41,8 @@ export default function EventsSection() {
   }, []);
 
   console.log("Upcoming: ", upcoming);
+
+  const locale = useLocale()
 
   return (
     <section className="py-8 sm:py-12 md:py-16 bg-white">
@@ -112,7 +115,7 @@ export default function EventsSection() {
                   </CardContent>
                   <CardFooter className="px-6 pb-6 pt-0">
                     <Button className="w-full bg-[#B7410E] hover:bg-[#8B3103] text-white">
-                      Register Now
+                      <Link href={`/${locale}/contact`}>Register Now</Link>
                     </Button>
                   </CardFooter>
                 </Card>

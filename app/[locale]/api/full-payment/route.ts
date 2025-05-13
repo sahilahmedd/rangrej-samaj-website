@@ -22,7 +22,7 @@ export async function POST(req: Request) {
     // 2. Construct your payload
     const capturePayload = {
       paymentId,
-      amount: parseFloat(amount),
+      amount: parseFloat(amount) * 100,
       ENVIT_ID: event.eventID || "",
       PR_FULL_NAME: userData?.PR_FULL_NAME || "",
       entity: fullPaymentData.entity || "payment",

@@ -12,12 +12,13 @@ import {
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { splitEventsByDate } from "@/utils/eventHelpers";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 
 
 const HomeEvents = () => {
   const t = useTranslations("Homepage");
+  const locale = useLocale()
 
   const [ event, setEvents ] = useState<any[]>([])
   const [pastEvents, setPastEvents] = useState<any[]>([]);
@@ -148,7 +149,7 @@ const HomeEvents = () => {
             asChild
             className="bg-[#B7410E] hover:bg-[#8B3103] text-white"
           >
-            <Link href="/events">
+            <Link href={`/${locale}/events`}>
             {/* View All Events */}
             {t("home-events-button")}
             </Link>
