@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from '../ui/button'
 import { useTranslations } from 'next-intl';
+import LocaleLink from '../LocaleLink';
 
 const EventsHost = () => {
   const t = useTranslations("Events");
@@ -20,7 +21,7 @@ const EventsHost = () => {
         </p>
         <Button className="bg-[#B7410E] hover:bg-[#8B3103] text-white">
           {/* Contact Us to Host an Event */}
-          {t("events-host-button")}
+          <LocaleLink lable={`${t("events-host-button")}`} path="contact" />
         </Button>
       </div>
     </div>
