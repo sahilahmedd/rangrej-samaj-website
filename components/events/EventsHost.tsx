@@ -6,10 +6,10 @@ import LocaleLink from '../LocaleLink';
 const EventsHost = () => {
   const t = useTranslations("Events");
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16">
     <div className="container px-4 md:px-6">
       <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-6 text-[#8B3103]">
+        <h2 className="text-3xl font-header font-bold mb-6 text-rangrez-indigo_dark">
           {/* Host an Event */}
           {t("events-host-title")}
         </h2>
@@ -19,7 +19,7 @@ const EventsHost = () => {
           organizing and promoting your event. */}
           {t("events-host-description")}
         </p>
-        <Button className="bg-[#B7410E] hover:bg-[#8B3103] text-white">
+        <Button className="bg-rangrez-indigo hover:bg-rangrez-indigo_dark text-white">
           {/* Contact Us to Host an Event */}
           <LocaleLink lable={`${t("events-host-button")}`} path="contact" />
         </Button>

@@ -10,7 +10,7 @@ export default function ContactPage() {
   return (
     <main className="flex min-h-screen flex-col">
       {/* Hero Section */}
-      <section className="bg-[#B7410E] py-16 md:py-24">
+      <section className="bg-[#0C2340] py-16 md:py-24">
         <div className="container px-4 md:px-6">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tighter mb-4">
@@ -27,20 +27,20 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16 bg-white">
+      <section className="py-16 ">
         <div className="container px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold mb-8 text-[#8B3103]">
+              <h2 className="text-3xl font-bold mb-8 text-rangrez-indigo_dark">
                 {/* Get in Touch */}
                 {t("contact-us-get-in-touch")}
               </h2>
 
               <div className="space-y-8">
                 <Card>
-                  <CardContent className="p-6 flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[#F2C94C]/10 flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-6 h-6 text-[#B7410E]" />
+                  <CardContent className="p-6 border-2 bg-rangrez-sand_lite border-rangrez-sand_hover/20 hover:border-rangrez-sand_hover transition-all rounded-lg flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-rangrez-saffron/20 flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-6 h-6 text-[#0C2340]" />
                     </div>
                     <div>
                       <h3 className="font-bold text-lg mb-1">
@@ -58,9 +58,9 @@ export default function ContactPage() {
                 </Card>
 
                 <Card>
-                  <CardContent className="p-6 flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[#F2C94C]/10 flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-6 h-6 text-[#B7410E]" />
+                  <CardContent className="p-6 border-2 bg-rangrez-sand_lite border-rangrez-sand_hover/20 hover:border-rangrez-sand_hover transition-all rounded-lg flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-rangrez-saffron/20 flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-6 h-6 text-[#0C2340]" />
                     </div>
                     <div>
                       <h3 className="font-bold text-lg mb-1">
@@ -78,9 +78,9 @@ export default function ContactPage() {
                 </Card>
 
                 <Card>
-                  <CardContent className="p-6 flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[#F2C94C]/10 flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-[#B7410E]" />
+                  <CardContent className="p-6 border-2 bg-rangrez-sand_lite border-rangrez-sand_hover/20 hover:border-rangrez-sand_hover transition-all rounded-lg flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-rangrez-saffron/20 flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-6 h-6 text-[#0C2340]" />
                     </div>
                     <div>
                       <h3 className="font-bold text-lg mb-1">
@@ -112,28 +112,28 @@ export default function ContactPage() {
                 <div className="flex gap-4">
                   <a
                     href="#"
-                    className="w-12 h-12 rounded-full bg-[#F2C94C]/10 flex items-center justify-center hover:bg-[#F2C94C]/20 transition-colors"
+                    className="w-12 h-12 rounded-full bg-rangrez-saffron/20 flex items-center justify-center hover:bg-rangrez-sand_hover/20 transition-colors"
                   >
-                    <Facebook className="w-6 h-6 text-[#B7410E]" />
+                    <Facebook className="w-6 h-6 text-[#0C2340]" />
                   </a>
                   <a
                     href="#"
-                    className="w-12 h-12 rounded-full bg-[#F2C94C]/10 flex items-center justify-center hover:bg-[#F2C94C]/20 transition-colors"
+                    className="w-12 h-12 rounded-full bg-rangrez-saffron/20 flex items-center justify-center hover:bg-rangrez-sand_hover/20 transition-colors"
                   >
-                    <Instagram className="w-6 h-6 text-[#B7410E]" />
+                    <Instagram className="w-6 h-6 text-[#0C2340]" />
                   </a>
                   <a
                     href="#"
-                    className="w-12 h-12 rounded-full bg-[#F2C94C]/10 flex items-center justify-center hover:bg-[#F2C94C]/20 transition-colors"
+                    className="w-12 h-12 rounded-full bg-rangrez-saffron/20 flex items-center justify-center hover:bg-rangrez-sand_hover/20 transition-colors"
                   >
-                    <Youtube className="w-6 h-6 text-[#B7410E]" />
+                    <Youtube className="w-6 h-6 text-[#0C2340]" />
                   </a>
                 </div>
               </div>
             </div>
 
             <div>
-              <h2 className="text-3xl font-bold mb-8 text-[#8B3103]">
+              <h2 className="text-3xl font-bold mb-8 text-rangrez-indigo_dark">
                 {/* Send Us a Message */}
                 {t("contact-us-send-us-a-message")}
               </h2>
@@ -146,7 +146,7 @@ export default function ContactPage() {
       {/* Map Section */}
       <section className="py-16 bg-[#F9F5E7]">
         <div className="container px-4 md:px-6">
-          <h2 className="text-3xl font-bold text-center mb-8 text-[#8B3103]">
+          <h2 className="text-3xl font-bold text-center mb-8 text-rangrez-indigo_dark">
             {/* Find Us */}
             {t("contact-us-find-us")}
           </h2>

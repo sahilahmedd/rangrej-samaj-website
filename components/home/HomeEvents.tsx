@@ -1,7 +1,8 @@
 "use client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { TabsTrigger } from "../tabs-trigger";
+import { Tabs, TabsContent, TabsList } from "@/components/ui/tabs";
 import {
   Carousel,
   CarouselContent,
@@ -46,24 +47,24 @@ const HomeEvents = () => {
   },[])
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 ">
       <div className="container px-4 md:px-6">
-        <h2 className="text-3xl font-bold text-center mb-12 text-[#8B3103]">
+        <h2 className="text-3xl font-header font-bold text-center mb-12 text-rangrez-indigo_dark">
           {/* Our Events */}
           {t("home-events-title-h2")}
         </h2>
-        <Tabs defaultValue="upcoming" className="w-full">
-          <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-10 ">
-            <TabsTrigger value="upcoming">
+        <Tabs defaultValue="upcoming" className="w-full ">
+          <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-10 gap-2 bg-rangrez-tab">
+            <TabsTrigger value="upcoming" className="">
               {/* Upcoming Events */}
               {t("home-events-title-upcoming")}
               </TabsTrigger>
-            <TabsTrigger value="past">
+            <TabsTrigger value="past" className="">
               {/* Past Events */}
               {t("home-events-title-past")}
               </TabsTrigger>
           </TabsList>
-          <TabsContent value="upcoming">
+          <TabsContent value="upcoming" className="">
             <div className="relative">
               <Carousel className=" pb-10">
                 <CarouselContent>
@@ -76,7 +77,7 @@ const HomeEvents = () => {
                           : "md:basis-1/3 basis-4/5"
                       }
                     >
-                      <div className="bg-white rounded-lg border mb-5 p-4 h-full flex flex-col">
+                      <div className=" rounded-lg  border-2 bg-rangrez-sand_lite border-rangrez-sand_hover/20 hover:border-rangrez-sand_hover transition-all mb-5 p-4 h-full flex flex-col">
                         <Image
                           src={event.ENVT_BANNER_IMAGE}
                           alt={event.ENVT_DESC}
@@ -100,8 +101,8 @@ const HomeEvents = () => {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="absolute -left-4 top-1/2 p-4 text-white hover:text-white bg-[#B7410E] hover:bg-[#8B3103] -translate-y-1/2 z-10" />
-                <CarouselNext className="absolute -right-4 top-1/2 p-4 text-white hover:text-white bg-[#B7410E] hover:bg-[#8B3103] -translate-y-1/2 z-10" />
+                <CarouselPrevious className="absolute -left-4 top-1/2 p-4 text-white hover:text-white bg-[#0C2340] hover:bg-rangrez-indigo_dark -translate-y-1/2 z-10" />
+                <CarouselNext className="absolute -right-4 top-1/2 p-4 text-white hover:text-white bg-[#0C2340] hover:bg-rangrez-indigo_dark -translate-y-1/2 z-10" />
               </Carousel>
             </div>
           </TabsContent>
@@ -118,7 +119,7 @@ const HomeEvents = () => {
                           : "md:basis-1/3 basis-4/5"
                       }
                     >
-                      <div className="bg-white rounded-lg shadow p-4 h-full flex flex-col">
+                      <div className=" border-2 bg-rangrez-sand_lite border-rangrez-sand_hover/20 hover:border-rangrez-sand_hover transition-all rounded-lg shadow p-4 h-full flex flex-col">
                         <Image
                           src={event.ENVT_BANNER_IMAGE}
                           alt={event.ENVT_DESC}
@@ -142,8 +143,8 @@ const HomeEvents = () => {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="absolute left-0 top-1/2 text-white hover:text-white bg-[#B7410E] hover:bg-[#8B3103] -translate-y-1/2 z-10" />
-                <CarouselNext className="absolute right-0 top-1/2 text-white hover:text-white bg-[#B7410E] hover:bg-[#8B3103] -translate-y-1/2 z-10" />
+                <CarouselPrevious className="absolute -left-4 top-1/2 text-white hover:text-white bg-[#0C2340] hover:bg-rangrez-indigo_dark -translate-y-1/2 z-10" />
+                <CarouselNext className="absolute -right-4 top-1/2 text-white hover:text-white bg-[#0C2340] hover:bg-rangrez-indigo_dark -translate-y-1/2 z-10" />
               </Carousel>
             </div>
           </TabsContent>
@@ -151,7 +152,7 @@ const HomeEvents = () => {
         <div className="text-center mt-8">
           <Button
             asChild
-            className="bg-[#B7410E] hover:bg-[#8B3103] text-white"
+            className="bg-rangrez-indigo hover:bg-rangrez-indigo_dark text-white"
           >
             <Link href={`/${locale}/events`}>
             {/* View All Events */}

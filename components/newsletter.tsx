@@ -70,7 +70,7 @@ export default function Newsletter() {
             onChange={(e) => setEmail(e.target.value)}
             disabled={isSubmitting}
           />
-          <Button type="submit" className="bg-white text-[#B7410E] hover:bg-white/90" disabled={isSubmitting}>
+          <Button type="submit" className="bg-white text-[#0C2340] hover:bg-white/90" disabled={isSubmitting}>
             {isSubmitting ? t("home-newsletter-button-subscribing") : t("home-newsletter-button")}
           </Button>
         </div>

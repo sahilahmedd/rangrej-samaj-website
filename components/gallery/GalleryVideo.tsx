@@ -27,7 +27,7 @@ const GalleryVideo = () => {
   return (
     <section className="py-16 bg-[#F9F5E7]">
       <div className="container px-4 md:px-6">
-        <h2 className="text-3xl font-bold text-center mb-12 text-[#8B3103]">
+        <h2 className="text-3xl font-bold text-center mb-12 text-rangrez-indigo_dark">
           {/* Video Gallery */}
           {t("gallery-video-title")}
         </h2>

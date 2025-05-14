@@ -19,7 +19,7 @@ const HeroHome = () => {
       />
     </div>
     <div className="container relative z-10 px-4 md:px-6 flex flex-col items-center text-center space-y-4">
-      <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tighter">
+      <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tighter">
         {/* Serving Humanity, Preserving Culture */}
         {t('title')}
       </h1>
@@ -31,7 +31,7 @@ const HeroHome = () => {
       <div className="flex flex-wrap gap-4 justify-center mt-8">
         <Button
           size="lg"
-          className="bg-[#B7410E] hover:bg-[#8B3103] text-white"
+          className="bg-rangrez-indigo hover:bg-rangrez-indigo_dark text-white"
         >
           {t('button-Join')}
         </Button>

@@ -1,5 +1,5 @@
 import type React from "react";
-import { Inter } from "next/font/google";
+import { Lato, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
@@ -9,7 +9,12 @@ import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import Script from "next/script";
 
-const inter = Inter({ subsets: ["latin"] });
+const lato = Lato({ subsets: ["latin"], weight: ["400"] });
+export const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["700"],
+  variable: "--font-header",
+});
 
 export const metadata = {
   title: "Rangraj Samaj",
@@ -34,7 +39,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${playfair.variable} ${lato.className}`}>
         <NextIntlClientProvider>
           <ThemeProvider
             attribute="class"

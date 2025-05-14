@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList } from "@/components/ui/tabs";
+import { TabsTrigger } from "../tabs-trigger";
 import ResponsiveTabHeader from "../ResponsiveTabHeader";
 import { Card, CardContent, CardFooter } from "../ui/card";
 import { Button } from "../ui/button";
@@ -45,7 +46,7 @@ export default function EventsSection() {
   const locale = useLocale()
 
   return (
-    <section className="py-8 sm:py-12 md:py-16 bg-white">
+    <section className="py-8 sm:py-12 md:py-16">
       <div className="container px-4 md:px-6">
         {/* Mobile Header */}
         <ResponsiveTabHeader
@@ -57,8 +58,8 @@ export default function EventsSection() {
         {/* Tabs: always rendered */}
         <Tabs value={activeTab} onValueChange={setActiveTab}>
           {/* Desktop Header */}
-          <div className="hidden sm:block mt-4">
-            <TabsList className="grid w-full grid-cols-2">
+          <div className="hidden bg-rangrez-tab rounded mb-5 sm:block mt-4">
+            <TabsList className="grid gap-2 w-full grid-cols-2">
               {tabItems.map((tab) => (
                 <TabsTrigger key={tab.value} value={tab.value}>
                   {tab.label}
@@ -114,7 +115,7 @@ export default function EventsSection() {
                     </p>
                   </CardContent>
                   <CardFooter className="px-6 pb-6 pt-0">
-                    <Button className="w-full bg-[#B7410E] hover:bg-[#8B3103] text-white">
+                    <Button className="w-full bg-rangrez-indigo hover:bg-rangrez-indigo_dark text-white">
                       <Link href={`/${locale}/contact`}>Register Now</Link>
                     </Button>
                   </CardFooter>

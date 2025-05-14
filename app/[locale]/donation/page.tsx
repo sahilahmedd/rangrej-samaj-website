@@ -23,9 +23,9 @@ export default function DonationPage() {
       <DonationInfo />
 
       {/* Donation Form */}
-      <section className="py-16 bg-white">
+      <section className="py-16 ">
         <div className="container px-4 md:px-6">
-          <h2 className="text-3xl font-bold text-center mb-12 text-[#8B3103]">Make a Donation</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-rangrez-indigo_dark">Make a Donation</h2>
           <div className="max-w-3xl mx-auto">
             <Tabs defaultValue="online" className="w-full">
               {/* <TabsList className="grid w-full grid-cols-1 mb-8"> grid-cols-2
@@ -88,10 +88,10 @@ export default function DonationPage() {
       </section>
 
       {/* Testimonials */}
-      <DonationTestimonials />
+      {/* <DonationTestimonials /> */}
 
       {/* Transparency */}
-      <DonationTransparency />
+      {/* <DonationTransparency /> */}
     </main>
   )
 }

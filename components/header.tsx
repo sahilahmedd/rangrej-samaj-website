@@ -31,15 +31,15 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 flex justify-center items-center z-50 w-full h-28 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 flex justify-center items-center z-50 w-full h-28 border-b bg-rangrez-sand/95 backdrop-blur supports-[backdrop-filter]:bg-rangrez-sand/60">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href={`/${locale}`} className="flex items-center space-x-2">
-            {/* <span className="text-2xl font-bold text-[#B7410E]">Rangraj Samaj</span> */}
+            {/* <span className="text-2xl font-bold text-[#0C2340]">Rangraj Samaj</span> */}
             <Logo
               width={100}
               height={100}
-              style="rounded-lg border-1 shadow-md"
+              style="rounded-lg border-2 border-rangrez-saffron shadow-md"
               alt="Logo"
             />
           </Link>
@@ -51,8 +51,8 @@ export default function Header() {
               key={item.name}
               href={item.href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-[#B7410E]",
-                pathname === item.href ? "text-[#B7410E]" : "text-foreground/60"
+                "text-lg font-medium  text-[#0C2340] hover:text-rangrez-saffron",
+                pathname === item.href ? "text-rangrez-saffron" : "text-foreground/60"
               )}
             >
               {item.name}
@@ -63,7 +63,7 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <Button
             asChild
-            className="hidden md:flex bg-[#B7410E] hover:bg-[#8B3103] text-white"
+            className="hidden md:flex bg-rangrez-indigo hover:bg-rangrez-indigo_dark text-white"
           >
             <Link href={`/${locale}/donation`}>
               {/* Donate Now */}
@@ -101,9 +101,9 @@ export default function Header() {
                     key={item.name}
                     href={item.href}
                     className={cn(
-                      "text-base font-medium transition-colors hover:text-[#B7410E]",
+                      "text-base font-medium transition-colors hover:text-[#0C2340]",
                       pathname === item.href
-                        ? "text-[#B7410E]"
+                        ? "text-[#0C2340]"
                         : "text-foreground/60"
                     )}
                     onClick={() => setIsOpen(false)}
@@ -111,7 +111,7 @@ export default function Header() {
                     {item.name}
                   </Link>
                 ))}
-                <Button className="mt-4 bg-[#B7410E] hover:bg-[#8B3103] text-white">
+                <Button className="mt-4 bg-rangrez-saffron hover:bg-rangrez-gold text-white">
                   <Link href={`/${locale}/donation`} onClick={() => setIsOpen(false)}>
                     Donate Now
                   </Link>

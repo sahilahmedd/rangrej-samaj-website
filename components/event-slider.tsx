@@ -66,7 +66,7 @@ export default function EventSlider({ events }: EventSliderProps) {
                     <p className="text-muted-foreground mb-6">
                       {event.description}
                     </p>
-                    <Button className="w-full md:w-auto bg-[#B7410E] hover:bg-[#8B3103] text-white">
+                    <Button className="w-full md:w-auto bg-[#0C2340] hover:bg-rangrez-indigo_dark text-white">
                       Learn More
                     </Button>
                   </CardContent>
@@ -103,7 +103,7 @@ export default function EventSlider({ events }: EventSliderProps) {
               <button
                 key={index}
                 className={`w-2 h-2 rounded-full ${
-                  index === currentIndex ? "bg-[#B7410E]" : "bg-gray-300"
+                  index === currentIndex ? "bg-[#0C2340]" : "bg-gray-300"
                 }`}
                 onClick={() => setCurrentIndex(index)}
                 aria-label={`Go to slide ${index + 1}`}

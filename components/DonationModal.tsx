@@ -95,7 +95,7 @@ export default function DonationModal({lable}: types) {
         modal: {
           ondismiss: () => setShowPaymentFrame(false),
         },
-        theme: { color: "#B7410E" },
+        theme: { color: "#0C2340" },
       }
 
       setShowPaymentFrame(true)
@@ -133,10 +133,10 @@ export default function DonationModal({lable}: types) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button>{lable}</Button>
+        <Button className="bg-rangrez-indigo hover:bg-rangrez-indigo_dark text-white">{lable}</Button>
       </DialogTrigger>
 
-      <DialogContent className="max-w-sm" ref={formContainerRef}>
+      <DialogContent className="max-w-sm bg-white" ref={formContainerRef}>
         <DialogHeader>
           <DialogTitle>Support the Cause</DialogTitle>
         </DialogHeader>
@@ -179,7 +179,7 @@ export default function DonationModal({lable}: types) {
           />
 
           <Button
-            className="w-full"
+            className="w-full bg-rangrez-indigo hover:bg-rangrez-indigo_dark text-white"
             onClick={handleSubmit}
             disabled={isSubmitting}
           >
