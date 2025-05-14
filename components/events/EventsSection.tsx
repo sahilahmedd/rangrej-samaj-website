@@ -165,11 +165,11 @@ export default function EventsSection() {
                       {event.ENVT_EXCERPT}
                     </p>
                   </CardContent>
-                  <CardFooter className="px-6 pb-6 pt-0">
+                  {/* <CardFooter className="px-6 pb-6 pt-0">
                     <Button variant="outline" className="w-full">
                       View Gallery
                     </Button>
-                  </CardFooter>
+                  </CardFooter> */}
                 </Card>
               ))}
             </div>

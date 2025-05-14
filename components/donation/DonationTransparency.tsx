@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from '../ui/button'
 import { useTranslations } from 'next-intl';
+import LocaleLink from '../LocaleLink';
 const DonationTransparency = () => {
   const t = useTranslations("Donation");
   return (
@@ -28,7 +29,7 @@ const DonationTransparency = () => {
         </p>
         <Button className="bg-[#B7410E] hover:bg-[#8B3103] text-white">
           {/* Request Annual Report */}
-          {t("donation-transparency-button")}
+          <LocaleLink path="contact" lable={`${t("donation-transparency-button")}`} />
         </Button>
       </div>
     </div>

@@ -22,7 +22,7 @@ const HomeEvents = () => {
 
   const [ event, setEvents ] = useState<any[]>([])
   const [pastEvents, setPastEvents] = useState<any[]>([]);
-  const [activeTab, setActiveTab] = useState("upcoming");
+  // const [activeTab, setActiveTab] = useState("upcoming");
 
   const fetchEvents = async() =>{
     const res = await fetch("https://node2-plum.vercel.app/api/user/events")
@@ -52,7 +52,7 @@ const HomeEvents = () => {
           {/* Our Events */}
           {t("home-events-title-h2")}
         </h2>
-        <Tabs defaultValue="past" className="w-full">
+        <Tabs defaultValue="upcoming" className="w-full">
           <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-10 ">
             <TabsTrigger value="upcoming">
               {/* Upcoming Events */}
@@ -109,10 +109,14 @@ const HomeEvents = () => {
             <div className="relative">
               <Carousel>
                 <CarouselContent>
-                  {pastEvents.map((event) => (
+                  {pastEvents.map((event, index) => (
                     <CarouselItem
                       key={event.id}
-                      className="md:basis-1/3 basis-4/5"
+                      className={
+                        index === 0
+                          ? "md:basis-1/2 basis-4/5"
+                          : "md:basis-1/3 basis-4/5"
+                      }
                     >
                       <div className="bg-white rounded-lg shadow p-4 h-full flex flex-col">
                         <Image
