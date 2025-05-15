@@ -156,8 +156,8 @@ export default function CardSlider() {
           </CarouselContent>
 
           {/* Navigation Buttons - pushed out */}
-          <CarouselPrevious className="absolute -left-4 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full shadow-md p-2 md:p-3 hover:bg-gray-100 transition" />
-          <CarouselNext className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full shadow-md p-2 md:p-3 hover:bg-gray-100 transition" />
+          <CarouselPrevious className="absolute  -left-4 top-1/2 -translate-y-1/2 z-10  text-white bg-rangrez-indigo border rounded-full shadow-md p-2 md:p-3 hover:bg-rangrez-indigo_dark transition" />
+          <CarouselNext className="absolute  -right-4 top-1/2 -translate-y-1/2 z-10 text-white bg-rangrez-indigo hover:bg-rangrez-indigo_dark border rounded-full shadow-md p-2 md:p-3 transition" />
         </Carousel>
 
         {/* Dots */}
@@ -217,8 +217,8 @@ export default function CardSlider() {
               </CarouselContent>
 
               {/* Navigation Buttons - pushed out */}
-              <CarouselPrevious className="absolute -left-10 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full shadow-md p-2 md:p-3 hover:bg-gray-100 transition" />
-              <CarouselNext className="absolute -right-10 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full shadow-md p-2 md:p-3 hover:bg-gray-100 transition" />
+              <CarouselPrevious className="absolute text-white bg-rangrez-indigo hover:bg-rangrez-indigo_dark -left-10 top-1/2 -translate-y-1/2 z-10 border rounded-full shadow-md p-2 md:p-3 transition" />
+              <CarouselNext className="absolute text-white bg-rangrez-indigo hover:bg-rangrez-indigo_dark -right-10 top-1/2 -translate-y-1/2 z-10 border rounded-full shadow-md p-2 md:p-3 transition" />
             </Carousel>
           </CardContent>
         </Card>
