@@ -136,7 +136,7 @@ export default function DonationModal({lable}: types) {
         <Button className="bg-rangrez-indigo hover:bg-rangrez-indigo_dark text-white">{lable}</Button>
       </DialogTrigger>
 
-      <DialogContent className="max-w-sm bg-white" ref={formContainerRef}>
+      <DialogContent className="max-w-sm bg-rangrez-sand" ref={formContainerRef}>
         <DialogHeader>
           <DialogTitle>Support the Cause</DialogTitle>
         </DialogHeader>
@@ -146,11 +146,13 @@ export default function DonationModal({lable}: types) {
             placeholder="Your Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            className="border border-rangrez-indigo"
           />
           <Input
             placeholder="Phone Number"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
+            className="border border-rangrez-indigo"
           />
 
           <div className="flex flex-wrap gap-2">
@@ -162,6 +164,7 @@ export default function DonationModal({lable}: types) {
                   setSelectedAmount(amount)
                   setCustomAmount("")
                 }}
+                className="hover:bg-rangrez-gold border border-rangrez-indigo"
               >
                 ₹{amount}
               </Button>
@@ -176,6 +179,7 @@ export default function DonationModal({lable}: types) {
               setCustomAmount(e.target.value)
               setSelectedAmount(null)
             }}
+            className="border border-rangrez-indigo"
           />
 
           <Button

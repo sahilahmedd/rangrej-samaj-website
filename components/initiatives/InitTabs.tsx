@@ -436,7 +436,7 @@ export default function InitTabs() {
                       open for candidates and families. */}
                       {t("initiatives-nikah-upcoming-description")}
                     </p>
-                    <Button className="w-full md:w-auto bg-[#0C2340] hover:bg-rangrez-indigo_dark text-white">
+                    <Button className="w-full md:w-auto bg-rangrez-indigo hover:bg-rangrez-indigo_dark text-white">
                       {/* Register Now */}
                       {t("initiatives-nikah-upcoming-button")}
                     </Button>

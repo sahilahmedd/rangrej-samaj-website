@@ -58,6 +58,8 @@ export default function Footer() {
                 { href: `/gallery`, label: t("gallery") },
                 { href: `/donation`, label: t("donation") },
                 { href: `/contact`, label: t("contact") },
+                { href: `/privacy-policy`, label: t("privacy") },
+                { href: `/terms-conditions`, label: t("terms") },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
