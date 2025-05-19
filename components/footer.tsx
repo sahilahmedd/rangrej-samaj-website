@@ -16,7 +16,7 @@ export default function Footer() {
   const locale = useLocale();
 
   return (
-    <footer className="bg-[#8B3103] text-white mx-2 sm:mx-4 my-8 sm:my-10 rounded-2xl">
+    <footer className="bg-rangrez-indigo_dark text-white mx-2 sm:mx-4 my-8 sm:my-10 rounded-2xl">
       <div className="container px-4 sm:px-6 py-8 sm:py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
           {/* Brand & Social */}
@@ -58,6 +58,8 @@ export default function Footer() {
                 { href: `/gallery`, label: t("gallery") },
                 { href: `/donation`, label: t("donation") },
                 { href: `/contact`, label: t("contact") },
+                { href: `/privacy-policy`, label: t("privacy") },
+                { href: `/terms-conditions`, label: t("terms") },
               ].map((link) => (
                 <li key={link.href}>
                   <Link

@@ -1,16 +1,21 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { Phone, Mail, MapPin, Facebook, Instagram, Youtube } from "lucide-react"
-import ContactForm from "@/components/contact-form"
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Instagram,
+  Youtube,
+} from "lucide-react";
+import ContactForm from "@/components/contact-form";
 import { useTranslations } from "next-intl";
-
-
 
 export default function ContactPage() {
   const t = useTranslations("Contact");
   return (
     <main className="flex min-h-screen flex-col">
       {/* Hero Section */}
-      <section className="bg-[#B7410E] py-16 md:py-24">
+      <section className="bg-[#0C2340] py-16 md:py-24">
         <div className="container px-4 md:px-6">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tighter mb-4">
@@ -27,20 +32,20 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16 bg-white">
+      <section className="py-16 ">
         <div className="container px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold mb-8 text-[#8B3103]">
+              <h2 className="text-3xl font-bold mb-8 text-rangrez-indigo_dark">
                 {/* Get in Touch */}
                 {t("contact-us-get-in-touch")}
               </h2>
 
               <div className="space-y-8">
                 <Card>
-                  <CardContent className="p-6 flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[#F2C94C]/10 flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-6 h-6 text-[#B7410E]" />
+                  <CardContent className="p-6 border-2 bg-rangrez-sand_lite border-rangrez-sand_hover/20 hover:border-rangrez-sand_hover transition-all rounded-lg flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-rangrez-saffron/20 flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-6 h-6 text-[#0C2340]" />
                     </div>
                     <div>
                       <h3 className="font-bold text-lg mb-1">
@@ -52,15 +57,17 @@ export default function ContactPage() {
                         {t("contact-us-phone-call")}
                       </p>
                       <p className="font-medium">+91 98765 43210</p>
-                      <p className="font-medium">+91 12345 67890 ({t("contact-us-whatsapp")})</p>
+                      <p className="font-medium">
+                        +91 12345 67890 ({t("contact-us-whatsapp")})
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
 
                 <Card>
-                  <CardContent className="p-6 flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[#F2C94C]/10 flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-6 h-6 text-[#B7410E]" />
+                  <CardContent className="p-6 border-2 bg-rangrez-sand_lite border-rangrez-sand_hover/20 hover:border-rangrez-sand_hover transition-all rounded-lg flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-rangrez-saffron/20 flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-6 h-6 text-[#0C2340]" />
                     </div>
                     <div>
                       <h3 className="font-bold text-lg mb-1">
@@ -78,9 +85,9 @@ export default function ContactPage() {
                 </Card>
 
                 <Card>
-                  <CardContent className="p-6 flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[#F2C94C]/10 flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-[#B7410E]" />
+                  <CardContent className="p-6 border-2 bg-rangrez-sand_lite border-rangrez-sand_hover/20 hover:border-rangrez-sand_hover transition-all rounded-lg flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-rangrez-saffron/20 flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-6 h-6 text-[#0C2340]" />
                     </div>
                     <div>
                       <h3 className="font-bold text-lg mb-1">
@@ -104,7 +111,7 @@ export default function ContactPage() {
                 </Card>
               </div>
 
-              <div className="mt-8">            
+              <div className="mt-8">
                 <h3 className="font-bold text-lg mb-4">
                   {/* Connect With Us */}
                   {t("contact-us-connect-with-us")}
@@ -112,28 +119,28 @@ export default function ContactPage() {
                 <div className="flex gap-4">
                   <a
                     href="#"
-                    className="w-12 h-12 rounded-full bg-[#F2C94C]/10 flex items-center justify-center hover:bg-[#F2C94C]/20 transition-colors"
+                    className="w-12 h-12 rounded-full bg-rangrez-saffron/20 flex items-center justify-center hover:bg-rangrez-sand_hover/20 transition-colors"
                   >
-                    <Facebook className="w-6 h-6 text-[#B7410E]" />
+                    <Facebook className="w-6 h-6 text-[#0C2340]" />
                   </a>
                   <a
                     href="#"
-                    className="w-12 h-12 rounded-full bg-[#F2C94C]/10 flex items-center justify-center hover:bg-[#F2C94C]/20 transition-colors"
+                    className="w-12 h-12 rounded-full bg-rangrez-saffron/20 flex items-center justify-center hover:bg-rangrez-sand_hover/20 transition-colors"
                   >
-                    <Instagram className="w-6 h-6 text-[#B7410E]" />
+                    <Instagram className="w-6 h-6 text-[#0C2340]" />
                   </a>
                   <a
                     href="#"
-                    className="w-12 h-12 rounded-full bg-[#F2C94C]/10 flex items-center justify-center hover:bg-[#F2C94C]/20 transition-colors"
+                    className="w-12 h-12 rounded-full bg-rangrez-saffron/20 flex items-center justify-center hover:bg-rangrez-sand_hover/20 transition-colors"
                   >
-                    <Youtube className="w-6 h-6 text-[#B7410E]" />
+                    <Youtube className="w-6 h-6 text-[#0C2340]" />
                   </a>
                 </div>
               </div>
             </div>
 
             <div>
-              <h2 className="text-3xl font-bold mb-8 text-[#8B3103]">
+              <h2 className="text-3xl font-bold mb-8 text-rangrez-indigo_dark">
                 {/* Send Us a Message */}
                 {t("contact-us-send-us-a-message")}
               </h2>
@@ -146,13 +153,24 @@ export default function ContactPage() {
       {/* Map Section */}
       <section className="py-16 bg-[#F9F5E7]">
         <div className="container px-4 md:px-6">
-          <h2 className="text-3xl font-bold text-center mb-8 text-[#8B3103]">
+          <h2 className="text-3xl font-bold text-center mb-8 text-rangrez-indigo_dark">
             {/* Find Us */}
             {t("contact-us-find-us")}
           </h2>
           <div className="w-full h-[400px] rounded-lg overflow-hidden">
+            {/* <iframe
+              // src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin"
+              src="https://maps.app.goo.gl/TYgQGPsabc4JytuD9"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Rangraj Samaj Office Location"
+            ></iframe> */}
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d358.6205934335566!2d74.64391215989316!3d25.889432076626647!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39693f87fae81287%3A0xa8b517834ef56b2!2sRangrej%20Samaj%20Sewa%20Samiti!5e1!3m2!1sen!2sin!4v1747636112426!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -165,5 +183,5 @@ export default function ContactPage() {
         </div>
       </section>
     </main>
-  )
+  );
 }

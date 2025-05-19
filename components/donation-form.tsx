@@ -137,7 +137,7 @@ export default function DonationForm() {
         modal: {
           ondismiss: () => setShowPaymentFrame(false),
         },
-        theme: { color: "#B7410E" },
+        theme: { color: "#0C2340" },
       };
 
       setShowPaymentFrame(true);
@@ -171,7 +171,7 @@ export default function DonationForm() {
   )?.CATE_DESC || "";
 
   return (
-    <div className="max-w-2xl mx-auto p-6" ref={formContainerRef}>
+    <div className="max-w-2xl mx-auto p-6 border-2 border-rangrez-indigo_dark rounded-lg" ref={formContainerRef}>
       {/* Step 1 - Donation Details */}
       {currentStep === 1 && (
         <div className="space-y-6">
@@ -251,7 +251,7 @@ export default function DonationForm() {
           <div className="flex justify-end">
             <Button
               onClick={() => handleStepNavigation("next")}
-              className="bg-[#B7410E] hover:bg-[#8B3103] text-white"
+              className="bg-rangrez-indigo hover:bg-rangrez-indigo_dark text-white"
             >
               {t("donation-form-next")}
             </Button>
@@ -300,7 +300,7 @@ export default function DonationForm() {
             </Button>
             <Button
               type="submit"
-              className="bg-[#B7410E] hover:bg-[#8B3103] text-white"
+              className="bg-rangrez-indigo hover:bg-rangrez-indigo_dark text-white"
               disabled={isSubmitting}
             >
               {isSubmitting
@@ -314,7 +314,7 @@ export default function DonationForm() {
       {/* Payment Frame Overlay */}
       {showPaymentFrame && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-          <div className="bg-white border-2 border-red-700 p-4 rounded-lg w-full max-w-2xl">
+          <div className="bg-white border-2 border-rangrez-indigo_dark p-4 rounded-lg w-full max-w-2xl">
             <div className="razorpay-container" />
           </div>
         </div>
@@ -327,7 +327,7 @@ export default function DonationForm() {
       }}>
         <DialogContent className="text-center">
           <DialogHeader>
-            <DialogTitle className="text-2xl text-[#B7410E]">
+            <DialogTitle className="text-2xl text-[#0C2340]">
               {t("donation-form-thank-you")}
             </DialogTitle>
           </DialogHeader>
@@ -337,7 +337,7 @@ export default function DonationForm() {
             </p>
           </div>
           <Button
-            className="bg-[#B7410E] hover:bg-[#8B3103] text-white"
+            className="bg-rangrez-indigo hover:bg-rangrez-indigo_dark text-white"
             onClick={() => {
               setShowThankYouModal(false);
               setCurrentStep(1);

@@ -27,12 +27,12 @@ const LanguageSwitcher = () => {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
+      <DropdownMenuTrigger className="border-2 border-rangrez-indigo_dark" asChild>
         <Button variant="outline" size="sm">
-          🌐
+          <Image width={20} height={20} src="/images/globe.png" alt="lang" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent align="end" className="bg-white">
         <DropdownMenuItem onClick={() => changeLanguage("en")}>
           <Image width={15} height={15} src="/images/uk.png" alt="EN"/> ENGLISH
         </DropdownMenuItem>

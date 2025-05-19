@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList } from "@/components/ui/tabs";
+import { TabsTrigger } from "../tabs-trigger";
 import ResponsiveTabHeader from "../ResponsiveTabHeader";
 import { Card, CardContent } from "../ui/card";
 import { Button } from "../ui/button";
@@ -27,7 +28,7 @@ export default function InitTabs() {
   const [activeTab, setActiveTab] = useState("health");
 
   return (
-    <section className="py-8 sm:py-12 md:py-16 bg-white">
+    <section className="py-8 sm:py-12 md:py-16">
       <div className="container px-4 md:px-6">
         {/* Mobile Header */}
         <ResponsiveTabHeader
@@ -39,8 +40,8 @@ export default function InitTabs() {
         {/* Tabs: always rendered */}
         <Tabs value={activeTab} onValueChange={setActiveTab}>
           {/* Desktop Header */}
-          <div className="hidden sm:block mt-4">
-            <TabsList className="grid w-full grid-cols-4">
+          <div className="hidden bg-rangrez-tab rounded sm:block mt-4">
+            <TabsList className="grid gap-2 w-full grid-cols-4">
               {tabItems.map((tab) => (
                 <TabsTrigger key={tab.value} value={tab.value}>
                   {tab.label}
@@ -60,11 +61,11 @@ export default function InitTabs() {
                 />
               </div>
               <div>
-                <div className="inline-block rounded-lg bg-[#F2C94C]/10 px-3 py-1 text-sm text-[#B7410E] mb-4">
+                <div className="inline-block rounded-lg bg-rangrez-sand_hover/10 px-3 py-1 text-sm text-[#0C2340] mb-4">
                   {/* Health Initiative */}
                   {t("initiatives-Health-Initiative")}
                 </div>
-                <h2 className="text-3xl font-bold mb-6 text-[#8B3103]">
+                <h2 className="text-3xl font-header font-bold mb-6 text-rangrez-indigo_dark">
                   {/* Medical Aid Program */}
                   {t("initiatives-Medical")}
                 </h2>
@@ -101,11 +102,11 @@ export default function InitTabs() {
                   </li>
                 </ul>
                 <div className="flex flex-wrap gap-4">
-                  <Button className="bg-[#B7410E] hover:bg-[#8B3103] text-white">
+                  <Button className="bg-rangrez-indigo hover:bg-rangrez-indigo_dark text-white">
                     {/* Apply for Medical Aid */}
                     <Link href={`/${locale}/contact`}>{t("initiatives-Medical-button1")}</Link>
                   </Button>
-                  <Button variant="outline">
+                  <Button variant="outline" className="border-2 border-rangrez-indigo_dark duration-300 ease-in hover:bg-rangrez-indigo_dark hover:text-white">
                     {/* Volunteer for Health Camps */}
                     <Link href={`/${locale}/contact`}>{t("initiatives-Medical-button2")}</Link>
                     
@@ -115,7 +116,7 @@ export default function InitTabs() {
             </div>
 
             <div className="mt-12">
-              <h3 className="text-2xl font-bold mb-6 text-[#8B3103]">
+              <h3 className="text-2xl font-bold mb-6 text-rangrez-indigo_dark">
                 {/* Recent Health Camps */}
                 {t("initiatives-Medical-camps")}
               </h3>
@@ -158,14 +159,14 @@ export default function InitTabs() {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center">
                 <div className="p-4 bg-white rounded-lg">
-                  <div className="text-3xl font-bold text-[#B7410E]">50+</div>
+                  <div className="text-3xl font-bold text-[#0C2340]">50+</div>
                   <p>
                     {/* Health Camps Conducted */}
                     {t("initiatives-medical-Impact-Camps")}
                   </p>
                 </div>
                 <div className="p-4 bg-white rounded-lg">
-                  <div className="text-3xl font-bold text-[#B7410E]">
+                  <div className="text-3xl font-bold text-[#0C2340]">
                     5,000+
                   </div>
                   <p>
@@ -174,14 +175,14 @@ export default function InitTabs() {
                   </p>
                 </div>
                 <div className="p-4 bg-white rounded-lg">
-                  <div className="text-3xl font-bold text-[#B7410E]">₹50L+</div>
+                  <div className="text-3xl font-bold text-[#0C2340]">₹50L+</div>
                   <p>
                     {/* Medical Aid Distributed */}
                     {t("initiatives-medical-Impact-Distributed")}
                   </p>
                 </div>
                 <div className="p-4 bg-white rounded-lg">
-                  <div className="text-3xl font-bold text-[#B7410E]">20+</div>
+                  <div className="text-3xl font-bold text-[#0C2340]">20+</div>
                   <p>
                     {/* Hospital Partnerships */}
                     {t("initiatives-medical-Impact-Partnerships")}
@@ -194,11 +195,11 @@ export default function InitTabs() {
           <TabsContent value="zakat" className="space-y-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-block rounded-lg bg-[#F2C94C]/10 px-3 py-1 text-sm text-[#B7410E] mb-4">
+                <div className="inline-block rounded-lg bg-rangrez-sand_hover/10 px-3 py-1 text-sm text-[#0C2340] mb-4">
                   {/* Charity Initiative */}
                   {t("initiatives-Zakat-Initiative")}
                 </div>
-                <h2 className="text-3xl font-bold mb-6 text-[#8B3103]">
+                <h2 className="text-3xl font-header font-bold mb-6 text-rangrez-indigo_dark">
                   {/* Zakat Distribution */}
                   {t("initiatives-Zakat")}
                 </h2>
@@ -236,7 +237,7 @@ export default function InitTabs() {
                   </li>
                 </ul>
                 <div className="flex flex-wrap gap-4">
-                  {/* <Button className="bg-[#B7410E] hover:bg-[#8B3103] text-white">
+                  {/* <Button className="bg-[#0C2340] hover:bg-rangrez-indigo_dark text-white">
                     Contribute Zakat
                     {t("initiatives-Zakat-button1")}
                   </Button> */}
@@ -258,7 +259,7 @@ export default function InitTabs() {
             </div>
 
             <div className="mt-12">
-              <h3 className="text-2xl font-bold mb-6 text-[#8B3103]">
+              <h3 className="text-2xl font-bold mb-6 text-rangrez-indigo_dark">
                 {/* Recent Zakat Distributions */}
                 {t("initiatives-Zakat-Recent-Distributions")}
               </h3>
@@ -301,14 +302,14 @@ export default function InitTabs() {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center">
                 <div className="p-4 bg-white rounded-lg">
-                  <div className="text-3xl font-bold text-[#B7410E]">₹1Cr+</div>
+                  <div className="text-3xl font-bold text-[#0C2340]">₹1Cr+</div>
                   <p>
                     {/* Zakat Collected */}
                     {t("initiatives-Zakat-Distributions-Impact-Amount")}
                   </p>
                 </div>
                 <div className="p-4 bg-white rounded-lg">
-                  <div className="text-3xl font-bold text-[#B7410E]">
+                  <div className="text-3xl font-bold text-[#0C2340]">
                     1,000+
                   </div>
                   <p>
@@ -317,14 +318,14 @@ export default function InitTabs() {
                   </p>
                 </div>
                 <div className="p-4 bg-white rounded-lg">
-                  <div className="text-3xl font-bold text-[#B7410E]">200+</div>
+                  <div className="text-3xl font-bold text-[#0C2340]">200+</div>
                   <p>
                     {/* Students Sponsored */}
                     {t("initiatives-Zakat-Distributions-Impact-Students")}
                   </p>
                 </div>
                 <div className="p-4 bg-white rounded-lg">
-                  <div className="text-3xl font-bold text-[#B7410E]">50+</div>
+                  <div className="text-3xl font-bold text-[#0C2340]">50+</div>
                   <p>
                     {/* Medical Treatments Funded */}
                     {t("initiatives-Zakat-Distributions-Impact-Medical")}
@@ -345,11 +346,11 @@ export default function InitTabs() {
                 />
               </div>
               <div>
-                <div className="inline-block rounded-lg bg-[#F2C94C]/10 px-3 py-1 text-sm text-[#B7410E] mb-4">
+                <div className="inline-block rounded-lg bg-rangrez-sand_hover/10 px-3 py-1 text-sm text-[#0C2340] mb-4">
                   {/* Community Initiative */}
                   {t("initiatives-nikah-Initiative")}
                 </div>
-                <h2 className="text-3xl font-bold mb-6 text-[#8B3103]">
+                <h2 className="text-3xl font-header font-bold mb-6 text-rangrez-indigo_dark">
                   {/* Nikah Sammelan */}
                   {t("initiatives-nikah")}
                 </h2>
@@ -387,7 +388,7 @@ export default function InitTabs() {
                   </li>
                 </ul>
                 {/* <div className="flex flex-wrap gap-4">
-                  <Button className="bg-[#B7410E] hover:bg-[#8B3103] text-white">
+                  <Button className="bg-[#0C2340] hover:bg-rangrez-indigo_dark text-white">
                    
                     {t("initiatives-nikah-button1")}
                   </Button>
@@ -400,7 +401,7 @@ export default function InitTabs() {
             </div>
 
             <div className="mt-12">
-              <h3 className="text-2xl font-bold mb-6 text-[#8B3103]">
+              <h3 className="text-2xl font-header font-bold mb-6 text-rangrez-indigo_dark">
                 {/* Upcoming Nikah Sammelan */}
                 {t("initiatives-nikah-upcoming")}
               </h3>
@@ -435,7 +436,7 @@ export default function InitTabs() {
                       open for candidates and families. */}
                       {t("initiatives-nikah-upcoming-description")}
                     </p>
-                    <Button className="w-full md:w-auto bg-[#B7410E] hover:bg-[#8B3103] text-white">
+                    <Button className="w-full md:w-auto bg-rangrez-indigo hover:bg-rangrez-indigo_dark text-white">
                       {/* Register Now */}
                       {t("initiatives-nikah-upcoming-button")}
                     </Button>
@@ -444,17 +445,17 @@ export default function InitTabs() {
               </Card>
             </div>
 
-            <div className="bg-[#F9F5E7] p-6 rounded-lg">
+            {/* <div className="bg-[#F9F5E7] p-6 rounded-lg">
               <h3 className="text-xl font-bold mb-4">
-                {/* Success Stories */}
+                Success Stories
                 {t("initiatives-nikah-Success-title")}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {[1, 2, 3].map((i) => (
-                  <Card key={i} className="border-2 border-[#F2C94C]/20">
+                  <Card key={i} className="border-2 border-rangrez-sand_hover/20">
                     <CardContent className="p-6 space-y-4">
                       <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 rounded-full bg-[#B7410E]/10 overflow-hidden relative">
+                        <div className="w-12 h-12 rounded-full bg-[#0C2340]/10 overflow-hidden relative">
                           <Image
                             src={`/placeholder.svg?height=100&width=100&text=C${i}`}
                             alt="Couple"
@@ -464,38 +465,31 @@ export default function InitTabs() {
                         </div>
                         <div>
                           <h4 className="font-bold">
-                            {/* Couple {i} */}
                             {t("initiatives-nikah-Success")} {i}
                           </h4>
                           <p className="text-sm text-muted-foreground">
-                            {/* Married: 202{i} */}
                             {t("initiatives-nikah-Success-Date")} 202{i}
                           </p>
                         </div>
                       </div>
                       <p className="italic">
-                        {/* "We met at the Rangraj Samaj Nikah Sammelan and
-                        instantly connected. The organized environment helped us
-                        get to know each other's families properly. We're
-                        grateful to the Samaj for this beautiful beginning to
-                        our life together." */}
                         {t("initiatives-nikah-Success-description")}
                       </p>
                     </CardContent>
                   </Card>
                 ))}
               </div>
-            </div>
+            </div> */}
           </TabsContent>
 
           <TabsContent value="education" className="space-y-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-block rounded-lg bg-[#F2C94C]/10 px-3 py-1 text-sm text-[#B7410E] mb-4">
+                <div className="inline-block rounded-lg bg-rangrez-sand_hover/10 px-3 py-1 text-sm text-[#0C2340] mb-4">
                   {/* Education Initiative */}
                   {t("education-initiative")}
                 </div>
-                <h2 className="text-3xl font-bold mb-6 text-[#8B3103]">
+                <h2 className="text-3xl font-header font-bold mb-6 text-rangrez-indigo_dark">
                   {/* Educational Support */}
                   {t("educational-support")}
                 </h2>
@@ -533,7 +527,7 @@ export default function InitTabs() {
                   </li>
                 </ul>
                 <div className="flex flex-wrap gap-4">
-                  {/* <Button className="bg-[#B7410E] hover:bg-[#8B3103] text-white">
+                  {/* <Button className="bg-[#0C2340] hover:bg-rangrez-indigo_dark text-white">
                     {t("apply-scholarship-button")}
                   </Button> */}
                   {/* <Button variant="outline">
@@ -553,7 +547,7 @@ export default function InitTabs() {
             </div>
 
             <div className="mt-12">
-              <h3 className="text-2xl font-bold mb-6 text-[#8B3103]">
+              <h3 className="text-2xl font-bold mb-6 text-rangrez-indigo_dark">
                 {/* Scholarship Recipients */}
                 {t("scholarship-recipients-title")}
               </h3>
@@ -598,28 +592,28 @@ export default function InitTabs() {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center">
                 <div className="p-4 bg-white rounded-lg">
-                  <div className="text-3xl font-bold text-[#B7410E]">500+</div>
+                  <div className="text-3xl font-bold text-[#0C2340]">500+</div>
                   <p>
                     {/* Scholarships Awarded */}
                     {t("impact-statistics1")}
                   </p>
                 </div>
                 <div className="p-4 bg-white rounded-lg">
-                  <div className="text-3xl font-bold text-[#B7410E]">₹50L+</div>
+                  <div className="text-3xl font-bold text-[#0C2340]">₹50L+</div>
                   <p>
                     {/* Educational Aid Distributed */}
                     {t("impact-statistics2")}
                   </p>
                 </div>
                 <div className="p-4 bg-white rounded-lg">
-                  <div className="text-3xl font-bold text-[#B7410E]">100+</div>
+                  <div className="text-3xl font-bold text-[#0C2340]">100+</div>
                   <p>
                     {/* Professional Graduates */}
                     {t("impact-statistics3")}
                   </p>
                 </div>
                 <div className="p-4 bg-white rounded-lg">
-                  <div className="text-3xl font-bold text-[#B7410E]">20+</div>
+                  <div className="text-3xl font-bold text-[#0C2340]">20+</div>
                   <p>
                     {/* Career Workshops */}
                     {t("impact-statistics4")}

@@ -12,7 +12,7 @@ const InfoCard = () => {
 
 
   return (
-    <section className="py-16 bg-[#B7410E]">
+    <section className="py-16 bg-[#0C2340]">
     <div className="container px-4 md:px-6 text-white">
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-6">
@@ -27,7 +27,7 @@ const InfoCard = () => {
         {t("info-card-description")}
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card className="bg-white/10 border-0">
+          <Card className="border-2 border-transparent duration-300 ease-in hover:border-white">
             <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
               <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center">
                 <Heart className="w-8 text-white h-8" />
@@ -43,7 +43,7 @@ const InfoCard = () => {
               </p>
               <Button
                 variant="outline"
-                className="border-white text-white bg-transparent duration-300 ease-in hover:bg-white hover:text-[#B7410E]"
+                className="border-white text-white bg-transparent duration-300 ease-in hover:bg-white hover:text-[#0C2340]"
               >
                 {/* Make a Donation */}
                 <Link href={`/${locale}/donation`}>{t("info-card-button1")}</Link>
@@ -51,7 +51,7 @@ const InfoCard = () => {
             </CardContent>
           </Card>
 
-          <Card className="bg-white/10 border-0">
+          <Card className="border-2 border-transparent hover:border-white transition-all">
             <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
               <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center">
                 <Users className="w-8 text-white h-8" />
@@ -67,7 +67,7 @@ const InfoCard = () => {
               </p>
               <Button
                 variant="outline"
-                className="border-white text-white bg-transparent duration-300 ease-in hover:bg-white hover:text-[#B7410E]"
+                className="border-white text-white bg-transparent duration-300 ease-in hover:bg-white hover:text-[#0C2340]"
               >
                 {/* Join as Volunteer */}
                 <Link href={`/${locale}/contact`}>{t("info-card-button2")}</Link>
@@ -75,7 +75,7 @@ const InfoCard = () => {
             </CardContent>
           </Card>
 
-          <Card className="bg-white/10 border-0">
+          <Card className="border-2 border-transparent hover:border-white transition-all">
             <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
               <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center">
                 <GraduationCap className="w-8 text-white h-8" />
@@ -91,7 +91,7 @@ const InfoCard = () => {
               </p>
               <Button
                 variant="outline"
-                className="border-white text-white bg-transparent duration-300 ease-in hover:bg-white hover:text-[#B7410E]"
+                className="border-white text-white bg-transparent duration-300 ease-in hover:bg-white hover:text-[#0C2340]"
               >
                 {/* Share Our Mission */}
                 {t("info-card-button3")}

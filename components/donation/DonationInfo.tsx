@@ -8,15 +8,15 @@ const DonationInfo = () => {
   return (
     <section className="py-16 bg-[#F9F5E7]">
       <div className="container px-4 md:px-6">
-        <h2 className="text-3xl font-bold text-center mb-12 text-[#8B3103]">
+        <h2 className="text-3xl font-header font-bold text-center mb-12 text-rangrez-indigo_dark">
           {/* Where Your Donations Go */}
           {t("donation-info-title")}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <Card className="border-2 border-[#F2C94C]/20">
+          <Card className=" border-2 bg-rangrez-sand_lite border-rangrez-sand_hover/20 hover:border-rangrez-sand_hover transition-all">
             <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
-              <div className="w-16 h-16 rounded-full bg-[#F2C94C]/10 flex items-center justify-center">
-                <Heart className="w-8 h-8 text-[#B7410E]" />
+              <div className="w-16 h-16 rounded-full bg-rangrez-saffron/10 flex items-center justify-center">
+                <Heart className="w-8 h-8 text-[#0C2340]" />
               </div>
               {/* Healthcare */}
               <h3 className="text-xl font-bold">{t("donation-info-title1")}</h3>
@@ -28,10 +28,10 @@ const DonationInfo = () => {
             </CardContent>
           </Card>
 
-          <Card className="border-2 border-[#F2C94C]/20">
+          <Card className=" border-2 bg-rangrez-sand_lite border-rangrez-sand_hover/20 hover:border-rangrez-sand_hover transition-all">
             <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
-              <div className="w-16 h-16 rounded-full bg-[#F2C94C]/10 flex items-center justify-center">
-                <BookOpen className="w-8 h-8 text-[#B7410E]" />
+              <div className="w-16 h-16 rounded-full bg-rangrez-saffron/10 flex items-center justify-center">
+                <BookOpen className="w-8 h-8 text-[#0C2340]" />
               </div>
               {/* Education */}
               <h3 className="text-xl font-bold">{t("donation-info-title2")}</h3>
@@ -43,10 +43,10 @@ const DonationInfo = () => {
             </CardContent>
           </Card>
 
-          <Card className="border-2 border-[#F2C94C]/20">
+          <Card className=" border-2 bg-rangrez-sand_lite border-rangrez-sand_hover/20 hover:border-rangrez-sand_hover transition-all">
             <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
-              <div className="w-16 h-16 rounded-full bg-[#F2C94C]/10 flex items-center justify-center">
-                <GraduationCap className="w-8 h-8 text-[#B7410E]" />
+              <div className="w-16 h-16 rounded-full bg-rangrez-saffron/10 flex items-center justify-center">
+                <GraduationCap className="w-8 h-8 text-[#0C2340]" />
               </div>
               {/* Marriage Aid */}
               <h3 className="text-xl font-bold">{t("donation-info-title3")}</h3>
@@ -58,10 +58,10 @@ const DonationInfo = () => {
             </CardContent>
           </Card>
 
-          <Card className="border-2 border-[#F2C94C]/20">
+          <Card className=" border-2 bg-rangrez-sand_lite border-rangrez-sand_hover/20 hover:border-rangrez-sand_hover transition-all">
             <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
-              <div className="w-16 h-16 rounded-full bg-[#F2C94C]/10 flex items-center justify-center">
-                <Home className="w-8 h-8 text-[#B7410E]" />
+              <div className="w-16 h-16 rounded-full bg-rangrez-saffron/10 flex items-center justify-center">
+                <Home className="w-8 h-8 text-[#0C2340]" />
               </div>
               {/* Family Support */}
               <h3 className="text-xl font-bold">{t("donation-info-title4")}</h3>

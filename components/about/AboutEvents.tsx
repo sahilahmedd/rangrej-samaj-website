@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList } from "@/components/ui/tabs";
+import { TabsTrigger } from "../tabs-trigger";
 import ResponsiveTabHeader from "../ResponsiveTabHeader";
 import { Card, CardContent } from "../ui/card";
 import Image from "next/image";
@@ -22,7 +23,7 @@ const tabItems = [
   const [activeTab, setActiveTab] = useState("introduction");
 
   return (
-    <section className="py-8 sm:py-12 md:py-16 bg-white">
+    <section className="py-8 sm:py-12 md:py-16 ">
       <div className="container px-4 md:px-6">
         {/* Mobile Header */}
         <ResponsiveTabHeader
@@ -34,8 +35,8 @@ const tabItems = [
         {/* Tabs: always rendered */}
         <Tabs value={activeTab} onValueChange={setActiveTab}>
           {/* Desktop Header */}
-          <div className="hidden sm:block mt-4">
-            <TabsList className="grid w-full grid-cols-5 mb-8">
+          <div className="hidden bg-rangrez-tab rounded sm:block mt-4">
+            <TabsList className="grid gap-2 w-full grid-cols-5 mb-8">
               {tabItems.map((tab) => (
                 <TabsTrigger key={tab.value} value={tab.value}>
                   {tab.label}
@@ -47,7 +48,7 @@ const tabItems = [
           <TabsContent value="introduction" className="space-y-6 sm:space-y-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
               <div>
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-[#8B3103]">
+                <h2 className="text-2xl font-header sm:text-3xl font-bold mb-4 sm:mb-6 text-rangrez-indigo_dark">
                   {/* Introduction to Rangraj Samaj */}
                   {t("about-introduction-title")}
                 </h2>
@@ -99,7 +100,7 @@ const tabItems = [
                 />
               </div>
               <div className="order-1 lg:order-2">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-[#8B3103]">
+                <h2 className="text-2xl font-header sm:text-3xl font-bold mb-4 sm:mb-6 text-rangrez-indigo_dark">
                     {/* Our Rich History */}
                     {t("about-history-title")}
                 </h2>
@@ -130,7 +131,7 @@ const tabItems = [
 
           <TabsContent value="mission" className="space-y-6 sm:space-y-8">
             <div className="max-w-3xl mx-auto text-center px-4">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-[#8B3103]">
+              <h2 className="text-2xl font-header sm:text-3xl font-bold mb-6 sm:mb-8 text-rangrez-indigo_dark">
                 {/* Our Mission & Vision */}
                 {t("about-mission-title")}
               </h2>
@@ -212,7 +213,7 @@ const tabItems = [
           </TabsContent>
 
           <TabsContent value="members" className="space-y-6 sm:space-y-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8 text-[#8B3103]">
+            <h2 className="text-2xl font-header sm:text-3xl font-bold text-center mb-6 sm:mb-8 text-rangrez-indigo_dark">
               {/* Key Members & Trustees */}
               {t("about-key-members-title")}
             </h2>
@@ -265,7 +266,7 @@ const tabItems = [
                     <h3 className="text-lg sm:text-xl font-bold">
                       {member.name}
                     </h3>
-                    <p className="text-[#B7410E] mb-2">{member.role}</p>
+                    <p className="text-[#0C2340] mb-2">{member.role}</p>
                     <p className="text-muted-foreground text-sm sm:text-base">
                       {member.bio}
                     </p>
@@ -287,7 +288,7 @@ const tabItems = [
                 />
               </div>
               <div className="order-1 lg:order-2">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-[#8B3103]">
+                <h2 className="text-2xl font-header sm:text-3xl font-bold mb-4 sm:mb-6 text-rangrez-indigo_dark">
                   {/* Rangrej Academy */}
                   {t("about-academy-title")}
                 </h2>

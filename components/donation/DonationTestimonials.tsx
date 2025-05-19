@@ -8,16 +8,16 @@ const DonationTestimonials = () => {
   return (
     <section className="py-16 bg-[#F9F5E7]">
     <div className="container px-4 md:px-6">
-      <h2 className="text-3xl font-bold text-center mb-12 text-[#8B3103]">
+      <h2 className="text-3xl font-bold text-center mb-12 text-rangrez-indigo_dark">
         {/* Impact Stories */}
         {t("donation-testimonials-title")}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {[1, 2, 3].map((i) => (
-          <Card key={i} className="border-2 border-[#F2C94C]/20">
+          <Card key={i} className="border-2 border-rangrez-sand_hover/20">
             <CardContent className="p-6 space-y-4">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-[#B7410E]/10 overflow-hidden relative">
+                <div className="w-12 h-12 rounded-full bg-[#0C2340]/10 overflow-hidden relative">
                   <Image
                     src={`/placeholder.svg?height=100&width=100&text=P${i}`}
                     alt="Beneficiary"

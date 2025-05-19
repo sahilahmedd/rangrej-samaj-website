@@ -21,7 +21,7 @@ export default function Home() {
       <HomeEvents />  
 
       {/* Testimonials */}
-      <Testimonials />
+      {/* <Testimonials /> */}
 
       {/* Newsletter */}
       <NewsHome />

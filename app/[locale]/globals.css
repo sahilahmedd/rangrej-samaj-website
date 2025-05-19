@@ -1,4 +1,4 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -59,7 +59,7 @@
 }
 
 
-/* .razorpay-container iframe {
+.razorpay-container iframe {
   width: 100% !important;
   max-width: 672px !important;
   height: 600px !important;
@@ -72,3 +72,30 @@
   width: 100% !important;
   height: 100% !important;
 } */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: Custom fonts or global styles */
+@layer base {
+  :root {
+  }
+  html {
+    font-family: "Lato", sans-serif;
+  }
+
+  body {
+    @apply bg-rangrez-sand text-rangrez-indigo_dark;
+  }
+
+  header {
+    /* background: linear-gradient(180deg, #F7F3EA, #d6c9b3b8); */
+  }
+
+  h1 {
+    font-family: var(--font-header);
+    font-size: ;
+    letter-spacing: 0px !important;
+  }
+}

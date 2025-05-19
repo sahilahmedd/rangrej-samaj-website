@@ -164,7 +164,7 @@ export default function ContactForm() {
 
       <Button
         type="submit"
-        className="w-full bg-[#B7410E] hover:bg-[#8B3103] text-white"
+        className="w-full bg-rangrez-indigo hover:bg-rangrez-indigo_dark text-white"
         disabled={isSubmitting}
       >
         {isSubmitting ? "Sending..." : "Send Message"}

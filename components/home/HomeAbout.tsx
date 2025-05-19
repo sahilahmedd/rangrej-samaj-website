@@ -10,7 +10,7 @@ const HomeAbout = () => {
     <div className="container px-4 md:px-6">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 className="text-3xl font-bold mb-6 text-[#8B3103]">
+          <h2 className="text-3xl font-header font-bold mb-6 text-rangrez-saffron">
             {/* About Rangraj Samaj */}
             {t("home-about-title")}
           </h2>
@@ -29,7 +29,7 @@ const HomeAbout = () => {
           </p>
           <Button
             asChild
-            className="bg-[#B7410E] hover:bg-[#8B3103] text-white"
+            className="bg-rangrez-indigo hover:bg-rangrez-indigo_dark text-white"
           >
             <Link href="/about">
             {/* Learn More About Us */}
