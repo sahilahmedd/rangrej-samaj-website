@@ -8,6 +8,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import Script from "next/script";
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const lato = Lato({ subsets: ["latin"], weight: ["400"] });
 export const playfair = Playfair_Display({
@@ -59,6 +60,7 @@ export default async function RootLayout({
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
+      <GoogleAnalytics gaId="G-TVNN33KLF2" />
     </html>
   );
 }
