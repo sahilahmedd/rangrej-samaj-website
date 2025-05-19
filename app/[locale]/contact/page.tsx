@@ -1,9 +1,14 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { Phone, Mail, MapPin, Facebook, Instagram, Youtube } from "lucide-react"
-import ContactForm from "@/components/contact-form"
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Instagram,
+  Youtube,
+} from "lucide-react";
+import ContactForm from "@/components/contact-form";
 import { useTranslations } from "next-intl";
-
-
 
 export default function ContactPage() {
   const t = useTranslations("Contact");
@@ -52,7 +57,9 @@ export default function ContactPage() {
                         {t("contact-us-phone-call")}
                       </p>
                       <p className="font-medium">+91 98765 43210</p>
-                      <p className="font-medium">+91 12345 67890 ({t("contact-us-whatsapp")})</p>
+                      <p className="font-medium">
+                        +91 12345 67890 ({t("contact-us-whatsapp")})
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
@@ -104,7 +111,7 @@ export default function ContactPage() {
                 </Card>
               </div>
 
-              <div className="mt-8">            
+              <div className="mt-8">
                 <h3 className="font-bold text-lg mb-4">
                   {/* Connect With Us */}
                   {t("contact-us-connect-with-us")}
@@ -151,8 +158,19 @@ export default function ContactPage() {
             {t("contact-us-find-us")}
           </h2>
           <div className="w-full h-[400px] rounded-lg overflow-hidden">
+            {/* <iframe
+              // src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin"
+              src="https://maps.app.goo.gl/TYgQGPsabc4JytuD9"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Rangraj Samaj Office Location"
+            ></iframe> */}
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d358.6205934335566!2d74.64391215989316!3d25.889432076626647!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39693f87fae81287%3A0xa8b517834ef56b2!2sRangrej%20Samaj%20Sewa%20Samiti!5e1!3m2!1sen!2sin!4v1747636112426!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -165,5 +183,5 @@ export default function ContactPage() {
         </div>
       </section>
     </main>
-  )
+  );
 }
