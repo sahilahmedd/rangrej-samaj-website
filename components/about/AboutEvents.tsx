@@ -7,18 +7,126 @@ import ResponsiveTabHeader from "../ResponsiveTabHeader";
 import { Card, CardContent } from "../ui/card";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export default function RangrajSection() {
-const t = useTranslations("About");
+  const t = useTranslations("About");
 
-const tabItems = [
-  { label: t("about-tabitems-introduction"), value: "introduction" },
-  { label: t("about-tabitems-history"), value: "history" },
-  { label: t("about-tabitems-mission"), value: "mission" },
-  { label: t("about-tabitems-key-members"), value: "members" },
-  { label: t("about-tabitems-academy"), value: "academy" },
-];
+  const communities = [
+    {
+      title: t("about-community-khari-ka-dhawa-title"),
+      discription: t("about-community-khari-ka-dhawa-description"),
+      value: "khari-ka-dhawa",
+    },
+    {
+      title: t("about-community-mandariya-title"),
+      discription: t("about-community-mandariya-description"),
+      value: "mandariya",
+    },
+    {
+      title: t("about-community-mewad-title"),
+      discription: t("about-community-mewad-description"),
+      value: "mewad",
+    },
+    {
+      title: t("about-community-dhundhad-title"),
+      discription: t("about-community-dhundhad-description"),
+      value: "dhundhad",
+    },
+    {
+      title: t("about-community-marwar-title"),
+      discription: t("about-community-marwar-description"),
+      value: "marwar",
+    },
+    {
+      title: t("about-community-hadoti-title"),
+      discription: t("about-community-hadoti-description"),
+      value: "hadoti",
+    },
+    {
+      title: t("about-community-shekhawati-title"),
+      discription: t("about-community-shekhawati-description"),
+      value: "shekhawati",
+    },
+    {
+      title: t("about-community-malwa-title"),
+      discription: t("about-community-malwa-description"),
+      value: "malwa",
+    },
+    {
+      title: t("about-community-baghelkhand-title"),
+      discription: t("about-community-baghelkhand-description"),
+      value: "baghelkhand",
+    },
+    {
+      title: t("about-community-surti-title"),
+      discription: t("about-community-surti-description"),
+      value: "surti-rangrej",
+    },
+    {
+      title: t("about-community-rohilkhand-title"),
+      discription: t("about-community-rohilkhand-description"),
+      value: "rohilkhand",
+    },
+    {
+      title: t("about-community-awadhi-title"),
+      discription: t("about-community-awadhi-description"),
+      value: "awadhi-rangrej",
+    },
+    {
+      title: t("about-community-delhi-punjab-haryana-title"),
+      discription: t("about-community-delhi-punjab-haryana-description"),
+      value: "delhi-punjab-haryana",
+    },
+    {
+      title: t("about-community-bihar-jharkhand-title"),
+      discription: t("about-community-bihar-jharkhand-description"),
+      value: "bihar-jharkhand-rangrej",
+    },
+    {
+      title: t("about-community-bengal-title"),
+      discription: t("about-community-bengal-description"),
+      value: "bengal-rangrej",
+    },
+    {
+      title: t("about-community-deccan-title"),
+      discription: t("about-community-deccan-description"),
+      value: "deccan-rangrej",
+    },
+    {
+      title: t("about-community-malabar-title"),
+      discription: t("about-community-malabar-description"),
+      value: "malabar-rangrej",
+    },
+    {
+      title: t("about-community-tamil-title"),
+      discription: t("about-community-tamil-description"),
+      value: "tamil-rangrej",
+    },
+    {
+      title: t("about-community-sindhi-title"),
+      discription: t("about-community-sindhi-description"),
+      value: "sindhi-rangrej",
+    },
+    {
+      title: t("about-community-kashmir-title"),
+      discription: t("about-community-kashmir-description"),
+      value: "kashmir-rangrej",
+    },
+  ];
+
+  const tabItems = [
+    { label: t("about-tabitems-introduction"), value: "introduction" },
+    { label: t("about-tabitems-history"), value: "history" },
+    { label: t("about-tabitems-mission"), value: "mission" },
+    { label: t("about-tabitems-key-members"), value: "members" },
+    { label: t("about-tabitems-academy"), value: "academy" },
+  ];
 
   const [activeTab, setActiveTab] = useState("introduction");
 
@@ -46,43 +154,67 @@ const tabItems = [
           </div>
 
           <TabsContent value="introduction" className="space-y-6 sm:space-y-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+            <div className="grid grid-cols-1 relative lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
               <div>
                 <h2 className="text-2xl font-header sm:text-3xl font-bold mb-4 sm:mb-6 text-rangrez-indigo_dark">
-                  {/* Introduction to Rangraj Samaj */}
                   {t("about-introduction-title")}
                 </h2>
                 <p className="text-base sm:text-lg mb-3 sm:mb-4">
-                  {/* The Rangraj (Rangrez) Samaj is a vibrant community with a rich
-                  cultural heritage in textile dyeing and craftsmanship. Our
-                  community has been preserving traditional art forms while
-                  adapting to modern challenges. */}
                   {t("about-introduction-description")}
-                  
                 </p>
                 <p className="text-base sm:text-lg mb-3 sm:mb-4">
-                  {/* The word "Rangraj" comes from "Rang" meaning color and "Raj"
-                  meaning master, reflecting our community's historical
-                  expertise in the art of dyeing textiles with vibrant,
-                  long-lasting colors. */}
                   {t("about-introduction-description-2")}
                 </p>
                 <p className="text-base sm:text-lg">
-                  {/* Today, we focus on empowering our community through education,
-                  healthcare, cultural preservation, and social welfare
-                  initiatives. */}
                   {t("about-introduction-description-3")}
                 </p>
               </div>
               <div className="relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-lg overflow-hidden">
                 <Image
-                  // src="/placeholder.svg?height=800&width=600"
                   src="/images/image-11.jpg"
                   alt="Rangraj Samaj Community"
                   fill
                   className="object-cover"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
                 />
+              </div>
+
+              <div className="col-span-full mt-8">
+                <h2 className="text-lg font-semibold font-header mb-4">
+                  {t("about-community-title")}
+                </h2>
+                {/* <Accordion
+                  type="single"
+                  collapsible
+                  className="w-full border border-black rounded-md"
+                >
+                  {communities.map((section) => (
+                    <AccordionItem key={section.value} value={section.value}>
+                      <AccordionTrigger className="text-base font-medium px-4 py-2">
+                        {section.title}
+                      </AccordionTrigger>
+                      <AccordionContent className="px-4 py-2 text-sm text-muted-foreground">
+                        {section.discription}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion> */}
+                <Accordion type="single" collapsible className="w-full">
+                  {communities.map((section) => (
+                    <AccordionItem
+                      key={section.value}
+                      value={section.value}
+                      className="border border-rangrez-turquoise rounded-md mb-2"
+                    >
+                      <AccordionTrigger className="text-base font-semibold px-4 py-2">
+                        {section.title}
+                      </AccordionTrigger>
+                      <AccordionContent className="px-4 py-2 text-sm text-muted-foreground">
+                        {section.discription}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
               </div>
             </div>
           </TabsContent>
@@ -101,8 +233,8 @@ const tabItems = [
               </div>
               <div className="order-1 lg:order-2">
                 <h2 className="text-2xl font-header sm:text-3xl font-bold mb-4 sm:mb-6 text-rangrez-indigo_dark">
-                    {/* Our Rich History */}
-                    {t("about-history-title")}
+                  {/* Our Rich History */}
+                  {t("about-history-title")}
                 </h2>
                 <p className="text-base sm:text-lg mb-3 sm:mb-4">
                   {/* The Rangraj community has a history dating back several

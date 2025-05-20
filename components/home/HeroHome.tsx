@@ -30,33 +30,34 @@ const HeroHome = () => {
         {t('title-h1')}
       </p>
       <div className="flex flex-wrap gap-4 justify-center mt-8">
-        <LocaleLink 
+        {/* <LocaleLink 
         classes="bg-rangrez-indigo hover:bg-rangrez-indigo_dark text-white"
         path="contact" 
-        lable={`${t('button-Join')}`} />
+        lable={`${t('button-Join')}`} /> */}
 
-        {/* <Button
+        <Button
           size="lg"
           className="bg-rangrez-indigo hover:bg-rangrez-indigo_dark text-white"
         >
-          {t('button-Join')}
-        </Button> */}
-        {/* <Button
-          size="lg"
-          variant="outline"
-          className="bg-white/10 backdrop-blur-sm text-white border-white hover:bg-white/20"
-        > */}
-          {/* Donate Now */}
-          {/* {t('button-Donate')}
+          {/* {t('button-Join')} */}
+          <LocaleLink lable={`${t('button-Join')}`} path='contact' classes=''/>
         </Button>
         <Button
           size="lg"
           variant="outline"
           className="bg-white/10 backdrop-blur-sm text-white border-white hover:bg-white/20"
-        > */}
-          {/* Attend Next Event */}
-          {/* {t('button-Volunteer')}
-        </Button> */}
+        >
+          {/* Donate Now */}
+          <LocaleLink lable={`${t('button-Donate')}`} path='donate' classes=''/>
+        </Button> 
+        {/* <Button
+          size="lg"
+          variant="outline"
+          className="bg-white/10 backdrop-blur-sm text-white border-white hover:bg-white/20"
+        >
+          Attend Next Event
+           {t('button-Volunteer')}
+        </Button>  */}
       </div>
     </div>
   </section>
