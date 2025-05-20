@@ -20,102 +20,102 @@ export default function RangrajSection() {
   const communities = [
     {
       title: t("about-community-khari-ka-dhawa-title"),
-      discription: t("about-community-khari-ka-dhawa-description"),
+      discription: "about-community-khari-ka-dhawa-description",
       value: "khari-ka-dhawa",
     },
     {
       title: t("about-community-mandariya-title"),
-      discription: t("about-community-mandariya-description"),
+      discription: "about-community-mandariya-description",
       value: "mandariya",
     },
     {
       title: t("about-community-mewad-title"),
-      discription: t("about-community-mewad-description"),
+      discription: "about-community-mewad-description",
       value: "mewad",
     },
     {
       title: t("about-community-dhundhad-title"),
-      discription: t("about-community-dhundhad-description"),
+      discription: "about-community-dhundhad-description",
       value: "dhundhad",
     },
     {
       title: t("about-community-marwar-title"),
-      discription: t("about-community-marwar-description"),
+      discription: "about-community-marwar-description",
       value: "marwar",
     },
     {
       title: t("about-community-hadoti-title"),
-      discription: t("about-community-hadoti-description"),
+      discription: "about-community-hadoti-description",
       value: "hadoti",
     },
     {
       title: t("about-community-shekhawati-title"),
-      discription: t("about-community-shekhawati-description"),
+      discription: "about-community-shekhawati-description",
       value: "shekhawati",
     },
     {
       title: t("about-community-malwa-title"),
-      discription: t("about-community-malwa-description"),
+      discription: "about-community-malwa-description",
       value: "malwa",
     },
     {
       title: t("about-community-baghelkhand-title"),
-      discription: t("about-community-baghelkhand-description"),
+      discription: "about-community-baghelkhand-description",
       value: "baghelkhand",
     },
     {
       title: t("about-community-surti-title"),
-      discription: t("about-community-surti-description"),
+      discription: "about-community-surti-description",
       value: "surti-rangrej",
     },
     {
       title: t("about-community-rohilkhand-title"),
-      discription: t("about-community-rohilkhand-description"),
+      discription: "about-community-rohilkhand-description",
       value: "rohilkhand",
     },
     {
       title: t("about-community-awadhi-title"),
-      discription: t("about-community-awadhi-description"),
+      discription: "about-community-awadhi-description",
       value: "awadhi-rangrej",
     },
     {
       title: t("about-community-delhi-punjab-haryana-title"),
-      discription: t("about-community-delhi-punjab-haryana-description"),
+      discription: "about-community-delhi-punjab-haryana-description",
       value: "delhi-punjab-haryana",
     },
     {
       title: t("about-community-bihar-jharkhand-title"),
-      discription: t("about-community-bihar-jharkhand-description"),
+      discription: "about-community-bihar-jharkhand-description",
       value: "bihar-jharkhand-rangrej",
     },
     {
       title: t("about-community-bengal-title"),
-      discription: t("about-community-bengal-description"),
+      discription: "about-community-bengal-description",
       value: "bengal-rangrej",
     },
     {
       title: t("about-community-deccan-title"),
-      discription: t("about-community-deccan-description"),
+      discription: "about-community-deccan-description",
       value: "deccan-rangrej",
     },
     {
       title: t("about-community-malabar-title"),
-      discription: t("about-community-malabar-description"),
+      discription: "about-community-malabar-description",
       value: "malabar-rangrej",
     },
     {
       title: t("about-community-tamil-title"),
-      discription: t("about-community-tamil-description"),
+      discription: "about-community-tamil-description",
       value: "tamil-rangrej",
     },
     {
       title: t("about-community-sindhi-title"),
-      discription: t("about-community-sindhi-description"),
+      discription: "about-community-sindhi-description",
       value: "sindhi-rangrej",
     },
     {
       title: t("about-community-kashmir-title"),
-      discription: t("about-community-kashmir-description"),
+      discription: "about-community-kashmir-description",
       value: "kashmir-rangrej",
     },
   ];
@@ -199,22 +199,35 @@ export default function RangrajSection() {
                     </AccordionItem>
                   ))}
                 </Accordion> */}
-                <Accordion type="single" collapsible className="w-full">
-                  {communities.map((section) => (
+                <Accordion type="multiple" className="w-full" defaultValue={communities.map(section => section.value)} data-state="open">
+                  {communities.map((section) => {
+                     const htmlString = section.discription;
+
+                     // Extract <li> items manually (basic version)
+                     const listItems = htmlString.match(/<li>.*?<\/li>/g) || [];
+                   
+                    return (
                     <AccordionItem
                       key={section.value}
                       value={section.value}
                       className="border border-rangrez-turquoise rounded-md mb-2"
+                      
                     >
                       <AccordionTrigger className="text-base font-semibold px-4 py-2">
                         {section.title}
                       </AccordionTrigger>
                       <AccordionContent className="px-4 py-2 text-sm text-muted-foreground">
-                        {section.discription}
+                        <ul className="list-disc px-4">
+                        {t.rich(section.discription, {
+                          li: (chunks) => <li dangerouslySetInnerHTML={{ __html: chunks }}/>,
+                        })} 
+                        </ul>
                       </AccordionContent>
                     </AccordionItem>
-                  ))}
+                  )}
+                  )}
                 </Accordion>
+                <p>{t("about-subgroups-description")}</p>
               </div>
             </div>
           </TabsContent>
