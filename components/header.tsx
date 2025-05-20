@@ -29,7 +29,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 flex justify-center items-center shadow-md rounded-lg z-50 w-full h-28 border-b bg-rangrez-sand/95 backdrop-blur supports-[backdrop-filter]:bg-rangrez-sand/60">
+    <header className="sticky top-0 flex justify-center items-center shadow-md z-50 w-full h-28 border-b bg-rangrez-sand/95 backdrop-blur supports-[backdrop-filter]:bg-rangrez-sand/60">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href={`/${locale}`} className="flex items-center space-x-2">
