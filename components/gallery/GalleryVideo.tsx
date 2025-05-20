@@ -6,22 +6,22 @@ const GalleryVideo = () => {
   const videos = [
     {
       id: "video-1",
-      title: t("gallery-videos-title-cultural"),
+      title: "Kothiya Sammelan-2025",
       thumbnail: "/placeholder.svg?height=400&width=600&text=Video1",
-      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      embedUrl: "https://www.youtube.com/embed/H8zTqspdo3o",
     },
-    {
-      id: "video-2",
-      title: t("gallery-videos-title-medical"),
-      thumbnail: "/placeholder.svg?height=400&width=600&text=Video2",
-      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    },
-    {
-      id: "video-3",
-      title: t("gallery-videos-title-Nikah"),
-      thumbnail: "/placeholder.svg?height=400&width=600&text=Video3",
-      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    },
+    // {
+    //   id: "video-2",
+    //   title: t("gallery-videos-title-medical"),
+    //   thumbnail: "/placeholder.svg?height=400&width=600&text=Video2",
+    //   embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    // },
+    // {
+    //   id: "video-3",
+    //   title: t("gallery-videos-title-Nikah"),
+    //   thumbnail: "/placeholder.svg?height=400&width=600&text=Video3",
+    //   embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    // },
   ];
 
   return (

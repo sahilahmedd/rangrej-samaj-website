@@ -405,5 +405,96 @@
     "contact-us-mumbai-maharashtra": "Mumbai, Maharashtra 400001",
     "contact-us-connect-with-us": "Connect With Us",
     "contact-us-find-us": "Find Us"
+  },
+  "privacy-policy": {
+    "title": "Privacy Policy",
+    "effective-date": "Effective Date: May 2025",
+    "who-we-are-title": "Who We Are",
+    "who-we-are-description": "Rangrez Samaj a community-driven organization rooted in a rich heritage of dyeing, printing, and design. Today, we focus on education, healthcare, social welfare, and economic empowerment to uplift our members and create a prosperous, united future.",
+    "info-we-collect-title": "What Information We Collect",
+    "info-we-collect-description": "We may collect the following types of information:",
+    "info-we-collect-list": {
+      "0": "Personal details (e.g., name, address, contact info)",
+      "1": "Usage data (e.g., pages visited, device type)",
+      "2": "Form submissions and preferences"
+    },
+    "how-we-use-title": "How We Use Your Information",
+    "how-we-use-description": "We use the collected data to:",
+    "how-we-use-list": {
+      "0": "Provide and improve services",
+      "1": "Communicate with users",
+      "2": "Personalize content"
+    },
+    "how-we-use-note": "We do not sell your data to third parties.",
+    "cookies-title": "Cookies and Tracking",
+    "cookies-description": "We may use cookies to enhance user experience...",
+    "data-security-title": "Data Security",
+    "data-security-description": "We implement measures to protect your data.",
+    "third-party-title": "Third-Party Links",
+    "third-party-description": "We are not responsible for external content...",
+    "your-rights-title": "Your Rights",
+    "your-rights-description": "You have rights to your data including:",
+    "your-rights-list": {
+      "0": "Access and update your info",
+      "1": "Request deletion",
+      "2": "Withdraw consent"
+    },
+    "your-rights-note": "Contact us to exercise these rights.",
+    "children-title": "Children’s Privacy",
+    "children-description": "We do not knowingly collect data from children under 13.",
+    "updates-title": "Policy Updates",
+    "updates-description": "We may update this policy as needed.",
+    "contact-title": "Contact Us",
+    "contact-description": "For privacy-related questions, reach us at:",
+    "contact-details": {
+      "name": "Rangrej Samaj",
+      "email": "support@rangrejsamaj.org",
+      "phone": "+91-XXXXXXXXXX",
+      "website": "https://rangrejsamaj.org"
+    }
+  },
+  "terms": {
+    "title": "Terms and Conditions",
+    "effective-date": "Effective Date: May 2025",
+
+    "acceptance-title": "Acceptance of Terms",
+    "acceptance-description": "By accessing or using the Rangrej Samaj website, you agree to be bound by these Terms and Conditions. If you do not agree, please do not use the site.",
+
+    "use-title": "Use of the Website",
+    "use-description": "You agree to use the site for lawful purposes only. You must not:",
+    "use-list": {
+      "0": "Violate any applicable laws or regulations.",
+      "1": "Transmit any harmful or disruptive code.",
+      "2": "Attempt to gain unauthorized access to our systems."
+    },
+
+    "user-responsibilities-title": "User Responsibilities",
+    "user-responsibilities-description": "As a user, you are responsible for:",
+    "user-responsibilities-list": {
+      "0": "Providing accurate and current information.",
+      "1": "Maintaining the confidentiality of your account credentials.",
+      "2": "Using the site in accordance with these terms."
+    },
+
+    "intellectual-property-title": "Intellectual Property",
+    "intellectual-property-description": "All content on this website, including text, graphics, logos, and images, is the property of Rangrej Samaj or its licensors and is protected by copyright and other laws.",
+
+    "termination-title": "Termination",
+    "termination-description": "We reserve the right to suspend or terminate your access to the website at our discretion, without prior notice, for conduct that we believe violates these Terms.",
+
+    "disclaimer-title": "Disclaimer",
+    "disclaimer-description": "The content on the site is provided for general information only. We do not guarantee its accuracy, completeness, or usefulness.",
+
+    "changes-title": "Changes to Terms",
+    "changes-description": "We may update these Terms from time to time. Changes will be posted on this page and are effective immediately upon posting.",
+
+    "contact-title": "Contact Us",
+    "contact-description": "If you have questions about these Terms, contact us at:",
+    "contact-details": {
+      "name": "Rangrej Samaj",
+      "email": "support@rangrejsamaj.org",
+      "phone": "+91-XXXXXXXXXX",
+      "website": "https://rangrejsamaj.org"
+    }
   }
 }

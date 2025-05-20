@@ -208,9 +208,9 @@ export default function CardSlider() {
                       <p className="text-sm text-muted-foreground">
                         {ad.description}
                       </p>
-                      <button className="mt-2 px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded">
+                      {/* <button className="mt-2 px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded">
                         Learn More
-                      </button>
+                      </button> */}
                     </div>
                   </CarouselItem>
                 ))}

@@ -30,15 +30,13 @@ export default function Footer() {
             <div className="flex justify-start gap-4">
               <a href="#" className="text-white/80 hover:text-white">
                 <Facebook className="w-5 h-5" />
-                <span className="sr-only">Facebook</span>
               </a>
               <a href="#" className="text-white/80 hover:text-white">
                 <Instagram className="w-5 h-5" />
                 <span className="sr-only">Instagram</span>
               </a>
               <a href="#" className="text-white/80 hover:text-white">
-                <Youtube className="w-5 h-5" />
-                <span className="sr-only">YouTube</span>
+                <Link href="https://www.youtube.com/@RangrezSamajKharikaDhawa" target="_blank"><Youtube className="w-5 h-5" /></Link>
               </a>
             </div>
           </div>
