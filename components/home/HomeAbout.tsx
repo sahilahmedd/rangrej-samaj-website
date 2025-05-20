@@ -36,7 +36,7 @@ const HomeAbout = () => {
             {t("home-about-button")}
             </Link> */}
 
-            <LocaleLink path='kharikadhawa' lable={`${t("button-LearnMore")}`} classes='bg-rangrez-indigo hover:bg-rangrez-indigo_dark text-white px-4 py-2 rounded-lg'/>
+            <LocaleLink path='about' lable={`${t("button-LearnMore")}`} classes='bg-rangrez-indigo hover:bg-rangrez-indigo_dark text-white px-4 py-2 rounded-lg'/>
           </Button>
         </div>
         <div className="relative h-[400px] rounded-lg overflow-hidden">

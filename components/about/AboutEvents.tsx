@@ -200,7 +200,7 @@ export default function RangrezSection() {
                   ))}
                 </Accordion> */}
                 <Accordion type="multiple" className="w-full" defaultValue={communities.map(section => section.value)} data-state="open">
-                  {communities.map((section) => {
+                  {communities.map((section, index) => {
                      const htmlString = section.discription;
 
                      // Extract <li> items manually (basic version)
@@ -219,7 +219,7 @@ export default function RangrezSection() {
                       <AccordionContent className="px-4 py-2 text-sm text-muted-foreground">
                         <ul className="list-disc px-4">
                         {t.rich(section.discription, {
-                          li: (chunks) => <li dangerouslySetInnerHTML={{ __html: chunks }}/>,
+                          li: index == 0 ? (chunks) => <li dangerouslySetInnerHTML={{ __html: chunks }}/> : (chunks) => <li dangerouslySetInnerHTML={{ __html: chunks }}/>,
                         })} 
                         </ul>
                       </AccordionContent>
