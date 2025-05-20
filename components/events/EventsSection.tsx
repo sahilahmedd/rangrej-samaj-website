@@ -74,7 +74,7 @@ export default function EventsSection() {
                 <Card
                   key={event.id}
                   id={event.category}
-                  className="overflow-hidden"
+                  className="border-2 bg-rangrez-sand_lite border-rangrez-sand_hover/20 hover:border-rangrez-sand_hover transition-all h-full overflow-hidden"
                 >
                   <div className="relative h-48">
                     <Image
@@ -130,7 +130,7 @@ export default function EventsSection() {
                 <Card
                   key={event.id}
                   id={event.category}
-                  className="overflow-hidden"
+                  className="border-2 bg-rangrez-sand_lite border-rangrez-sand_hover/20 hover:border-rangrez-sand_hover transition-all h-full overflow-hidden"
                 >
                   <div className="relative h-48">
                     <Image

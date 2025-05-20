@@ -2,9 +2,9 @@ import React from 'react'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 
-const AboutHero = () => {
+const Kkdhero = () => {
 
-  const t  = useTranslations('About')
+  const t  = useTranslations("Khari-ka-Dhawa")
 
   return (
     <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
@@ -20,12 +20,12 @@ const AboutHero = () => {
     </div>
     <div className="container relative z-10 px-4 md:px-6 flex flex-col items-center text-center">
       <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tighter">
-        {/* About Rangrez Samaj */}
-        {t('title')}
+
+        {t('page-title')}
       </h1>
     </div>
   </section>
   )
 }
 
-export default AboutHero
+export default Kkdhero

@@ -135,7 +135,7 @@ export default function CardSlider() {
                 key={index}
                 className="pl-4  md:pl-6 lg:pl-8 basis-full sm:basis-1/2 lg:basis-1/3"
               >
-                <Card className=" border-2 bg-rangrez-sand_lite border-rangrez-sand_hover/20 hover:border-rangrez-sand_hover transition-all h-full">
+                <Card className="border-2 bg-rangrez-sand_lite border-rangrez-sand_hover/20 hover:border-rangrez-sand_hover transition-all h-full">
                   <CardContent className="p-6 text-rangrez-indigo_text flex flex-col items-center text-center space-y-4">
                     <div className="w-16 h-16 rounded-full bg-rangrez-saffron/10 flex items-center justify-center">
                       {card.icon}
