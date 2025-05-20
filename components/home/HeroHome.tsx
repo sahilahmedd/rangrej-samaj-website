@@ -48,7 +48,7 @@ const HeroHome = () => {
           className="bg-white/10 backdrop-blur-sm text-white border-white hover:bg-white/20"
         >
           {/* Donate Now */}
-          <LocaleLink lable={`${t('button-Donate')}`} path='donate' classes=''/>
+          <LocaleLink lable={`${t('button-Donate')}`} path='donation' classes=''/>
         </Button> 
         {/* <Button
           size="lg"
