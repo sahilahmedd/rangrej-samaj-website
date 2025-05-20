@@ -3,6 +3,7 @@ import { Button } from '../ui/button'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
+import LocaleLink from '../LocaleLink'
 const HomeAbout = () => {
   const t  = useTranslations("Homepage");
   return (
@@ -29,12 +30,13 @@ const HomeAbout = () => {
           </p>
           <Button
             asChild
-            className="bg-rangrez-indigo hover:bg-rangrez-indigo_dark text-white"
+            className=""
           >
-            <Link href="/about">
-            {/* Learn More About Us */}
+            {/* <Link href="/about">
             {t("home-about-button")}
-            </Link>
+            </Link> */}
+
+            <LocaleLink path='kharikadhawa' lable={`${t("home-about-button")}`} classes='bg-rangrez-indigo hover:bg-rangrez-indigo_dark text-white px-4 py-2 rounded-lg'/>
           </Button>
         </div>
         <div className="relative h-[400px] rounded-lg overflow-hidden">

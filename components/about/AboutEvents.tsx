@@ -398,9 +398,7 @@ export default function RangrajSection() {
                 <Card key={index} className="overflow-hidden">
                   <div className="relative h-48 sm:h-56 md:h-64">
                     <Image
-                      src={`/placeholder.svg?height=300&width=300&text=${member.name.charAt(
-                        0
-                      )}`}
+                      src="/images/logo.png"
                       alt={member.name}
                       fill
                       className="object-cover"
