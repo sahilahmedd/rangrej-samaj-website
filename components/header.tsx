@@ -33,7 +33,7 @@ export default function Header() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href={`/${locale}`} className="flex items-center space-x-2">
-            {/* <span className="text-2xl font-bold text-[#0C2340]">Rangraj Samaj</span> */}
+            {/* <span className="text-2xl font-bold text-[#0C2340]">Rangrez Samaj</span> */}
             <Logo
               width={100}
               height={100}

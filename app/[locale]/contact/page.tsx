@@ -78,8 +78,8 @@ export default function ContactPage() {
                         {/* Send us an email at: */}
                         {t("contact-us-email-send-us-an-email-at")}
                       </p>
-                      <p className="font-medium">info@rangrajsamaj.org</p>
-                      <p className="font-medium">support@rangrajsamaj.org</p>
+                      <p className="font-medium">info@Rangrezsamaj.org</p>
+                      <p className="font-medium">support@Rangrezsamaj.org</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -99,7 +99,7 @@ export default function ContactPage() {
                         {t("contact-us-visit-us-at")}
                       </p>
                       <p className="font-medium">
-                        {/* Rangraj Bhavan, 123 Community Street */}
+                        {/* Rangrez Bhavan, 123 Community Street */}
                         {t("contact-us-Rangrej-bhavan")}
                       </p>
                       <p className="font-medium">
@@ -167,7 +167,7 @@ export default function ContactPage() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Rangraj Samaj Office Location"
+              title="Rangrez Samaj Office Location"
             ></iframe> */}
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d358.6205934335566!2d74.64391215989316!3d25.889432076626647!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39693f87fae81287%3A0xa8b517834ef56b2!2sRangrej%20Samaj%20Sewa%20Samiti!5e1!3m2!1sen!2sin!4v1747636112426!5m2!1sen!2sin"
@@ -177,7 +177,7 @@ export default function ContactPage() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Rangraj Samaj Office Location"
+              title="Rangrez Samaj Office Location"
             ></iframe>
           </div>
         </div>

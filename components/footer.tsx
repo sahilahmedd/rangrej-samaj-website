@@ -21,10 +21,10 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
           {/* Brand & Social */}
           <div className="text-left text-sm sm:text-lg">
-            {/* <h3 className="text-lg font-bold mb-4">Rangraj Samaj</h3> */}
+            {/* <h3 className="text-lg font-bold mb-4">Rangrez Samaj</h3> */}
             <Logo width={120} height={120} style="rounded-lg mb-5" alt="Logo" />
             <p className="text-white/80 mb-4 text-sm">
-              {/* Empowering and uniting the Rangraj (Rangrez) Samaj through health, charity, marriage meets, and cultural awareness. */}
+              {/* Empowering and uniting the Rangrez (Rangrez) Samaj through health, charity, marriage meets, and cultural awareness. */}
               {t("footer-title-p")}
             </p>
             <div className="flex justify-start gap-4">
@@ -134,7 +134,7 @@ export default function Footer() {
         {/* Footer Bottom */}
         <div className="border-t border-white/20 mt-8 pt-6 text-center text-white/60 text-sm">
           <p>
-            {/* &copy; {new Date().getFullYear()} Rangraj Samaj. All rights reserved. */}
+            {/* &copy; {new Date().getFullYear()} Rangrez Samaj. All rights reserved. */}
             {t("footer-copyright")}
           </p>
         </div>

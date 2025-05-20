@@ -38,7 +38,7 @@ const Testimonials = () => {
                 </div>
               </div>
               <p className="italic">
-                {/* "The support from Rangraj Samaj has been life-changing for
+                {/* "The support from Rangrez Samaj has been life-changing for
                 my family. The medical assistance helped us during a
                 difficult time, and we are forever grateful." */}
                 {t("home-testimonials-description")}

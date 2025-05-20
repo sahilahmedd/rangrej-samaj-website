@@ -37,7 +37,7 @@ const DonationTestimonials = () => {
                 </div>
               </div>
               <p className="italic">
-                {/* The medical assistance provided by Rangraj Samaj was life-saving for my family. My child needed
+                {/* The medical assistance provided by Rangrez Samaj was life-saving for my family. My child needed
                 urgent surgery, and we couldn't afford it. Thanks to the generous donors, my child received the
                 treatment and is now healthy and thriving. */}
                 {t("donation-testimonials-testimonial")}

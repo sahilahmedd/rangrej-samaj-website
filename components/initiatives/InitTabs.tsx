@@ -356,7 +356,7 @@ export default function InitTabs() {
                 </h2>
                 <p className="text-lg mb-4">
                   {/* Our Nikah Sammelan (Marriage Meet) initiative aims to help
-                  eligible candidates from the Rangraj community find suitable
+                  eligible candidates from the Rangrez community find suitable
                   life partners in a respectful and organized environment. */}
                   {t("initiatives-nikah-description")}
                 </p>
@@ -427,12 +427,12 @@ export default function InitTabs() {
                       {/* Time: 10:00 AM - 6:00 PM */}
                       {t("initiatives-nikah-upcoming-time")}
                       <br />
-                      {/* Venue: Rangraj Community Hall, Mumbai */}
+                      {/* Venue: Rangrez Community Hall, Mumbai */}
                       {t("initiatives-nikah-upcoming-Venue")}
                     </p>
                     <p className="text-muted-foreground mb-4">
                       {/* Our annual marriage meet bringing together eligible
-                      candidates from the Rangraj community. Registration is now
+                      candidates from the Rangrez community. Registration is now
                       open for candidates and families. */}
                       {t("initiatives-nikah-upcoming-description")}
                     </p>
@@ -573,7 +573,7 @@ export default function InitTabs() {
                         {["Engineering", "Medicine", "Computer Science"][i - 1]}
                       </p>
                       <p className="text-muted-foreground">
-                        {/* "The scholarship from Rangraj Samaj has been
+                        {/* "The scholarship from Rangrez Samaj has been
                         instrumental in helping me pursue my dream of becoming a{" "}
                         {["engineer", "doctor", "software developer"][i - 1]}.
                         I'm grateful for this support." */}

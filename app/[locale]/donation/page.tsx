@@ -48,7 +48,7 @@ export default function DonationPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <p className="font-medium">Account Name:</p>
-                        <p className="text-muted-foreground">Rangraj Samaj Trust</p>
+                        <p className="text-muted-foreground">Rangrez Samaj Trust</p>
                       </div>
                       <div>
                         <p className="font-medium">Account Number:</p>
@@ -75,7 +75,7 @@ export default function DonationPage() {
                     <div className="pt-4 border-t">
                       <p className="font-medium mb-2">Important Note:</p>
                       <p className="text-muted-foreground">
-                        After making the transfer, please send the transaction details to info@rangrajsamaj.org or
+                        After making the transfer, please send the transaction details to info@Rangrezsamaj.org or
                         WhatsApp to +91 12345 67890 for receipt and acknowledgment.
                       </p>
                     </div>

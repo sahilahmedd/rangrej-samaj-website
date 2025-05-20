@@ -12,11 +12,11 @@ const HomeAbout = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
           <h2 className="text-3xl font-header font-bold mb-6 text-rangrez-saffron">
-            {/* About Rangraj Samaj */}
+            {/* About Rangrez Samaj */}
             {t("home-about-title")}
           </h2>
           <p className="text-lg mb-4">
-            {/* The Rangraj (Rangrez) Samaj is a vibrant community with a rich
+            {/* The Rangrez (Rangrez) Samaj is a vibrant community with a rich
             cultural heritage in textile dyeing and craftsmanship. Our
             community has been preserving traditional art forms while
             adapting to modern challenges. */}
@@ -43,7 +43,7 @@ const HomeAbout = () => {
           <Image
             // src="/placeholder.svg?height=800&width=600"
             src="/images/image-4.jpg"
-            alt="Rangraj Samaj Community"
+            alt="Rangrez Samaj Community"
             fill
             className="object-cover"
           />

@@ -14,7 +14,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-export default function RangrajSection() {
+export default function RangrezSection() {
   const t = useTranslations("About");
 
   const communities = [
@@ -172,7 +172,7 @@ export default function RangrajSection() {
               <div className="relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-lg overflow-hidden">
                 <Image
                   src="/images/image-11.jpg"
-                  alt="Rangraj Samaj Community"
+                  alt="Rangrez Samaj Community"
                   fill
                   className="object-cover"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
@@ -238,7 +238,7 @@ export default function RangrajSection() {
                 <Image
                   // src="/placeholder.svg?height=800&width=600"
                   src="/images/image-12.jpg"
-                  alt="Rangraj Samaj History"
+                  alt="Rangrez Samaj History"
                   fill
                   className="object-cover"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
@@ -250,7 +250,7 @@ export default function RangrajSection() {
                   {t("about-history-title")}
                 </h2>
                 <p className="text-base sm:text-lg mb-3 sm:mb-4">
-                  {/* The Rangraj community has a history dating back several
+                  {/* The Rangrez community has a history dating back several
                   centuries, with our ancestors being master craftsmen in the
                   art of natural dyeing. Our community played a significant role
                   in the textile industry across various regions of India. */}
@@ -265,7 +265,7 @@ export default function RangrajSection() {
                 </p>
                 <p className="text-base sm:text-lg">
                   {/* Over time, our community has evolved while maintaining our
-                  cultural identity. The Rangraj Samaj organization was formally
+                  cultural identity. The Rangrez Samaj organization was formally
                   established in 1975 to preserve our heritage and address the
                   changing needs of our community. */}
                   {t("about-history-description-3")}
@@ -287,7 +287,7 @@ export default function RangrajSection() {
                   {t("about-mission-title-1")}
                 </h3>
                 <p className="text-base sm:text-lg">
-                  {/* To empower the Rangraj community through education,
+                  {/* To empower the Rangrez community through education,
                   healthcare, and social welfare initiatives while preserving
                   and promoting our rich cultural heritage and traditional
                   craftsmanship. */}
@@ -301,7 +301,7 @@ export default function RangrajSection() {
                   {t("about-mission-title-2")}
                 </h3>
                 <p className="text-base sm:text-lg">
-                  {/* A thriving Rangraj community that honors its heritage while
+                  {/* A thriving Rangrez community that honors its heritage while
                   embracing progress, where every member has access to quality
                   education, healthcare, and opportunities for personal and
                   professional growth. */}
@@ -424,7 +424,7 @@ export default function RangrajSection() {
               <div className="relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-lg overflow-hidden order-2 lg:order-1">
                 <Image
                   src="/images/academy.jpg"
-                  alt="Rangraj Samaj Academy"
+                  alt="Rangrez Samaj Academy"
                   fill
                   className="object-cover"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"

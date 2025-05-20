@@ -13,7 +13,7 @@ const HeroHome = () => {
     <div className="absolute inset-0 z-0">
       <Image
         src="/images/image-2.jpg"
-        alt="Rangraj Samaj Cultural Image"
+        alt="Rangrez Samaj Cultural Image"
         fill
         className="object-cover brightness-50"
         priority
@@ -25,7 +25,7 @@ const HeroHome = () => {
         {t('title')}
       </h1>
       <p className="text-xl text-white/90 max-w-[800px]">
-        {/* Empowering and uniting the Rangraj (Rangrez) Samaj through health
+        {/* Empowering and uniting the Rangrez (Rangrez) Samaj through health
         initiatives, charity, marriage meets, and cultural awareness. */}
         {t('title-h1')}
       </p>

@@ -18,10 +18,9 @@ export const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  title: "Rangraj Samaj",
+  title: "Rangrez Samaj Sewa Samiti",
   description:
-    "Empowering and uniting the Rangraj (Rangrez) Samaj through health, charity, marriage meets, and cultural awareness.",
-  generator: "v0.dev",
+    "Empowering and uniting the Rangrez (Rangrej) samaj sewa samiti through health, charity, marriage meets, and cultural awareness.",
 };
 
 export default async function RootLayout({

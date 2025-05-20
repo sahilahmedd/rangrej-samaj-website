@@ -12,7 +12,7 @@ const AboutHero = () => {
       <Image
         // src="/placeholder.svg?height=800&width=1920"
         src="/images/image-8.jpg"
-        alt="About Rangraj Samaj"
+        alt="About Rangrez Samaj"
         fill
         className="object-cover brightness-50"
         priority
@@ -20,7 +20,7 @@ const AboutHero = () => {
     </div>
     <div className="container relative z-10 px-4 md:px-6 flex flex-col items-center text-center">
       <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tighter">
-        {/* About Rangraj Samaj */}
+        {/* About Rangrez Samaj */}
         {t('title')}
       </h1>
     </div>
