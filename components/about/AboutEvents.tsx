@@ -13,6 +13,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Button } from "../ui/button";
+import LocaleLink from "../LocaleLink";
 
 export default function RangrezSection() {
   const t = useTranslations("About");
@@ -199,34 +201,80 @@ export default function RangrezSection() {
                     </AccordionItem>
                   ))}
                 </Accordion> */}
-                <Accordion type="multiple" className="w-full" defaultValue={communities.map(section => section.value)} data-state="open">
+                {/* <Accordion
+                  type="multiple"
+                  className="w-full"
+                  defaultValue={communities.map((section) => section.value)}
+                  data-state="open"
+                >
                   {communities.map((section, index) => {
-                     const htmlString = section.discription;
+                    const htmlString = section.discription;
 
-                     // Extract <li> items manually (basic version)
-                     const listItems = htmlString.match(/<li>.*?<\/li>/g) || [];
-                   
+                    // Extract <li> items manually (basic version)
+                    const listItems = htmlString.match(/<li>.*?<\/li>/g) || [];
+
                     return (
-                    <AccordionItem
-                      key={section.value}
-                      value={section.value}
-                      className="border border-rangrez-turquoise rounded-md mb-2"
-                      
-                    >
-                      <AccordionTrigger className="text-base font-semibold px-4 py-2">
-                        {section.title}
-                      </AccordionTrigger>
-                      <AccordionContent className="px-4 py-2 text-sm text-muted-foreground">
-                        <ul className="list-disc px-4">
+                      <AccordionItem
+                        key={section.value}
+                        value={section.value}
+                        className="border border-rangrez-turquoise rounded-md mb-2"
+                      >
+                        <AccordionTrigger className="text-base font-semibold px-4 py-2">
+                          {section.title}
+                        </AccordionTrigger>
+                        <AccordionContent className="px-4 py-2 text-sm text-muted-foreground">
+                          <ul className="list-disc px-4">
                         {t.rich(section.discription, {
                           li: index == 0 ? (chunks) => <li dangerouslySetInnerHTML={{ __html: chunks }}/> : (chunks) => <li dangerouslySetInnerHTML={{ __html: chunks }}/>,
                         })} 
                         </ul>
-                      </AccordionContent>
-                    </AccordionItem>
-                  )}
-                  )}
+
+                        </AccordionContent>
+                      </AccordionItem>
+                    );
+                  })}
+                </Accordion> */}
+                <Accordion
+                  type="multiple"
+                  className="w-full"
+                  defaultValue={communities.map((section) => section.value)}
+                  data-state="open"
+                >
+                  {communities.map((section, index) => {
+                    return (
+                      <AccordionItem
+                        key={section.value}
+                        value={section.value}
+                        className="border border-rangrez-turquoise rounded-md mb-2"
+                      >
+                        <AccordionTrigger className="text-base font-semibold px-4 py-2">
+                          {section.title}
+                        </AccordionTrigger>
+                        <AccordionContent className="px-4 py-2 text-sm text-muted-foreground">
+                          <ul className="list-disc px-4">
+                            {t.rich(section.discription, {
+                              li: (chunks) => (
+                                <li
+                                  dangerouslySetInnerHTML={{ __html: chunks }}
+                                />
+                              ),
+                            })}
+                          </ul>
+
+                          {/* Only render this button after the <ul> in the FIRST accordion */}
+                          {index === 0 && (
+                            <div className="mt-4 px-4">
+                              <Button className="text-sm text-white py-2">
+                                <LocaleLink path="kharikadhawa" lable="More about Khari ka Dhawa" classes="" />
+                              </Button>
+                            </div>
+                          )}
+                        </AccordionContent>
+                      </AccordionItem>
+                    );
+                  })}
                 </Accordion>
+
                 <p>{t("about-subgroups-description")}</p>
               </div>
             </div>

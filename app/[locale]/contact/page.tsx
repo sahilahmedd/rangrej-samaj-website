@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import ContactForm from "@/components/contact-form";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 export default function ContactPage() {
   const t = useTranslations("Contact");
@@ -56,10 +57,10 @@ export default function ContactPage() {
                         {/* Call us directly at: */}
                         {t("contact-us-phone-call")}
                       </p>
-                      <p className="font-medium">+91 98765 43210</p>
-                      <p className="font-medium">
+                      <p className="font-medium"><Link href={`tel:+919414573204`}>+91 94145 73204</Link></p>
+                      {/* <p className="font-medium">
                         +91 12345 67890 ({t("contact-us-whatsapp")})
-                      </p>
+                      </p> */}
                     </div>
                   </CardContent>
                 </Card>
@@ -78,8 +79,8 @@ export default function ContactPage() {
                         {/* Send us an email at: */}
                         {t("contact-us-email-send-us-an-email-at")}
                       </p>
-                      <p className="font-medium">info@Rangrezsamaj.org</p>
-                      <p className="font-medium">support@Rangrezsamaj.org</p>
+                      <p><Link href="mail:info@rangrezsamaj.org" className="font-medium">info@rangrezsamaj.org</Link></p>
+                      <p><Link href="mail:support@rangrezsamaj.org" className="font-medium">support@rangrezsamaj.org</Link></p>
                     </div>
                   </CardContent>
                 </Card>

@@ -1,7 +1,7 @@
 {
   "Homepage": {
     "title": "Serving Humanity, Preserving Culture",
-    "title-h1": "Empowering and uniting the Rangrez (Rangrej) Samaj sewa samiti through health initiatives, charity, marriage meets, and cultural awareness.",
+    "title-h1": "Empowering and uniting the Rangrez Samaj sewa samiti through health initiatives, charity, marriage meets, and cultural awareness.",
     "button-Join": "Join Us",
     "button-Donate": "Donate Now",
     "button-Volunteer": "Volunteer",
@@ -71,13 +71,16 @@
     "footer-initiatives": "Initiatives",
     "footer-medical-aid": "Medical Aid",
     "footer-zakat-distribution": "Zakat Distribution",
-    "footer-vivah-sammelan": "NIkah Sammelan",
+    "footer-vivah-sammelan": "Nikah Sammelan",
     "footer-educational-support": "Educational Support",
     "footer-community-events": "Community Events",
     "footer-contact": "Contact  Us",
-    "footer-address": "Rangrez Samaj Sewa Samiti, Khari Ka Dhawa, Mayur Mill Road, Sajnabad Area, Gulabpura - 311021, Bhilwara, Rajasthan, India",
-    "footer-phone": "91 98765 43210",
-    "footer-email": "info@Rangrezsamaj.org",
+    "footer-address-1": "Rangrez Samaj Sewa Samiti, Khari Ka Dhawa,",
+    "footer-address-2": "Mayur Mill Road, Sajnabad Area,",
+    "footer-address-3": " Gulabpura - 311021,",
+    "footer-address-4": "Bhilwara, Rajasthan, India",
+    "footer-phone": "919414573204",
+    "footer-email": "info@rangrezsamaj.org",
     "footer-copyright": "Copyright © 2025 Rangrez Samaj. All rights reserved."
   },
   "About": {
@@ -88,7 +91,7 @@
     "about-tabitems-key-members": "Key Members",
     "about-tabitems-academy": "Academy",
     "about-introduction-title": "Introduction to Rangrez Samaj",
-    "about-introduction-description": "Rangrez (Rangrej) Samaj is a vibrant community with a rich cultural heritage in textile dyeing and craftsmanship. Our community has been preserving traditional art forms while adapting to modern challenges.",
+    "about-introduction-description": "Rangrez Samaj is a vibrant community with a rich cultural heritage in textile dyeing and craftsmanship. Our community has been preserving traditional art forms while adapting to modern challenges.",
     "about-introduction-description-2": "The word 'Rangrez' comes from 'Rang' meaning color and 'Raj' meaning master, reflecting our community's historical expertise in the art of dyeing textiles with vibrant, long-lasting colors.",
     "about-introduction-description-3": "Today, we focus on empowering our community through education, healthcare, cultural preservation, and social welfare initiatives.",
     "about-history-title": "Our Rich History",
@@ -347,7 +350,7 @@
     "donation-form-bank-transfer-account-type": "Account Type",
     "donation-form-bank-transfer-account-type-value": "Current Account",
     "donation-form-bank-transfer-important-note": "Important Note",
-    "donation-form-bank-transfer-important-note-description": "After making the transfer, please send the transaction details to info@Rangrezsamaj.org or WhatsApp to +91 12345 67890 for receipt and acknowledgment.",
+    "donation-form-bank-transfer-important-note-description": "After making the transfer, please send the transaction details to info@rangrezsamaj.org or WhatsApp to +91 12345 67890 for receipt and acknowledgment.",
     "donation-form-name": "Name",
     "donation-form-name-placeholder": "Your Name",
     "donation-form-email": "Email",
@@ -450,9 +453,9 @@
     "contact-description": "For privacy-related questions, reach us at:",
     "contact-details": {
       "name": "Rangrez Samaj",
-      "email": "support@Rangrezsamaj.org",
+      "email": "support@rangrezsamaj.org",
       "phone": "+91-XXXXXXXXXX",
-      "website": "https://Rangrezsamaj.org"
+      "website": "https://rangrezsamaj.com"
     }
   },
   "terms": {
@@ -494,9 +497,9 @@
     "contact-description": "If you have questions about these Terms, contact us at:",
     "contact-details": {
       "name": "Rangrez Samaj",
-      "email": "support@Rangrezsamaj.org",
+      "email": "support@rangrezsamaj.org",
       "phone": "+91-XXXXXXXXXX",
-      "website": "https://Rangrezsamaj.org"
+      "website": "https://rangrezsamaj.com"
     }
   },
   "Khari-ka-Dhawa": {

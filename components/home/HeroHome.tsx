@@ -20,13 +20,10 @@ const HeroHome = () => {
       />
     </div>
     <div className="container relative z-10 px-4 md:px-6 flex flex-col items-center text-center space-y-4">
-      <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tighter">
-        {/* Serving Humanity, Preserving Culture */}
+      <h1 className="text-5xl mb-4 md:text-7xl font-bold text-white tracking-tighter">
         {t('title')}
       </h1>
       <p className="text-xl text-white/90 max-w-[800px]">
-        {/* Empowering and uniting the Rangrez (Rangrez) Samaj through health
-        initiatives, charity, marriage meets, and cultural awareness. */}
         {t('title-h1')}
       </p>
       <div className="flex flex-wrap gap-4 justify-center mt-8">

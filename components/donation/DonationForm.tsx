@@ -109,8 +109,6 @@ const DonationForm = () => {
                         {t("donation-form-bank-transfer-important-note")}
                       </p>
                       <p className="text-muted-foreground">
-                        {/* After making the transfer, please send the transaction details to info@Rangrezsamaj.org or
-                        WhatsApp to +91 12345 67890 for receipt and acknowledgment. */}
                         {t("donation-form-bank-transfer-important-note-description")}
                       </p>
                     </div>

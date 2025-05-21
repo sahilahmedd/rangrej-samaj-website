@@ -36,7 +36,12 @@ export default function Footer() {
                 <span className="sr-only">Instagram</span>
               </a>
               <a href="#" className="text-white/80 hover:text-white">
-                <Link href="https://www.youtube.com/@RangrezSamajKharikaDhawa" target="_blank"><Youtube className="w-5 h-5" /></Link>
+                <Link
+                  href="https://www.youtube.com/@RangrezSamajKharikaDhawa"
+                  target="_blank"
+                >
+                  <Youtube className="w-5 h-5" />
+                </Link>
               </a>
             </div>
           </div>
@@ -113,19 +118,22 @@ export default function Footer() {
               {t("footer-contact")}
             </h3>
             <ul className="space-y-3 text-sm">
-              <li className="flex flex-col sm:flex-row sm:items-start gap-3">
+              <li className="flex flex-row gap-3">
                 <MapPin className="w-5 h-5 flex-shrink-0" />
-                <span className="text-white/80 leading-snug">
-                  {t("footer-address")}
-                </span>
+                <p className="text-white/80 leading-snug">
+                  {t("footer-address-1")} <br />
+                  {t("footer-address-2")} <br />
+                  {t("footer-address-3")} <br />
+                  {t("footer-address-4")}
+                </p>
               </li>
               <li className="flex items-center justify-start sm:justify-start gap-3">
                 <Phone className="w-5 h-5 flex-shrink-0" />
-                <span className="text-white/80">{t("footer-phone")}</span>
+                <Link href={`tel:${t("footer-phone")}`} className="text-white/80">{t("footer-phone")}</Link>
               </li>
               <li className="flex items-center justify-start sm:justify-start gap-3">
                 <Mail className="w-5 h-5 flex-shrink-0" />
-                <span className="text-white/80">{t("footer-email")}</span>
+                <Link href={`mail:${t("footer-email")}`} className="text-white/80">{t("footer-email")}</Link>
               </li>
             </ul>
           </div>
