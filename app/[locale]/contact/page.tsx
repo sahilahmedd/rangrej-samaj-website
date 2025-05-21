@@ -100,11 +100,19 @@ export default function ContactPage() {
                       </p>
                       <p className="font-medium">
                         {/* Rangrez Bhavan, 123 Community Street */}
-                        {t("contact-us-Rangrej-bhavan")}
+                        {t("contact-us-address-1")}
                       </p>
                       <p className="font-medium">
                         {/* Mumbai, Maharashtra 400001 */}
-                        {t("contact-us-mumbai-maharashtra")}
+                        {t("contact-us-address-2")}
+                      </p>
+                      <p className="font-medium">
+                        {/* Mumbai, Maharashtra 400001 */}
+                        {t("contact-us-address-3")}
+                      </p>
+                      <p className="font-medium">
+                        {/* Mumbai, Maharashtra 400001 */}
+                        {t("contact-us-address-4")}
                       </p>
                     </div>
                   </CardContent>
@@ -130,8 +138,9 @@ export default function ContactPage() {
                     <Instagram className="w-6 h-6 text-[#0C2340]" />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.youtube.com/@RangrezSamajKharikaDhawa"
                     className="w-12 h-12 rounded-full bg-rangrez-saffron/20 flex items-center justify-center hover:bg-rangrez-sand_hover/20 transition-colors"
+                    target="_blank"
                   >
                     <Youtube className="w-6 h-6 text-[#0C2340]" />
                   </a>
