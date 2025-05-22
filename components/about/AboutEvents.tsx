@@ -362,7 +362,7 @@ export default function RangrezSection() {
                 {t("about-mission-core-title")}
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
-                <Card>
+                <Card className="border-2 bg-rangrez-sand_lite border-rangrez-sand_hover/20 hover:border-rangrez-sand_hover transition-all h-full">
                   <CardContent className="p-4 sm:p-6 text-center">
                     <h4 className="font-bold text-lg sm:text-xl mb-2">
                       {/* Community Service */}
@@ -375,7 +375,7 @@ export default function RangrezSection() {
                     </p>
                   </CardContent>
                 </Card>
-                <Card>
+                <Card className="border-2 bg-rangrez-sand_lite border-rangrez-sand_hover/20 hover:border-rangrez-sand_hover transition-all h-full">
                   <CardContent className="p-4 sm:p-6 text-center">
                     <h4 className="font-bold text-lg sm:text-xl mb-2">
                       {/* Cultural Preservation */}
@@ -388,7 +388,7 @@ export default function RangrezSection() {
                     </p>
                   </CardContent>
                 </Card>
-                <Card className="sm:col-span-2 md:col-span-1">
+                <Card className="border-2 bg-rangrez-sand_lite border-rangrez-sand_hover/20 hover:border-rangrez-sand_hover transition-all h-full">
                   <CardContent className="p-4 sm:p-6 text-center">
                     <h4 className="font-bold text-lg sm:text-xl mb-2">
                       {/* Empowerment */}
