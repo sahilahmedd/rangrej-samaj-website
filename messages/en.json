@@ -22,7 +22,7 @@
     "academy-description": "Empowering education in the community.",
     "button-LearnMore": "Learn More",
     "home-about-title": "About Rangrez Samaj",
-    "home-about-description": "The Rangrez (Rangrez) Samaj is a vibrant community with a rich cultural heritage in textile dyeing and craftsmanship. Our community has been preserving traditional art forms while adapting to modern challenges.",
+    "home-about-description": "The Rangrez Samaj is a vibrant community with a rich cultural heritage in textile dyeing and craftsmanship. Our community has been preserving traditional art forms while adapting to modern challenges.",
     "home-about-description-2": "Today, we focus on empowering our community through education, healthcare, cultural preservation, and social welfare initiatives.",
     "home-about-button": "About us",
     "home-events-title-h2": "Our Events",
@@ -57,7 +57,7 @@
     "button-Donate": "Donate Now"
   },
   "Footer": {
-    "footer-title-p": "Empowering and uniting the Rangrez (Rangrez) Samaj through health, charity, marriage meets, and cultural awareness. ",
+    "footer-title-p": "Empowering and uniting the Rangrez Samaj through health, charity, marriage meets, and cultural awareness. ",
     "footer-quick-links": "Quick Links",
     "home": "Home",
     "about": "About",
@@ -80,7 +80,7 @@
     "footer-address-3": " Gulabpura - 311021,",
     "footer-address-4": "Bhilwara, Rajasthan, India",
     "footer-phone": "919414573204",
-    "footer-email": "info@rangrezsamaj.org",
+    "footer-email": "info@rangrezsamaj.com",
     "footer-copyright": "Copyright © 2025 Rangrez Samaj. All rights reserved."
   },
   "About": {
@@ -350,7 +350,7 @@
     "donation-form-bank-transfer-account-type": "Account Type",
     "donation-form-bank-transfer-account-type-value": "Current Account",
     "donation-form-bank-transfer-important-note": "Important Note",
-    "donation-form-bank-transfer-important-note-description": "After making the transfer, please send the transaction details to info@rangrezsamaj.org or WhatsApp to +91 12345 67890 for receipt and acknowledgment.",
+    "donation-form-bank-transfer-important-note-description": "After making the transfer, please send the transaction details to info@rangrezsamaj.com or WhatsApp to +91 12345 67890 for receipt and acknowledgment.",
     "donation-form-name": "Name",
     "donation-form-name-placeholder": "Your Name",
     "donation-form-email": "Email",
@@ -453,7 +453,7 @@
     "contact-description": "For privacy-related questions, reach us at:",
     "contact-details": {
       "name": "Rangrez Samaj",
-      "email": "support@rangrezsamaj.org",
+      "email": "support@rangrezsamaj.com",
       "phone": "+91-XXXXXXXXXX",
       "website": "https://rangrezsamaj.com"
     }
@@ -497,8 +497,8 @@
     "contact-description": "If you have questions about these Terms, contact us at:",
     "contact-details": {
       "name": "Rangrez Samaj",
-      "email": "support@rangrezsamaj.org",
-      "phone": "+91-XXXXXXXXXX",
+      "email": "support@rangrezsamaj.com",
+      "phone": "+91-9414573204",
       "website": "https://rangrezsamaj.com"
     }
   },
