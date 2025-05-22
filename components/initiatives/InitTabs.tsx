@@ -61,7 +61,7 @@ export default function InitTabs() {
                 />
               </div>
               <div>
-                <div className="inline-block rounded-lg bg-rangrez-sand_hover/10 px-3 py-1 text-sm text-[#0C2340] mb-4">
+                <div className="inline-block rounded-lg bg-rangrez-saffron/40 px-3 py-1 text-sm text-[#0C2340] mb-4">
                   {/* Health Initiative */}
                   {t("initiatives-Health-Initiative")}
                 </div>
@@ -195,7 +195,7 @@ export default function InitTabs() {
           <TabsContent value="zakat" className="space-y-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-block rounded-lg bg-rangrez-sand_hover/10 px-3 py-1 text-sm text-[#0C2340] mb-4">
+                <div className="inline-block rounded-lg bg-rangrez-saffron/40 px-3 py-1 text-sm text-[#0C2340] mb-4">
                   {/* Charity Initiative */}
                   {t("initiatives-Zakat-Initiative")}
                 </div>
@@ -346,7 +346,7 @@ export default function InitTabs() {
                 />
               </div>
               <div>
-                <div className="inline-block rounded-lg bg-rangrez-sand_hover/10 px-3 py-1 text-sm text-[#0C2340] mb-4">
+                <div className="inline-block rounded-lg bg-rangrez-saffron/40 px-3 py-1 text-sm text-[#0C2340] mb-4">
                   {/* Community Initiative */}
                   {t("initiatives-nikah-Initiative")}
                 </div>
@@ -485,7 +485,7 @@ export default function InitTabs() {
           <TabsContent value="education" className="space-y-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-block rounded-lg bg-rangrez-sand_hover/10 px-3 py-1 text-sm text-[#0C2340] mb-4">
+                <div className="inline-block rounded-lg bg-rangrez-saffron/40 px-3 py-1 text-sm text-[#0C2340] mb-4">
                   {/* Education Initiative */}
                   {t("education-initiative")}
                 </div>
