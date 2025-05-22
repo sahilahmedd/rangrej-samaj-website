@@ -122,7 +122,7 @@ export default function InitTabs() {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {[1, 2, 3].map((i) => (
-                  <Card key={i} className="overflow-hidden">
+                  <Card key={i} className="overflow-hidden border-2 bg-rangrez-sand_lite border-rangrez-sand_hover/20 hover:border-rangrez-sand_hover transition-all h-full">
                     <div className="relative h-48">
                       <Image
                         src={`/images/medical2.jpg`}
@@ -131,7 +131,7 @@ export default function InitTabs() {
                         className="object-cover"
                       />
                     </div>
-                    <CardContent className="p-6">
+                    <CardContent className="p-6 ">
                       <h4 className="font-bold text-lg mb-2">
                         {/* Health Check-up Camp {i} */}
                         {t("initiatives-Medical-camps1-title")} {i}
@@ -265,7 +265,7 @@ export default function InitTabs() {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {[1, 2, 3].map((i) => (
-                  <Card key={i} className="overflow-hidden">
+                  <Card key={i} className="overflow-hidden border-2 bg-rangrez-sand_lite border-rangrez-sand_hover/20 hover:border-rangrez-sand_hover transition-all h-full">
                     <div className="relative h-48">
                       <Image
                         src={`/images/zakat1.jpg`}
@@ -405,7 +405,7 @@ export default function InitTabs() {
                 {/* Upcoming Nikah Sammelan */}
                 {t("initiatives-nikah-upcoming")}
               </h3>
-              <Card className="overflow-hidden">
+              <Card className="overflow-hidden border-2 bg-rangrez-sand_lite border-rangrez-sand_hover/20 hover:border-rangrez-sand_hover transition-all h-full">
                 <div className="grid grid-cols-1 md:grid-cols-2">
                   <div className="relative h-64 md:h-auto">
                     <Image
@@ -553,7 +553,7 @@ export default function InitTabs() {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {[1, 2, 3].map((i) => (
-                  <Card key={i} className="overflow-hidden">
+                  <Card key={i} className="overflow-hidden border-2 bg-rangrez-sand_lite border-rangrez-sand_hover/20 hover:border-rangrez-sand_hover transition-all h-full">
                     <div className="relative h-48">
                       <Image
                         src={`/images/student1.jpg`}

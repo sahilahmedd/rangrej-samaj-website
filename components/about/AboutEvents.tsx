@@ -443,7 +443,7 @@ export default function RangrezSection() {
                 //   bio: t("about-key-key-member-title6-bio"),
                 // },
               ].map((member, index) => (
-                <Card key={index} className="overflow-hidden">
+                <Card key={index} className="border-2 bg-rangrez-sand_lite border-rangrez-sand_hover/20 hover:border-rangrez-sand_hover transition-all h-full overflow-hidden">
                   <div className="relative h-48 sm:h-56 md:h-64">
                     <Image
                       src="/images/logo.png"

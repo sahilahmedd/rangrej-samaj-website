@@ -79,7 +79,7 @@ const GallerySection = () => {
       {images.map((image, index) => (
         <div
           key={image.id}
-          className="group relative overflow-hidden rounded-lg cursor-pointer"
+          className="group relative overflow-hidden rounded-lg cursor-pointer border-2 bg-rangrez-sand_lite border-rangrez-sand_hover/20 hover:border-rangrez-sand_hover transition-all h-full"
           onClick={() => openModal(tab, index)}
         >
           <div className="aspect-square w-full overflow-hidden">

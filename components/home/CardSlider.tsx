@@ -21,6 +21,7 @@ import {
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import Autoplay from "embla-carousel-autoplay";
+import LocaleLink from "../LocaleLink";
 
 export default function CardSlider() {
   const [api, setApi] = useState<CarouselApi | null>(null);
@@ -61,37 +62,37 @@ export default function CardSlider() {
       icon: <Hospital className="w-8 h-8 text-[#0C2340]" />,
       title: t("hospital-title"),
       description: t("hospital-description"),
-      href: "/initiatives#health",
+      href: "initiatives#health",
     },
     {
       icon: <Landmark className="w-8 h-8 text-[#0C2340]" />,
       title: t("zakat-title"),
       description: t("zakat-description"),
-      href: "/donation",
+      href: "donation",
     },
     {
       icon: <Users className="w-8 h-8 text-[#0C2340]" />,
       title: t("nikah-title"),
       description: t("nikah-description"),
-      href: "/events#nikah",
+      href: "events#nikah",
     },
     {
       icon: <CalendarDays className="w-8 h-8 text-[#0C2340]" />,
       title: t("education-title"),
       description: t("education-description"),
-      href: "/events",
+      href: "events",
     },
     {
       icon: <Star className="w-8 h-8 text-[#0C2340]" />,
       title: t("culture-title"),
       description: t("culture-description"),
-      href: "/events",
+      href: "about",
     },
     {
       icon: <GraduationCap className="w-8 h-8 text-[#0C2340]" />,
       title: t("academy-title"),
       description: t("academy-description"),
-      href: "/academy",
+      href: "academy",
     },
   ];
 
@@ -119,7 +120,7 @@ export default function CardSlider() {
   }, []);
 
   return (
-    <div className="flex flex-col lg:flex-row gap-6 lg:gap-12">
+    <div className="flex flex-col lg:flex-row items-stretch gap-6 lg:gap-12">
       {/* Info Cards Section */}
       <div className="relative w-full lg:w-4/5">
         <Carousel
@@ -142,13 +143,21 @@ export default function CardSlider() {
                     </div>
                     <h3 className="text-xl font-bold">{card.title}</h3>
                     <p className="text-muted-foreground">{card.description}</p>
-                    <Link
+                    {/* <Link
                       href={card.href}
                       className="text-[#0C2340] flex items-center gap-1 hover:underline"
                     >
                       {t("button-LearnMore")}
                       <ArrowRight className="w-4 h-4" />
-                    </Link>
+                    </Link> */}
+                    <span>
+                      <LocaleLink
+                        path={card.href}
+                        lable={`${t("button-LearnMore")}`}
+                        classes="font-semibold hover:underline"
+                      />
+                      {/* <ArrowRight className="w-4 h-4" /> */}
+                    </span>
                   </CardContent>
                 </Card>
               </CarouselItem>
@@ -177,9 +186,9 @@ export default function CardSlider() {
       </div>
 
       {/* Ads Cards Section */}
-      <div className="w-full lg:w-1/3 flex flex-col items-center">
+      <div className="w-full lg:w-1/3 flex flex-col items-center justify-center">
         <Card className="border-2 border-blue-300 hover:border-blue-500 transition-all h-full overflow-visible w-full">
-          <CardContent className="p-6 text-center h-64 relative overflow-visible">
+          <CardContent className="p-6 h-64 relative overflow-visible flex items-center justify-center text-center">
             <Carousel
               setApi={setAdsApi}
               orientation="horizontal"
@@ -217,8 +226,8 @@ export default function CardSlider() {
               </CarouselContent>
 
               {/* Navigation Buttons - pushed out */}
-              <CarouselPrevious className="absolute text-white bg-rangrez-indigo hover:bg-rangrez-indigo_dark -left-10 top-1/2 -translate-y-1/2 z-10 border rounded-full shadow-md p-2 md:p-3 transition" />
-              <CarouselNext className="absolute text-white bg-rangrez-indigo hover:bg-rangrez-indigo_dark -right-10 top-1/2 -translate-y-1/2 z-10 border rounded-full shadow-md p-2 md:p-3 transition" />
+              <CarouselPrevious className="absolute text-white bg-rangrez-indigo hover:bg-rangrez-indigo_dark -left-10 top-4/3 -translate-y-1/2 z-10 border rounded-full shadow-md p-2 md:p-3 transition" />
+              <CarouselNext className="absolute text-white bg-rangrez-indigo hover:bg-rangrez-indigo_dark -right-10 top-4/3 -translate-y-1/2 z-10 border rounded-full shadow-md p-2 md:p-3 transition" />
             </Carousel>
           </CardContent>
         </Card>
