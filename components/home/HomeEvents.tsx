@@ -15,36 +15,31 @@ import { useEffect, useState } from "react";
 import { splitEventsByDate } from "@/utils/eventHelpers";
 import { useTranslations, useLocale } from "next-intl";
 
-
-
 const HomeEvents = () => {
   const t = useTranslations("Homepage");
-  const locale = useLocale()
+  const locale = useLocale();
 
-  const [ event, setEvents ] = useState<any[]>([])
+  const [event, setEvents] = useState<any[]>([]);
   const [pastEvents, setPastEvents] = useState<any[]>([]);
   // const [activeTab, setActiveTab] = useState("upcoming");
 
-  const fetchEvents = async() =>{
-    const res = await fetch("https://node2-plum.vercel.app/api/user/events")
-    const data = await res.json()
+  const fetchEvents = async () => {
+    const res = await fetch("https://node2-plum.vercel.app/api/user/events");
+    const data = await res.json();
 
     console.log("Data: ", data.events);
     const { pastEvents, upcomingEvents } = splitEventsByDate(data.events);
 
     setPastEvents(pastEvents);
     setEvents(upcomingEvents);
-  }
-
+  };
 
   console.log("Event: ", event);
   console.log("Event Past: ", pastEvents);
 
-  
-
-  useEffect(()=>{
+  useEffect(() => {
     fetchEvents();
-  },[])
+  }, []);
 
   return (
     <section className="py-16 ">
@@ -58,11 +53,11 @@ const HomeEvents = () => {
             <TabsTrigger value="upcoming" className="">
               {/* Upcoming Events */}
               {t("home-events-title-upcoming")}
-              </TabsTrigger>
+            </TabsTrigger>
             <TabsTrigger value="past" className="">
               {/* Past Events */}
               {t("home-events-title-past")}
-              </TabsTrigger>
+            </TabsTrigger>
           </TabsList>
           <TabsContent value="upcoming" className="">
             <div className="relative">
@@ -97,6 +92,12 @@ const HomeEvents = () => {
                         <p className="text-gray-700 text-sm mb-2">
                           {event.ENVT_EXCERPT}
                         </p>
+                        {/* <div 
+                          className="prose"
+                          dangerouslySetInnerHTML={{
+                            __html: event.ENVT_DETAIL,
+                          }}
+                        /> */}
                       </div>
                     </CarouselItem>
                   ))}
@@ -134,7 +135,7 @@ const HomeEvents = () => {
                           {event.date}
                         </p>
                         <p className="text-sm text-gray-600 mb-2">
-                        {`${event.ENVT_ADDRESS}, ${event.ENVT_CITY}`}
+                          {`${event.ENVT_ADDRESS}, ${event.ENVT_CITY}`}
                         </p>
                         <p className="text-gray-700 text-sm mb-2">
                           {event.ENVT_EXCERPT}
@@ -155,8 +156,8 @@ const HomeEvents = () => {
             className="bg-rangrez-indigo hover:bg-rangrez-indigo_dark text-white"
           >
             <Link href={`/${locale}/events`}>
-            {/* View All Events */}
-            {t("home-events-button")}
+              {/* View All Events */}
+              {t("home-events-button")}
             </Link>
           </Button>
         </div>
