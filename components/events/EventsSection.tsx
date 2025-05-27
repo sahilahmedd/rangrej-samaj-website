@@ -11,6 +11,7 @@ import { CalendarDays, Clock, MapPin, Users, Phone } from "lucide-react";
 import { splitEventsByDate } from "@/utils/eventHelpers";
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
+import parse from 'html-react-parser';
 
 export default function EventsSection() {
   const t = useTranslations("Events");
@@ -20,7 +21,7 @@ export default function EventsSection() {
     { label: t("events-tabitems-past"), value: "past" },
   ];
 
-  const [activeTab, setActiveTab] = useState("past");
+  const [activeTab, setActiveTab] = useState("upcoming");
   const [upcoming, setUpcoming] = useState<any[]>([]);
   const [pastEvents, setPastEvents] = useState<any[]>([]);
 
@@ -113,6 +114,9 @@ export default function EventsSection() {
                     <p className="text-muted-foreground">
                       {event.ENVT_EXCERPT}
                     </p>
+                    {/* <p className="text-muted-foreground">
+                      {parse(event.ENVT_DETAIL)}
+                    </p> */}
                   </CardContent>
                   <CardFooter className="px-6 pb-6 pt-0">
                     <Button className="w-full bg-rangrez-indigo hover:bg-rangrez-indigo_dark text-white">
