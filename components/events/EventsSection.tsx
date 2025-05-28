@@ -11,7 +11,7 @@ import { CalendarDays, Clock, MapPin, Users, Phone } from "lucide-react";
 import { splitEventsByDate } from "@/utils/eventHelpers";
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
-import parse from 'html-react-parser';
+import parse from "html-react-parser";
 
 export default function EventsSection() {
   const t = useTranslations("Events");
@@ -44,7 +44,7 @@ export default function EventsSection() {
 
   console.log("Upcoming: ", upcoming);
 
-  const locale = useLocale()
+  const locale = useLocale();
 
   return (
     <section className="py-8 sm:py-12 md:py-16">
@@ -71,9 +71,9 @@ export default function EventsSection() {
 
           <TabsContent value="upcoming" className="space-y-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {upcoming.map((event) => (
+              {upcoming.map((event, index) => (
                 <Card
-                  key={event.id}
+                  key={index}
                   id={event.category}
                   className="border-2 bg-rangrez-sand_lite border-rangrez-sand_hover/20 hover:border-rangrez-sand_hover transition-all h-full overflow-hidden"
                 >
@@ -120,7 +120,9 @@ export default function EventsSection() {
                   </CardContent>
                   <CardFooter className="px-6 pb-6 pt-0">
                     <Button className="w-full bg-rangrez-indigo hover:bg-rangrez-indigo_dark text-white">
-                      <Link href={`/${locale}/contact`}>Register Now</Link>
+                      <Link href={`/${locale}/events/${event?.ENVT_ID}`}>
+                        View Details
+                      </Link>
                     </Button>
                   </CardFooter>
                 </Card>
@@ -170,11 +172,13 @@ export default function EventsSection() {
                       {event.ENVT_EXCERPT}
                     </p>
                   </CardContent>
-                  {/* <CardFooter className="px-6 pb-6 pt-0">
-                    <Button variant="outline" className="w-full">
-                      View Gallery
+                  <CardFooter className="px-6 pb-6 pt-0">
+                    <Button className="w-full bg-rangrez-indigo hover:bg-rangrez-indigo_dark text-white">
+                      <Link href={`/${locale}/events/${event?.ENVT_ID}`}>
+                        View Details
+                      </Link>
                     </Button>
-                  </CardFooter> */}
+                  </CardFooter>
                 </Card>
               ))}
             </div>
