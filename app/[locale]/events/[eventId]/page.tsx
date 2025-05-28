@@ -1,5 +1,6 @@
-import parse from "html-react-parser";
 import Image from "next/image";
+import parse from "html-react-parser";
+import Link from "next/link";
 
 export default async function EventDetailPage({
   params,
@@ -11,14 +12,16 @@ export default async function EventDetailPage({
     { cache: "no-store" }
   );
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch event details");
-  }
+  if (!res.ok) throw new Error("Failed to fetch event");
 
   const { event } = await res.json();
 
+  const isUpcoming =
+    new Date(event.EVNT_UPTO_DT) >= new Date(); // ✅ compare with today
+
   return (
     <div className="container py-8">
+      {/* ✅ Banner */}
       {event.ENVT_BANNER_IMAGE && (
         <div className="relative w-full h-72 mb-6 rounded overflow-hidden">
           <Image
@@ -26,10 +29,10 @@ export default async function EventDetailPage({
             alt="Event Banner"
             fill
             className="object-cover"
-            priority
           />
         </div>
       )}
+
       <h1 className="text-3xl font-bold mb-4">{event.ENVT_DESC}</h1>
 
       <p className="text-muted mb-2">
@@ -38,23 +41,34 @@ export default async function EventDetailPage({
       <p className="text-muted mb-2">{event.ENVT_ADDRESS}</p>
       <p className="text-muted mb-4">{event.ENVT_EXCERPT}</p>
 
-      <div>
-        <h2 className="text-xl font-semibold mb-2">Full Details</h2>
+      {/* ✅ Full Detail HTML */}
+      {event.ENVT_DETAIL && (
         <div className="prose max-w-none">{parse(event.ENVT_DETAIL)}</div>
-      </div>
+      )}
 
+      {/* ✅ Gallery Images */}
       {event.ENVT_GALLERY_IMAGES && (
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
-          {event.ENVT_GALLERY_IMAGES.split(",").map(
-            (img: string, i: number) => (
-              <img
-                key={i}
-                src={img.trim()}
-                alt={`Gallery ${i + 1}`}
-                className="rounded border"
-              />
-            )
-          )}
+          {event.ENVT_GALLERY_IMAGES.split(",").map((img: string, i: number) => (
+            <img
+              key={i}
+              src={img.trim()}
+              alt={`Gallery ${i + 1}`}
+              className="rounded border"
+            />
+          ))}
+        </div>
+      )}
+
+      {/* ✅ Register Now Button */}
+      {isUpcoming && (
+        <div className="mt-8 text-center">
+          <Link
+            href={`/${params.locale}/contact`}
+            className="inline-block px-6 py-3 bg-rangrez-indigo text-white font-semibold rounded hover:bg-rangrez-indigo_dark transition"
+          >
+            Register Now
+          </Link>
         </div>
       )}
     </div>
