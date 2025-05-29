@@ -45,6 +45,7 @@ const HomeAbout = () => {
             src="/images/image-4.jpg"
             alt="Rangrez Samaj Community"
             fill
+            loading="lazy"
             className="object-cover"
           />
         </div>

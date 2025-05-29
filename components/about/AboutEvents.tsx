@@ -177,6 +177,7 @@ export default function RangrezSection() {
                   alt="Rangrez Samaj Community"
                   fill
                   className="object-cover"
+                  loading="lazy"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
                 />
               </div>
@@ -289,6 +290,7 @@ export default function RangrezSection() {
                   alt="Rangrez Samaj History"
                   fill
                   className="object-cover"
+                  loading="lazy"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
                 />
               </div>
@@ -450,6 +452,7 @@ export default function RangrezSection() {
                       alt={member.name}
                       fill
                       className="object-cover"
+                      loading="lazy"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                   </div>
@@ -475,6 +478,7 @@ export default function RangrezSection() {
                   alt="Rangrez Samaj Academy"
                   fill
                   className="object-cover"
+                  loading="lazy"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
                 />
               </div>

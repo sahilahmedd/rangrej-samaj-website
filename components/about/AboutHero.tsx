@@ -15,6 +15,7 @@ const AboutHero = () => {
         alt="About Rangrez Samaj"
         fill
         className="object-cover brightness-50"
+        loading="lazy"
         priority
       />
     </div>

@@ -57,6 +57,7 @@ export default function InitTabs() {
                   src="/images/medical1.jpg"
                   alt="Medical Aid Initiative"
                   fill
+                  loading="lazy"
                   className="object-cover"
                 />
               </div>
@@ -128,6 +129,7 @@ export default function InitTabs() {
                         src={`/images/medical2.jpg`}
                         alt={`Health Camp ${i}`}
                         fill
+                        loading="lazy"
                         className="object-cover"
                       />
                     </div>
@@ -253,6 +255,7 @@ export default function InitTabs() {
                   src="/images/zakat1.png"
                   alt="Zakat Distribution"
                   fill
+                  loading="lazy"
                   className="object-cover"
                 />
               </div>
@@ -271,6 +274,7 @@ export default function InitTabs() {
                         src={`/images/zakat1.jpg`}
                         alt={`Zakat Distribution ${i}`}
                         fill
+                        loading="lazy"
                         className="object-cover"
                       />
                     </div>
@@ -342,6 +346,7 @@ export default function InitTabs() {
                   src="/images/nikkah1.png"
                   alt="Nikah Sammelan"
                   fill
+                  loading="lazy"
                   className="object-cover"
                 />
               </div>
@@ -412,6 +417,7 @@ export default function InitTabs() {
                       src="/placeholder.svg?height=400&width=600&text=NextSammelan"
                       alt="Next Nikah Sammelan"
                       fill
+                      loading="lazy"
                       className="object-cover"
                     />
                   </div>
@@ -460,6 +466,7 @@ export default function InitTabs() {
                             src={`/placeholder.svg?height=100&width=100&text=C${i}`}
                             alt="Couple"
                             fill
+                            loading="lazy"
                             className="object-cover"
                           />
                         </div>
@@ -541,6 +548,7 @@ export default function InitTabs() {
                   src="/images/education1.png"
                   alt="Educational Support"
                   fill
+                  loading="lazy"
                   className="object-cover"
                 />
               </div>
@@ -559,6 +567,7 @@ export default function InitTabs() {
                         src={`/images/student1.jpg`}
                         alt={`Student ${i}`}
                         fill
+                        loading="lazy"
                         className="object-cover"
                       />
                     </div>

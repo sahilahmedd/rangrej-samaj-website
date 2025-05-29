@@ -83,6 +83,7 @@ export default function EventsSection() {
                       alt={event.ENVT_DESC}
                       fill
                       className="object-cover"
+                      loading="lazy"
                     />
                   </div>
                   <CardContent className="p-6">
@@ -144,6 +145,7 @@ export default function EventsSection() {
                       alt={event.ENVT_DESC}
                       fill
                       className="object-cover"
+                      loading="lazy"
                     />
                   </div>
                   <CardContent className="p-6">

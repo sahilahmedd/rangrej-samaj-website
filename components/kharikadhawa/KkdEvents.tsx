@@ -180,6 +180,7 @@ export default function KkdEvents() {
                       src="/images/image-11.jpg"
                       alt="Rangrez Samaj Community"
                       fill
+                      loading="lazy"
                       className="object-cover"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
                     />
@@ -219,6 +220,7 @@ export default function KkdEvents() {
                       src="/images/image-11.jpg"
                       alt="Rangrez Samaj Community"
                       fill
+                      loading="lazy"
                       className="object-cover"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
                     />

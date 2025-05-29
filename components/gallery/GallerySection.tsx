@@ -88,6 +88,7 @@ const GallerySection = () => {
               alt={image.alt}
               width={800}
               height={600}
+              loading="lazy"
               className="object-cover transition-all group-hover:scale-105"
             />
           </div>
@@ -157,6 +158,7 @@ const GallerySection = () => {
                 width={1000}
                 height={800}
                 className="w-full h-auto rounded shadow-lg"
+                loading="lazy"
               />
               <p className="text-white mt-4 text-sm">{currentImage.caption}</p>
             </>

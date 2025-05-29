@@ -12,6 +12,7 @@ const GalleryHero = () => {
         src="/images/image-1.jpg"
         alt="Gallery"
         fill
+        loading="lazy"
         className="object-cover brightness-50"
         priority
       />

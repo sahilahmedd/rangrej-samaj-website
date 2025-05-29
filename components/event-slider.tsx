@@ -49,6 +49,7 @@ export default function EventSlider({ events }: EventSliderProps) {
                       alt={event.title}
                       fill
                       className="object-cover"
+                      loading="lazy"
                     />
                   </div>
                   <CardContent className="p-0 flex flex-col justify-center">

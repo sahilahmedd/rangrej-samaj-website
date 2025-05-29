@@ -23,6 +23,7 @@ const DonationTestimonials = () => {
                     alt="Beneficiary"
                     fill
                     className="object-cover"
+                    loading="lazy"
                   />
                 </div>
                 <div>

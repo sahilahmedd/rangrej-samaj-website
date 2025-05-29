@@ -39,6 +39,7 @@ const DonationAbout = () => {
             src="/images/zakat.png"
             alt="Donation and Charity"
             fill
+            loading="lazy"
             className="object-cover"
           />
         </div>

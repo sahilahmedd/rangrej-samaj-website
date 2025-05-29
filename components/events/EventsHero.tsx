@@ -11,6 +11,7 @@ const EventsHero = () => {
         src="/images/image-7.jpg"
         alt="Events"
         fill
+        loading="lazy"
         className="object-cover brightness-50"
         priority
       />

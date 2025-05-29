@@ -79,6 +79,7 @@ const HomeEvents = () => {
                           width={600}
                           height={400}
                           className="rounded mb-4 object-cover w-full h-48"
+                          loading="lazy"
                         />
                         <h3 className="text-xl font-semibold mb-2">
                           {event.ENVT_DESC}
@@ -127,6 +128,7 @@ const HomeEvents = () => {
                           width={600}
                           height={400}
                           className="rounded mb-4 object-cover w-full h-48"
+                          loading="lazy"
                         />
                         <h3 className="text-xl font-semibold mb-2">
                           {event.ENVT_DESC}

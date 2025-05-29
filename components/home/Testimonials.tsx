@@ -23,6 +23,7 @@ const Testimonials = () => {
                     alt="Person"
                     fill
                     className="object-cover"
+                    loading="lazy"
                   />
                 </div>
                 <div>
