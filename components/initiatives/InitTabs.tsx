@@ -238,7 +238,7 @@ export default function InitTabs() {
                     {t("initiatives-Zakat-Distribution5")}
                   </li>
                 </ul>
-                <div className="flex flex-wrap gap-4">
+                <div className="flex bg-none flex-wrap gap-4">
                   {/* <Button className="bg-[#0C2340] hover:bg-rangrez-indigo_dark text-white">
                     Contribute Zakat
                     {t("initiatives-Zakat-button1")}

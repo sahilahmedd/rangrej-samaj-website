@@ -1,59 +1,59 @@
-"use client"
+"use client";
 
-import { useRef, useState } from "react"
+import { useRef, useState } from "react";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { toast } from "@/components/ui/use-toast"
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { toast } from "@/components/ui/use-toast";
 
 interface types {
-    lable: string;
+  lable: string;
 }
 
-export default function DonationModal({lable}: types) {
-  const [selectedAmount, setSelectedAmount] = useState<number | null>(null)
-  const [customAmount, setCustomAmount] = useState<string>("")
-  const [name, setName] = useState("")
-  const [phone, setPhone] = useState("")
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [showPaymentFrame, setShowPaymentFrame] = useState(false)
+export default function DonationModal({ lable }: types) {
+  const [selectedAmount, setSelectedAmount] = useState<number | null>(null);
+  const [customAmount, setCustomAmount] = useState<string>("");
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showPaymentFrame, setShowPaymentFrame] = useState(false);
 
-  const formContainerRef = useRef<HTMLDivElement>(null)
+  const formContainerRef = useRef<HTMLDivElement>(null);
 
-  const predefinedAmounts = [500, 1000, 2000]
+  const predefinedAmounts = [500, 1000, 2000];
 
   const getFinalAmount = () => {
-    return selectedAmount ?? parseInt(customAmount)
-  }
+    return selectedAmount ?? parseInt(customAmount);
+  };
 
   const handleSubmit = async () => {
-    const amount = getFinalAmount()
+    const amount = getFinalAmount();
 
     if (!amount || amount <= 0 || !name || !phone) {
       toast({
         title: "Missing fields",
         description: "Please fill in all required fields correctly.",
         variant: "destructive",
-      })
-      return
+      });
+      return;
     }
 
-    setIsSubmitting(true)
+    setIsSubmitting(true);
 
     try {
       const res = await fetch("/en/api/donate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ amount }),
-      })
+      });
 
-      const data = await res.json()
+      const data = await res.json();
 
       const options = {
         key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID as string,
@@ -79,34 +79,56 @@ export default function DonationModal({lable}: types) {
                 eventID: "", // pass if applicable
               },
             }),
-          })
+          });
 
           toast({
             title: "Thank You!",
             description: "Your donation was successful.",
-          })
+          });
 
-          setShowPaymentFrame(false)
-          setSelectedAmount(null)
-          setCustomAmount("")
-          setName("")
-          setPhone("")
+          setShowPaymentFrame(false);
+          setSelectedAmount(null);
+          setCustomAmount("");
+          setName("");
+          setPhone("");
         },
         modal: {
           ondismiss: () => setShowPaymentFrame(false),
         },
+        method: {
+          netbanking: false,
+          card: false,
+          upi: true,
+          wallet: false,
+          emi: false,
+          paylater: false,
+        },
         theme: { color: "#0C2340" },
+      };
+      console.log("Razorpay Options:", options);
+      setShowPaymentFrame(true);
+
+      // const rzp = new (window as any).Razorpay(options);
+      // rzp.open();
+
+      if (typeof window !== "undefined" && (window as any).Razorpay) {
+        const rzp = new (window as any).Razorpay(options);
+        rzp.open();
+      } else {
+        toast({
+          title: "Payment Error",
+          description: "Razorpay is not ready. Try refreshing the page.",
+          variant: "destructive",
+        });
       }
 
-      setShowPaymentFrame(true)
-      const rzp = new (window as any).Razorpay(options)
-      rzp.open()
-
-    setTimeout(() => {
-        const modal = document.querySelector(".razorpay-container") as HTMLElement;
+      setTimeout(() => {
+        const modal = document.querySelector(
+          ".razorpay-container"
+        ) as HTMLElement;
         if (modal && formContainerRef.current) {
           const { width } = formContainerRef.current.getBoundingClientRect();
-      
+
           modal.style.width = `${width}px`;
           modal.style.maxWidth = "672px";
           modal.style.position = "fixed";
@@ -118,25 +140,30 @@ export default function DonationModal({lable}: types) {
           modal.style.backgroundColor = "#fff"; // Optional: in case Razorpay sets transparent
           modal.style.zIndex = "9999"; // Ensure it sits above other content
         }
-      }, 100);      
+      }, 100);
     } catch (error) {
       toast({
         title: "Error",
         description: "Failed to process donation. Please try again later.",
         variant: "destructive",
-      })
+      });
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="bg-rangrez-indigo hover:bg-rangrez-indigo_dark text-white">{lable}</Button>
+        <Button className="bg-rangrez-indigo hover:bg-rangrez-indigo_dark text-white">
+          {lable}
+        </Button>
       </DialogTrigger>
 
-      <DialogContent className="max-w-sm bg-rangrez-sand" ref={formContainerRef}>
+      <DialogContent
+        className="max-w-sm bg-rangrez-sand"
+        ref={formContainerRef}
+      >
         <DialogHeader>
           <DialogTitle>Support the Cause</DialogTitle>
         </DialogHeader>
@@ -161,8 +188,8 @@ export default function DonationModal({lable}: types) {
                 key={amount}
                 variant={selectedAmount === amount ? "default" : "outline"}
                 onClick={() => {
-                  setSelectedAmount(amount)
-                  setCustomAmount("")
+                  setSelectedAmount(amount);
+                  setCustomAmount("");
                 }}
                 className="hover:bg-rangrez-gold border border-rangrez-indigo"
               >
@@ -176,8 +203,8 @@ export default function DonationModal({lable}: types) {
             placeholder="Or enter custom amount"
             value={customAmount}
             onChange={(e) => {
-              setCustomAmount(e.target.value)
-              setSelectedAmount(null)
+              setCustomAmount(e.target.value);
+              setSelectedAmount(null);
             }}
             className="border border-rangrez-indigo"
           />
@@ -192,5 +219,5 @@ export default function DonationModal({lable}: types) {
         </div>
       </DialogContent>
     </Dialog>
-  )
+  );
 }

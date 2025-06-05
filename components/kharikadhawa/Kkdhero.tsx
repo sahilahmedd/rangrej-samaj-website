@@ -14,7 +14,6 @@ const Kkdhero = () => {
         src="/images/image-8.jpg"
         alt="About Rangrez Samaj"
         fill
-        loading="lazy"
         className="object-cover brightness-50"
         priority
       />

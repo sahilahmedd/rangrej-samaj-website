@@ -13,7 +13,6 @@ const InitHero = () => {
         alt="Our Initiatives"
         fill
         className="object-cover brightness-50"
-        loading="lazy"
         priority
       />
     </div>

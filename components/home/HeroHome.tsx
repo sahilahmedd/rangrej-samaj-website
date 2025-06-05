@@ -16,7 +16,6 @@ const HeroHome = () => {
         alt="Rangrez Samaj Cultural Image"
         fill
         className="object-cover brightness-50"
-        loading="lazy"
         priority
       />
     </div>

@@ -50,7 +50,7 @@ export default async function RootLayout({
             <div className="flex min-h-screen flex-col">
               <Script
                 src="https://checkout.razorpay.com/v1/checkout.js"
-                strategy="beforeInteractive"
+                strategy="afterInteractive"
               />
               <Header />
               {children}

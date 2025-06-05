@@ -12,7 +12,6 @@ const DonationHero = () => {
         alt="Donation and Zakat"
         fill
         className="object-cover brightness-50"
-        loading="lazy"
         priority
       />
     </div>

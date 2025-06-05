@@ -28,7 +28,6 @@ export default async function EventDetailPage({
             alt="Event Banner"
             fill
             className="object-cover"
-            loading="lazy"
             priority
           />
         </div>

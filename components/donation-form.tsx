@@ -46,18 +46,21 @@ export default function DonationForm() {
 
   useEffect(() => {
     const getCategory = async () => {
-      const res = await fetch("https://node2-plum.vercel.app/api/admin/categories");
+      const res = await fetch(
+        "https://node2-plum.vercel.app/api/admin/categories"
+      );
       const data = await res.json();
 
-
       console.log("This is Data: ", data);
-    
-      const apiData = {CATE_CATE_ID: 1};
 
-      const matchID = data.categories.filter((cate: { CATE_CATE_ID: number; }) => cate.CATE_CATE_ID === apiData.CATE_CATE_ID)
+      const apiData = { CATE_CATE_ID: 1 };
+
+      const matchID = data.categories.filter(
+        (cate: { CATE_CATE_ID: number }) =>
+          cate.CATE_CATE_ID === apiData.CATE_CATE_ID
+      );
 
       console.log("CATE_ID: ", matchID);
-      
 
       setCategory(matchID);
     };
@@ -65,7 +68,6 @@ export default function DonationForm() {
   }, []);
 
   console.log("Category: ", category);
-  
 
   const validateStep1 = () => {
     if (!formData.name || !formData.amount || !formData.categoryId) {
@@ -137,6 +139,14 @@ export default function DonationForm() {
         modal: {
           ondismiss: () => setShowPaymentFrame(false),
         },
+        method: {
+          netbanking: false,
+          card: false,
+          upi: true,
+          wallet: false,
+          emi: false,
+          paylater: false,
+        },
         theme: { color: "#0C2340" },
       };
 
@@ -146,13 +156,15 @@ export default function DonationForm() {
 
       // Adjust payment modal styling
       setTimeout(() => {
-        const modal = document.querySelector('.razorpay-container') as HTMLElement;
+        const modal = document.querySelector(
+          ".razorpay-container"
+        ) as HTMLElement;
         if (modal && formContainerRef.current) {
           const { width } = formContainerRef.current.getBoundingClientRect();
           modal.style.width = `${width}px`;
-          modal.style.maxWidth = '672px';
-          modal.style.margin = '20px auto';
-          modal.style.borderRadius = '8px';
+          modal.style.maxWidth = "672px";
+          modal.style.margin = "20px auto";
+          modal.style.borderRadius = "8px";
         }
       }, 100);
     } catch (error) {
@@ -166,19 +178,23 @@ export default function DonationForm() {
     }
   };
 
-  const selectedCategory = category.find(
-    (cat) => cat.CATE_ID === formData.categoryId
-  )?.CATE_DESC || "";
+  const selectedCategory =
+    category.find((cat) => cat.CATE_ID === formData.categoryId)?.CATE_DESC ||
+    "";
 
   return (
-    <div className="max-w-2xl mx-auto p-6 border-2 border-rangrez-indigo_dark rounded-lg" ref={formContainerRef}>
+    <div
+      className="max-w-2xl mx-auto p-6 border-2 border-rangrez-indigo_dark rounded-lg"
+      ref={formContainerRef}
+    >
       {/* Step 1 - Donation Details */}
       {currentStep === 1 && (
         <div className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <Label>
-                {t("donation-form-name")} <span className="text-red-500">*</span>
+                {t("donation-form-name")}{" "}
+                <span className="text-red-500">*</span>
               </Label>
               <Input
                 name="name"
@@ -202,7 +218,8 @@ export default function DonationForm() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <Label>
-                {t("donation-form-amount")} <span className="text-red-500">*</span>
+                {t("donation-form-amount")}{" "}
+                <span className="text-red-500">*</span>
               </Label>
               <Input
                 name="amount"
@@ -216,15 +233,18 @@ export default function DonationForm() {
             </div>
             <div className="space-y-2">
               <Label>
-                {t("donation-form-donation-type")} <span className="text-red-500">*</span>
+                {t("donation-form-donation-type")}{" "}
+                <span className="text-red-500">*</span>
               </Label>
               <select
                 className="border p-2 rounded-lg w-full"
                 value={formData.categoryId}
-                onChange={(e) => setFormData(prev => ({
-                  ...prev,
-                  categoryId: e.target.value
-                }))}
+                onChange={(e) =>
+                  setFormData((prev) => ({
+                    ...prev,
+                    categoryId: e.target.value,
+                  }))
+                }
                 required
               >
                 <option value="">{t("donation-form-select-category")}</option>
@@ -321,10 +341,13 @@ export default function DonationForm() {
       )}
 
       {/* Thank You Modal */}
-      <Dialog open={showThankYouModal} onOpenChange={() => {
-        setShowThankYouModal(false);
-        setCurrentStep(1);
-      }}>
+      <Dialog
+        open={showThankYouModal}
+        onOpenChange={() => {
+          setShowThankYouModal(false);
+          setCurrentStep(1);
+        }}
+      >
         <DialogContent className="text-center">
           <DialogHeader>
             <DialogTitle className="text-2xl text-[#0C2340]">
